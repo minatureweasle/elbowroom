@@ -9,7 +9,10 @@ public class EddyController : MonoBehaviour {
 
 	float accumulatedVelocity = 0;
 
+	float originalHeight;
+
 	void Start () {
+		originalHeight = transform.position.y;
 	}
 
 	void Update () {
@@ -62,7 +65,7 @@ public class EddyController : MonoBehaviour {
 
 		accumulatedVelocity += GetComponent<Rigidbody>().velocity.z;
 		//add a sine wave to the players height depending on how fast they are going forward or backward
-		transform.position += new Vector3(0,Mathf.Sin(accumulatedVelocity*2f)/6f,0);
+		transform.position = new Vector3(transform.position.x,originalHeight + Mathf.Abs(Mathf.Sin(accumulatedVelocity*2f))/2f,transform.position.z);
 	}
 
 	void TiltCharacter(){
