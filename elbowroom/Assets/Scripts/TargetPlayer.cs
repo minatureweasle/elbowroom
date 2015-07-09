@@ -8,12 +8,24 @@ public class TargetPlayer : MonoBehaviour {
 
 	public float lerpSpeed = 1f;
 
+	public float turretShootingDelay = 1f;
+
 	float waitEndTime = Mathf.Infinity;
 
 	bool waiting = false;
 
-	void Start () {
+	public GameObject bulletPrefab;
 
+	public Transform firepoint;
+
+	void Start () {
+	}
+
+	void Shoot(){
+		//Debug.Log("pew pew pew");
+		Instantiate(bulletPrefab, firepoint.position, transform.rotation);
+
+		CancelWait();
 	}
 
 	void Update () {
@@ -58,12 +70,17 @@ public class TargetPlayer : MonoBehaviour {
 		GetComponent<LineRenderer>().SetPosition(0, transform.position);
 		//to this point
 		//cast a ray in the direction the turret is facing, and check if you hit the player
-		if (Physics.Raycast(transform.position + transform.up*2, transform.up, out hit) && hit.collider.tag == "Player")
+		if (Physics.Raycast(transform.position + transform.up*2, transform.up, out hit))
 		{
-			GetComponent<LineRenderer>().SetPosition(1, transform.position + transform.up*distanceToPlayer);
+			Debug.Log("name:"+hit.collider.name);
 
-			//shoot after waiting this long
-			if (!waiting)
+			float distanceToHit = (hit.collider.transform.position - transform.position).magnitude;
+
+			GetComponent<LineRenderer>().SetPosition(1, transform.position + transform.up.normalized*distanceToHit);
+
+
+			//shoot after waiting 1 second, but not if you've already started waiting
+			if (hit.collider.tag == "Player" && !waiting)
 				Wait(1f);
 		}
 		else
@@ -89,7 +106,5 @@ public class TargetPlayer : MonoBehaviour {
 		waitEndTime = Time.time + duration;
 	}
 
-	void Shoot(){
-		Debug.Log("pew pew pew");
-	}
+
 }
