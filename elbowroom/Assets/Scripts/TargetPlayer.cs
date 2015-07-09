@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(LineRenderer))]
 public class TargetPlayer : MonoBehaviour {
 
 	public GameObject player;
 
-	Vector3 originalUp;
+	public float lerpSpeed = 1f;
 
 	void Start () {
-		originalUp = transform.up;
+
 	}
 
 	void Update () {
@@ -26,15 +27,36 @@ public class TargetPlayer : MonoBehaviour {
 		//perfect follow
 		//transform.up = directionToPlayer;
 
-		//delayed follow
-		transform.up = Vector3.Lerp(transform.up, directionToPlayer, 0.001f);
-
-		Ray ray = new Ray(transform.position, transform.up);
+		//slowing down follow
+		transform.up = Vector3.Lerp(transform.up, directionToPlayer, 0.001f*lerpSpeed);
 
 
+		float distanceToPlayer = directionToPlayer.magnitude;
+
+		//constant speed follow
+		/*
+		Vector3 upDirectionWithEqualDistanceAsDistanceToPlayer = transform.up*distanceToPlayer;
+
+		Vector3 difference = directionToPlayer - upDirectionWithEqualDistanceAsDistanceToPlayer;
+		difference.Normalize();
+
+		difference *= 0.003f;
+
+		transform.up += difference;
+		*/
+
+
+		
+		//cast a ray in the direction the turret is facing
+		RaycastHit hit;
+
+		//draw a line from this point
 		GetComponent<LineRenderer>().SetPosition(0, transform.position);
-
-		GetComponent<LineRenderer>().SetPosition(1, transform.position + transform.up*100f);
+		//to this point
+		if (Physics.Raycast(transform.position + transform.up*2, transform.up, out hit) && hit.collider.tag == "Player")
+			GetComponent<LineRenderer>().SetPosition(1, transform.position + transform.up*distanceToPlayer);
+		else
+			GetComponent<LineRenderer>().SetPosition(1, transform.position + transform.up*100f);
 
 
 	}
