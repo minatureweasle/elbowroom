@@ -70,7 +70,7 @@ public class TargetPlayer : MonoBehaviour {
 		GetComponent<LineRenderer>().SetPosition(0, transform.position);
 		//to this point
 		//cast a ray in the direction the turret is facing, and check if you hit the player
-		if (Physics.Raycast(transform.position + transform.up*2, transform.up, out hit))
+		if (Physics.Raycast(transform.position + transform.up*2, transform.up, out hit) && hit.collider.name != "Plane")
 		{
 			Debug.Log("name:"+hit.collider.name);
 
@@ -81,7 +81,7 @@ public class TargetPlayer : MonoBehaviour {
 
 			//shoot after waiting 1 second, but not if you've already started waiting
 			if (hit.collider.tag == "Player" && !waiting)
-				Wait(1f);
+				Wait(turretShootingDelay);
 		}
 		else
 		{
