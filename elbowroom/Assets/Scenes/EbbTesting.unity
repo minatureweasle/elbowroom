@@ -631,7 +631,7 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: 375be879e0b96de48a526ca28491e2ee, type: 3}
   m_Controller: {fileID: 9100000, guid: bd03f1dc56078ef46ab8fca4faa23a8f, type: 2}
   m_CullingMode: 1
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -985,6 +985,10 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: bd03f1dc56078ef46ab8fca4faa23a8f, type: 2}
+    - target: {fileID: 9500000, guid: 375be879e0b96de48a526ca28491e2ee, type: 3}
+      propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 375be879e0b96de48a526ca28491e2ee, type: 3}
   m_RootGameObject: {fileID: 162454946}
