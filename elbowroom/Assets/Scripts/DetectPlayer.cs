@@ -3,6 +3,8 @@ using System.Collections;
 
 public class DetectPlayer : MonoBehaviour {
 
+	public int room = 0;
+
 	// Use this for initialization
 	void Start () {
 	}
@@ -16,7 +18,7 @@ public class DetectPlayer : MonoBehaviour {
 	{
 		if (collider.tag == "Player")
 		{
-			Application.LoadLevel(0);
+			Application.LoadLevel(room);
 		}
 	}
 }
