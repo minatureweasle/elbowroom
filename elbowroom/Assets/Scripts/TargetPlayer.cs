@@ -8,7 +8,7 @@ public class TargetPlayer : MonoBehaviour {
 
 	public float lerpSpeed = 1f;
 
-	public float turretShootingDelay = 1f;
+	public float turretShootingDelay = 0.1f;
 
 	float waitEndTime = Mathf.Infinity;
 
