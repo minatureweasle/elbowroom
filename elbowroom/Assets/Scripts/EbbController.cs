@@ -41,7 +41,7 @@ public class EbbController : MonoBehaviour {
 			//GetComponent<Rigidbody>().AddForce(-transform.forward*20);
 			AccelerateFromToZ(-3, -18, -20f*Time.deltaTime);
 			myAnimator.SetBool("Walking", true);
-			myAnimator.SetFloat("Speed", wantedVelocity.z);
+			myAnimator.SetFloat("Speed", Mathf.Abs(wantedVelocity.z));
 		}
 		else
 		{
