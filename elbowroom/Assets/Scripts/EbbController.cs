@@ -25,6 +25,10 @@ public class EbbController : MonoBehaviour {
 
 	public float rollDuration = 0.5f;
 
+	public float jumpTimeOut = 0.7f;
+
+	public float respawnHeight = -25;
+
 	public float strafeMinSpeed = 0;
 	public float strafeMaxSpeed = 16;
 	public float strafeAcceleration = 30;
@@ -34,6 +38,7 @@ public class EbbController : MonoBehaviour {
 	public float forwardAcceleration = 10;
 
 	float rollEndTime = Mathf.Infinity;
+	float jumpEndTime = Mathf.Infinity;
 
 	public enum PlayerState {IDLE, RUNNING, JUMPING, ROLLING};
 
@@ -53,11 +58,22 @@ public class EbbController : MonoBehaviour {
 		//Debug.Log (myState);
 
 		if (Time.time > rollEndTime) {
+
 			myState = PlayerState.RUNNING;
+
 			myAnimator.SetBool ("Rolling", false);
 
 			rollEndTime = Mathf.Infinity;
-		} 
+		}
+
+		if (Time.time > jumpEndTime) {
+
+			myState = PlayerState.RUNNING;
+
+			myAnimator.SetBool ("Jumping", false);
+			
+			jumpEndTime = Mathf.Infinity;
+		}
 
 
 		if (myState == PlayerState.IDLE) {
@@ -86,6 +102,8 @@ public class EbbController : MonoBehaviour {
 
 		}
 
+		DetectFall ();
+
 		if (increaseGravityWhenFalling) {
 			if (myRigidbody.velocity.y < 0)
 				Physics.gravity = new Vector3 (0, -9.81f * gravityMultiplier*2f, 0);
@@ -101,7 +119,7 @@ public class EbbController : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision){
 		
-		if (collision.transform.name == "Floor") {
+		if (collision.transform.tag == "Floor") {
 			if (myState == PlayerState.JUMPING)
 			{
 				myAnimator.SetBool("Jumping", false);
@@ -111,6 +129,13 @@ public class EbbController : MonoBehaviour {
 				myAnimator.SetBool("Walking", true);
 			}
 		}
+	}
+
+	void DetectFall(){
+
+		if (transform.position.y < respawnHeight)
+			Application.LoadLevel (Application.loadedLevel);
+
 	}
 
 	void DetectStartOfRoll(){
@@ -215,6 +240,8 @@ public class EbbController : MonoBehaviour {
 
 		myState = PlayerState.JUMPING;
 		myAnimator.SetBool("Jumping", true);
+
+		jumpEndTime = Time.time + jumpTimeOut;
 
 	}
 
