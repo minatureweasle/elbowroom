@@ -3,105 +3,208 @@ using System.Collections;
 
 public class EbbController : MonoBehaviour {
 
-
 	Animator myAnimator;
 
 	Rigidbody myRigidbody;
 
-	Vector3 wantedVelocity;
-
-	//public float strafeSpeed = 10;
+	Vector3 targetVelocity;
 
 	public bool faceWhereGoing = true;
+
+	public bool increaseGravityWhenFalling = true;
+
+	public bool canMoveWhileJumping = true;
+
+	public bool stopSuddenly = true;
 
 	public float gravityMultiplier = 4f;
 
 	public float jumpVelocity = 15f;
 
+	public float rollPower = 30;
+
+	public float rollDuration = 0.5f;
+
+	public float strafeMinSpeed = 0;
+	public float strafeMaxSpeed = 16;
+	public float strafeAcceleration = 30;
+
+	public float forwardMinSpeed = 3;
+	public float forwardMaxSpeed = 18;
+	public float forwardAcceleration = 10;
+
+	float rollEndTime = Mathf.Infinity;
+
+	public enum PlayerState {IDLE, RUNNING, JUMPING, ROLLING};
+
+	PlayerState myState;
+
 	void Start () {
 
 		myAnimator = GetComponent<Animator> ();
-
 		myRigidbody = GetComponent<Rigidbody> ();
 
 		Physics.gravity = Physics.gravity * gravityMultiplier;
+
+		myState = PlayerState.IDLE;
 	}
 
 	void Update () {
+		//Debug.Log (myState);
 
-		if (Input.GetKey (KeyCode.W)) 
-		{
-			//GetComponent<Rigidbody>().AddForce(transform.forward*20);
-			AccelerateFromToZ(3, 18, 10f*Time.deltaTime);
-			myAnimator.SetBool("Walking", true);
-			myAnimator.SetFloat("Speed", wantedVelocity.z);
-		}
-		else if (Input.GetKey (KeyCode.S)) 
-		{
-			//GetComponent<Rigidbody>().AddForce(-transform.forward*20);
-			AccelerateFromToZ(-3, -18, -20f*Time.deltaTime);
-			myAnimator.SetBool("Walking", true);
-			myAnimator.SetFloat("Speed", Mathf.Abs(wantedVelocity.z));
-		}
-		else
-		{
-			myAnimator.SetBool("Walking", false);
+		if (Time.time > rollEndTime) {
+			myState = PlayerState.RUNNING;
+			myAnimator.SetBool ("Rolling", false);
 
-			wantedVelocity.z = 0;
-			myAnimator.SetFloat("Speed", 0);
+			rollEndTime = Mathf.Infinity;
+		} 
 
-			Vector3 newVelocity = GetComponent<Rigidbody>().velocity;
-			newVelocity.z = 0;
-			GetComponent<Rigidbody>().velocity = newVelocity;
-		}
 
-		if (Input.GetKey (KeyCode.A)) 
-		{
-			//myAnimator.SetFloat("Direction", -1);
-			/*Vector3 newVelocity = GetComponent<Rigidbody>().velocity;
-			newVelocity.x = -strafeSpeed;
-			GetComponent<Rigidbody>().velocity = newVelocity;*/
+		if (myState == PlayerState.IDLE) {
 
-			//GetComponent<Rigidbody>().AddForce(new Vector3(-1*strafeSpeed, 0, 0));
-			AccelerateFromToX(-6, -12, -30f*Time.deltaTime);
+			DetectStartOfRun();
+
+			DetectStartOfJump();
 
 		}
-		else if (Input.GetKey (KeyCode.D)) 
-		{
-			//myAnimator.SetFloat("Direction", 1);
-			/*Vector3 newVelocity = GetComponent<Rigidbody>().velocity;
-			newVelocity.x = strafeSpeed;
-			GetComponent<Rigidbody>().velocity = newVelocity;*/
+		else if (myState == PlayerState.RUNNING) {
 
-			//GetComponent<Rigidbody>().AddForce(new Vector3(1*strafeSpeed, 0, 0));
-			AccelerateFromToX(6, 12, 30f*Time.deltaTime);
+			DetectRunning();
+
+			DetectStartOfRoll();
+
+			DetectStartOfJump();
+
 		}
-		else
-		{
-			wantedVelocity.x = 0;
+		else if (myState == PlayerState.JUMPING) {
+			
+			if (canMoveWhileJumping){
+				//DetectRunning();
+			}
+		}
+		else if (myState == PlayerState.ROLLING){
 
-
-			Vector3 newVelocity = GetComponent<Rigidbody>().velocity;
-			newVelocity.x = 0;
-			GetComponent<Rigidbody>().velocity = newVelocity;
 		}
 
-		if (Input.GetKeyDown (KeyCode.Space) &! myAnimator.GetBool("Jumping"))
-			Jump ();
+		if (increaseGravityWhenFalling) {
+			if (myRigidbody.velocity.y < 0)
+				Physics.gravity = new Vector3 (0, -9.81f * gravityMultiplier*2f, 0);
+			else
+				Physics.gravity = new Vector3 (0, -9.81f * gravityMultiplier, 0);
+		}
 
 		if (faceWhereGoing)
-			transform.forward = wantedVelocity;
+			if (targetVelocity != Vector3.zero)
+				transform.forward = targetVelocity;
 
 	}
 
 	void OnCollisionEnter(Collision collision){
-
+		
 		if (collision.transform.name == "Floor") {
+			if (myState == PlayerState.JUMPING)
+			{
+				myAnimator.SetBool("Jumping", false);
 
-			myAnimator.SetBool("Jumping", false);
+				myState = PlayerState.RUNNING;
+
+				myAnimator.SetBool("Walking", true);
+			}
+		}
+	}
+
+	void DetectStartOfRoll(){
+
+		if (Input.GetKeyDown (KeyCode.R)) {
+			Roll ();
+		}
+
+	}
+
+	void DetectStartOfJump(){
+
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			Jump ();
+		}
+
+	}
+
+	void DetectStartOfRun(){
+
+		if (Input.GetKeyDown (KeyCode.W) || Input.GetKeyDown (KeyCode.S) || Input.GetKeyDown (KeyCode.A) || Input.GetKeyDown (KeyCode.D)) {
+			myAnimator.SetBool("Walking", true);
+			myState = PlayerState.RUNNING;
+		}
+	}
+
+	void DetectRunning(){
+
+		bool runningInZDirection = false;
+
+		if (Input.GetKey (KeyCode.W)) 
+		{
+			//GetComponent<Rigidbody>().AddForce(transform.forward*20);
+			AccelerateFromToZ(forwardMinSpeed, forwardMaxSpeed, forwardAcceleration*Time.deltaTime);
+
+			myAnimator.SetFloat("Speed", targetVelocity.z);
+
+			runningInZDirection = true;
+		}
+		else if (Input.GetKey (KeyCode.S)) 
+		{
+			//GetComponent<Rigidbody>().AddForce(-transform.forward*20);
+			AccelerateFromToZ(-forwardMinSpeed, -forwardMaxSpeed, -forwardAcceleration*Time.deltaTime);
+
+			myAnimator.SetFloat("Speed", Mathf.Abs(targetVelocity.z));
+
+			runningInZDirection = true;
+		}
+		else
+		{
+
+			targetVelocity.z = 0;
+
+			if (stopSuddenly)
+			{
+				Vector3 newVelocity = GetComponent<Rigidbody>().velocity;
+				newVelocity.z = 0;
+				GetComponent<Rigidbody>().velocity = newVelocity;
+			}
 
 		}
 
+		if (Input.GetKey (KeyCode.A)) 
+		{
+			if (targetVelocity.x > 0) 
+				targetVelocity.x = 0;
+
+			AccelerateFromToX(-strafeMinSpeed, -strafeMaxSpeed, -strafeAcceleration*Time.deltaTime);
+			
+		}
+		else if (Input.GetKey (KeyCode.D)) 
+		{
+			if (targetVelocity.x < 0) 
+				targetVelocity.x = 0;
+
+			AccelerateFromToX(strafeMinSpeed, strafeMaxSpeed, strafeAcceleration*Time.deltaTime);
+		}
+		else
+		{
+			targetVelocity.x = 0;
+
+			if (stopSuddenly)
+			{
+				Vector3 newVelocity = GetComponent<Rigidbody>().velocity;
+				newVelocity.x = 0;
+				GetComponent<Rigidbody>().velocity = newVelocity;
+			}
+
+
+			if (!runningInZDirection){
+				myAnimator.SetBool("Walking", false);
+				myState = PlayerState.IDLE;
+			}
+		}
 	}
 
 	void Jump(){
@@ -110,31 +213,47 @@ public class EbbController : MonoBehaviour {
 		newVelocity.y = jumpVelocity;
 		GetComponent<Rigidbody>().velocity = newVelocity;
 
+		myState = PlayerState.JUMPING;
 		myAnimator.SetBool("Jumping", true);
 
+	}
 
+	void Roll(){
+		
+		Vector3 newVelocity = targetVelocity;
+		newVelocity.Normalize ();
+		newVelocity *= rollPower;
+		GetComponent<Rigidbody>().velocity = newVelocity;
+		
+		myState = PlayerState.ROLLING;
+		myAnimator.SetBool("Rolling", true);
 
+		ScheduleEndOfRoll (rollDuration);
+		
+	}
+
+	void ScheduleEndOfRoll(float duration){
+
+		rollEndTime = Time.time + duration;
 
 	}
 
 	void AccelerateFromToX(float initialVelocity, float maxVelocity, float acceleration){
 
-		//Debug.Log ("wantedvelocity x: "+wantedVelocity.x+ "   rigidbody velocity: "+myRigidbody.velocity);
-
 		Vector3 newVelocity = myRigidbody.velocity;
 
 		//start at the initial velocity
-		if (Mathf.Abs (wantedVelocity.x) < Mathf.Abs (initialVelocity)) {
-			wantedVelocity.x = initialVelocity;
+		if (Mathf.Abs (targetVelocity.x) < Mathf.Abs (initialVelocity)) {
+			targetVelocity.x = initialVelocity;
 		}
 		//accelerate up to the max
-		else if (Mathf.Abs (wantedVelocity.x) < Mathf.Abs (maxVelocity))
-			wantedVelocity.x += acceleration;
+		else if (Mathf.Abs (targetVelocity.x) < Mathf.Abs (maxVelocity))
+			targetVelocity.x += acceleration;
 		//if youre greater or equal to the max, stay at the max
 		else
-			wantedVelocity.x = maxVelocity;
+			targetVelocity.x = maxVelocity;
 
-		newVelocity.x = wantedVelocity.x;
+		newVelocity.x = targetVelocity.x;
 
 		myRigidbody.velocity = newVelocity;
 
@@ -142,22 +261,20 @@ public class EbbController : MonoBehaviour {
 
 	void AccelerateFromToZ(float initialVelocity, float maxVelocity, float acceleration){
 		
-		//Debug.Log ("wantedvelocity x: "+wantedVelocity.x+ "   rigidbody velocity: "+myRigidbody.velocity);
-		
 		Vector3 newVelocity = myRigidbody.velocity;
 		
 		//start at the initial velocity
-		if (Mathf.Abs (wantedVelocity.z) < Mathf.Abs (initialVelocity)) {
-			wantedVelocity.z = initialVelocity;
+		if (Mathf.Abs (targetVelocity.z) < Mathf.Abs (initialVelocity)) {
+			targetVelocity.z = initialVelocity;
 		}
 		//accelerate up to the max
-		else if (Mathf.Abs (wantedVelocity.z) < Mathf.Abs (maxVelocity))
-			wantedVelocity.z += acceleration;
+		else if (Mathf.Abs (targetVelocity.z) < Mathf.Abs (maxVelocity))
+			targetVelocity.z += acceleration;
 		//if youre greater or equal to the max, stay at the max
 		else
-			wantedVelocity.z = maxVelocity;
+			targetVelocity.z = maxVelocity;
 		
-		newVelocity.z = wantedVelocity.z;
+		newVelocity.z = targetVelocity.z;
 		
 		myRigidbody.velocity = newVelocity;
 		

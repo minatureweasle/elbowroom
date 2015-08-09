@@ -61,7 +61,7 @@ public class TargetPlayer : MonoBehaviour {
 		transform.up += difference;
 		*/
 
-		float distanceToPlayer = directionToPlayer.magnitude;
+		//float distanceToPlayer = directionToPlayer.magnitude;
 		
 		//a raycast's info can be stored in here later
 		RaycastHit hit;
