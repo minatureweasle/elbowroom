@@ -4013,6 +4013,7 @@ MonoBehaviour:
   rollPower: 35
   rollDuration: .400000006
   jumpTimeOut: .699999988
+  respawnHeight: -25
   strafeMinSpeed: 0
   strafeMaxSpeed: 16
   strafeAcceleration: 30
@@ -5569,6 +5570,10 @@ Prefab:
     - target: {fileID: 11406388, guid: 2106c871173fae646aef24887ce73510, type: 2}
       propertyPath: jumpTimeOut
       value: .699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406388, guid: 2106c871173fae646aef24887ce73510, type: 2}
+      propertyPath: forwardMaxSpeed
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2106c871173fae646aef24887ce73510, type: 2}

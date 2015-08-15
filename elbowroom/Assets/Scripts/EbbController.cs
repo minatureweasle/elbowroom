@@ -95,10 +95,13 @@ public class EbbController : MonoBehaviour {
 		else if (myState == PlayerState.JUMPING) {
 			
 			if (canMoveWhileJumping){
-				//DetectRunning();
+				DetectRunning();
 			}
 		}
 		else if (myState == PlayerState.ROLLING){
+
+			//DetectStartOfJump();
+
 
 		}
 

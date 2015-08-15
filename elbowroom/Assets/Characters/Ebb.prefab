@@ -2262,6 +2262,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &154592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 454592}
+  m_Layer: 0
+  m_Name: Head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &406090
 Transform:
   m_ObjectHideFlags: 1
@@ -2389,7 +2404,7 @@ Transform:
   - {fileID: 406110}
   - {fileID: 406176}
   m_Father: {fileID: 406356}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &406110
 Transform:
   m_ObjectHideFlags: 1
@@ -3575,7 +3590,7 @@ Transform:
   m_Children:
   - {fileID: 406242}
   m_Father: {fileID: 406356}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &406296
 Transform:
   m_ObjectHideFlags: 1
@@ -3995,10 +4010,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106356}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.10000002, y: .0500000007, z: -.140000001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.10000002, y: 0, z: -43.0999985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 454592}
   - {fileID: 406108}
   - {fileID: 406294}
   m_Father: {fileID: 0}
@@ -4211,6 +4227,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 406186}
   m_RootOrder: 0
+--- !u!4 &454592
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.52999997, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 406356}
+  m_RootOrder: 0
 --- !u!54 &5406388
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -4266,13 +4294,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faceWhereGoing: 1
   increaseGravityWhenFalling: 1
-  canMoveWhileJumping: 1
+  canMoveWhileJumping: 0
   stopSuddenly: 1
   gravityMultiplier: 4
   jumpVelocity: 16
   rollPower: 35
   rollDuration: .400000006
   jumpTimeOut: 1.39999998
+  respawnHeight: -20
   strafeMinSpeed: 0
   strafeMaxSpeed: 16
   strafeAcceleration: 30
@@ -4288,7 +4317,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .699999988
+  m_Radius: .400000006
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
