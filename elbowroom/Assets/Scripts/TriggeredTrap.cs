@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Collider))]
-public class TriggeredTrap : Trap {
+public abstract class TriggeredTrap : Trap {
 
 	void OnTriggerEnter(Collider collider){
 
@@ -10,10 +9,14 @@ public class TriggeredTrap : Trap {
 
 	}
 
-	void TriggerTrap(){
-
-		myAnimation.Play ();
-
+	void OnTriggerExit(Collider collider){
+		
+		DeactivateTrap ();
+		
 	}
+
+	public abstract void TriggerTrap();
+
+	public abstract void DeactivateTrap();
 
 }

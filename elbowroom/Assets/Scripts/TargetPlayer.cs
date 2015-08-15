@@ -72,7 +72,7 @@ public class TargetPlayer : MonoBehaviour {
 		//cast a ray in the direction the turret is facing, and check if you hit the player
 		if (Physics.Raycast(transform.position + transform.up*2, transform.up, out hit) && hit.collider.name != "Plane")
 		{
-			Debug.Log("name:"+hit.collider.name);
+			//Debug.Log("name:"+hit.collider.name);
 
 			float distanceToHit = (hit.collider.transform.position - transform.position).magnitude;
 
