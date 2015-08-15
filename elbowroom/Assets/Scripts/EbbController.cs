@@ -278,7 +278,7 @@ public class EbbController : MonoBehaviour {
 		}
 		//accelerate up to the max
 		else if (Mathf.Abs (targetVelocity.x) < Mathf.Abs (maxVelocity))
-			targetVelocity.x += acceleration;
+			targetVelocity.x += acceleration*Time.deltaTime*55f;
 		//if youre greater or equal to the max, stay at the max
 		else
 			targetVelocity.x = maxVelocity;
@@ -299,7 +299,7 @@ public class EbbController : MonoBehaviour {
 		}
 		//accelerate up to the max
 		else if (Mathf.Abs (targetVelocity.z) < Mathf.Abs (maxVelocity))
-			targetVelocity.z += acceleration;
+			targetVelocity.z += acceleration*Time.deltaTime*55f;
 		//if youre greater or equal to the max, stay at the max
 		else
 			targetVelocity.z = maxVelocity;

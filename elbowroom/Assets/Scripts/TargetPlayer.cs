@@ -18,7 +18,12 @@ public class TargetPlayer : MonoBehaviour {
 
 	public Transform firepoint;
 
+	public float maxDistance = 30;
+
+	Transform players;
+
 	void Start () {
+		players = GameObject.Find ("Players").transform;
 	}
 
 	void Shoot(){
@@ -47,8 +52,13 @@ public class TargetPlayer : MonoBehaviour {
 		//transform.up = directionToPlayer;
 
 		//slowing down follow
-		transform.up = Vector3.Lerp(transform.up, directionToPlayer, 0.001f*lerpSpeed);
-
+		if (directionToPlayer.magnitude < maxDistance && directionToPlayer.z < 0) {
+			transform.up = Vector3.Lerp (transform.up, directionToPlayer, 0.001f * lerpSpeed);
+		} 
+		else {
+			transform.up = Vector3.Lerp (transform.up, Vector3.up, 0.01f * lerpSpeed);
+		}
+		
 		//constant speed follow
 		/*
 		Vector3 upDirectionWithEqualDistanceAsDistanceToPlayer = transform.up*distanceToPlayer;
@@ -70,8 +80,10 @@ public class TargetPlayer : MonoBehaviour {
 		GetComponent<LineRenderer>().SetPosition(0, transform.position);
 		//to this point
 		//cast a ray in the direction the turret is facing, and check if you hit the player
-		if (Physics.Raycast(transform.position + transform.up*2, transform.up, out hit) && hit.collider.name != "Plane")
+		if (Physics.Raycast(firepoint.position, transform.up, out hit) && hit.collider.name != "Plane")
 		{
+
+
 			//Debug.Log("name:"+hit.collider.name);
 
 			float distanceToHit = (hit.collider.transform.position - transform.position).magnitude;
@@ -79,13 +91,17 @@ public class TargetPlayer : MonoBehaviour {
 			GetComponent<LineRenderer>().SetPosition(1, transform.position + transform.up.normalized*distanceToHit);
 
 
-			//shoot after waiting 1 second, but not if you've already started waiting
-			if (hit.collider.tag == "Player" && !waiting)
+			//shoot after waiting 1 second, 
+			//but not if you've already started waiting, 
+			//and only if the thing to shoot is close enough
+			//and only if you are behind the turret, not ahead
+			if (hit.collider.tag == "Player" && !waiting && distanceToHit < maxDistance && hit.point.z < transform.position.z)
 				Wait(turretShootingDelay);
 		}
-		else
+		else //nothing was hit
 		{
-			GetComponent<LineRenderer>().SetPosition(1, transform.position + transform.up*100f);
+			//draw no line
+			GetComponent<LineRenderer>().SetPosition(1, transform.position);
 
 			//no longer targeting the player, so stop getting ready to shoot
 			CancelWait();
