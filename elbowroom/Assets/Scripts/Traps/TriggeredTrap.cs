@@ -35,7 +35,7 @@ public abstract class TriggeredTrap : Trap {
 
 		//go through the players and see if any is close enough to activate the trap,
 		//but only if the trap isn't already active
-		if (!trapIsActive) {
+		if (!trapIsActive && triggeredByDistance) {
 			for (int i = 0; i < players.childCount; i++) {
 				if ((players.GetChild (i).transform.position - transform.position).magnitude < triggerDistance)
 					OnTrapActivated (collider);
