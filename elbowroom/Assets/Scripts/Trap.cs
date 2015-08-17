@@ -20,9 +20,11 @@ public class Trap : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision c){
-		if (c.transform.tag == "Player"){
+		if (c.transform.tag == "Player" && killPlayerOnTouch){
 			PlayerStates s = c.transform.GetComponent<PlayerStates>();
 			s.setState(PlayerStates.playerState.DEAD);
+
+
 		}
 	}
 }

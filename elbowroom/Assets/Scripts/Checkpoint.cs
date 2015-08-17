@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Checkpoint : TriggeredTrap {
 
+	public Material activeMaterial;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -13,10 +15,11 @@ public class Checkpoint : TriggeredTrap {
 	
 	}
 
-	public override void OnTrapTriggered(Collider c){
+	public override void OnTrapActivated(Collider c){
 		if (c.tag == "Player") {
 			PlayerStates s = c.transform.GetComponent<PlayerStates>();
-			s.setStartPoint(transform.position);
+			s.setStartPoint(transform.position + Vector3.up*6.25f);
+			GetComponent<Renderer>().material = activeMaterial;
 		}
 	}
 	

@@ -2010,10 +2010,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 406356}
-  - 95: {fileID: 9506388}
+  - 114: {fileID: 11435038}
   - 114: {fileID: 11406388}
+  - 95: {fileID: 9506388}
   - 54: {fileID: 5406388}
-  - 65: {fileID: 6506388}
   - 136: {fileID: 13606388}
   m_Layer: 0
   m_Name: Ebb
@@ -4011,7 +4011,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.10000002, y: 0, z: -43.0999985}
+  m_LocalPosition: {x: 2.51063418, y: -.75178051, z: -15.6430931}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 454592}
@@ -4254,18 +4254,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &6506388
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 106356}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2, z: 1}
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!95 &9506388
 Animator:
   serializedVersion: 3
@@ -4308,6 +4296,17 @@ MonoBehaviour:
   forwardMinSpeed: 6
   forwardMaxSpeed: 18
   forwardAcceleration: 10
+--- !u!114 &11435038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee7206a873b9504396a7cdc5a303665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &13606388
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -4498,7 +4497,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 646ba634be2a1f842ac361058f6b8759, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -4562,7 +4561,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 646ba634be2a1f842ac361058f6b8759, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -4791,7 +4790,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 646ba634be2a1f842ac361058f6b8759, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

@@ -137,7 +137,8 @@ public class EbbController : MonoBehaviour {
 	void DetectFall(){
 
 		if (transform.position.y < respawnHeight)
-			Application.LoadLevel (Application.loadedLevel);
+			GetComponent<PlayerStates> ().setState (PlayerStates.playerState.DEAD);
+			//Application.LoadLevel (Application.loadedLevel);
 
 	}
 
