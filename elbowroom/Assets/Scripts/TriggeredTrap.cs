@@ -5,18 +5,18 @@ public abstract class TriggeredTrap : Trap {
 
 	void OnTriggerEnter(Collider collider){
 
-		TriggerTrap ();
+		OnTrapTriggered (collider);
 
 	}
 
 	void OnTriggerExit(Collider collider){
 		
-		DeactivateTrap ();
+		OnTrapDeactivated (collider);
 		
 	}
 
-	public abstract void TriggerTrap();
+	public abstract void OnTrapTriggered(Collider collider);
 
-	public abstract void DeactivateTrap();
+	public abstract void OnTrapDeactivated(Collider collider);
 
 }

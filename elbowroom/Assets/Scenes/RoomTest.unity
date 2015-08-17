@@ -1030,7 +1030,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 406356, guid: 2106c871173fae646aef24887ce73510, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 406356, guid: 2106c871173fae646aef24887ce73510, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5432,6 +5432,7 @@ GameObject:
   - 33: {fileID: 1301721703}
   - 65: {fileID: 1301721702}
   - 23: {fileID: 1301721701}
+  - 114: {fileID: 1301721704}
   m_Layer: 0
   m_Name: Checkpoint
   m_TagString: Untagged
@@ -5493,6 +5494,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 678176999}
   m_GameObject: {fileID: 1301721699}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1301721704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1301721699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cd846b30b14b94a98e37774a7d65cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killPlayerOnTouch: 0
+  myAnimation: {fileID: 0}
 --- !u!1 &1313870505
 GameObject:
   m_ObjectHideFlags: 0
@@ -9645,6 +9659,7 @@ GameObject:
   - 54: {fileID: 2115007326}
   - 65: {fileID: 2115007325}
   - 136: {fileID: 2115007324}
+  - 114: {fileID: 2115007329}
   m_Layer: 0
   m_Name: Ebb
   m_TagString: Player
@@ -9659,7 +9674,7 @@ Transform:
   m_PrefabInternal: {fileID: 236365822}
   m_GameObject: {fileID: 2115007322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.26999998, z: -41}
+  m_LocalPosition: {x: -0, y: -5.26999998, z: -41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1971786194}
@@ -9754,6 +9769,18 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &2115007329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2115007322}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee7206a873b9504396a7cdc5a303665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &2127152720
 GameObject:
   m_ObjectHideFlags: 0

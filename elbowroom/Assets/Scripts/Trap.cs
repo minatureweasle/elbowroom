@@ -7,7 +7,6 @@ public class Trap : MonoBehaviour {
 	public bool killPlayerOnTouch;
 
 	public Animation myAnimation;
-	
 
 
 	// Use this for initialization
@@ -22,7 +21,8 @@ public class Trap : MonoBehaviour {
 
 	void OnCollisionEnter(Collision c){
 		if (c.transform.tag == "Player"){
-			Application.LoadLevel(Application.loadedLevel);
+			PlayerStates s = c.transform.GetComponent<PlayerStates>();
+			s.setState(PlayerStates.playerState.DEAD);
 		}
 	}
 }
