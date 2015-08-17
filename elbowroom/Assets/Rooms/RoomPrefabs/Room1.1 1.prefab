@@ -1396,7 +1396,7 @@ Transform:
   - {fileID: 401050}
   - {fileID: 401056}
   m_Father: {fileID: 422162}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!4 &401056
 Transform:
   m_ObjectHideFlags: 1
@@ -1441,17 +1441,17 @@ Transform:
   - {fileID: 422248}
   - {fileID: 422252}
   - {fileID: 444050}
-  - {fileID: 422224}
   - {fileID: 422164}
+  - {fileID: 422166}
+  - {fileID: 444132}
   - {fileID: 422204}
   - {fileID: 401054}
-  - {fileID: 422166}
   - {fileID: 422182}
   - {fileID: 444086}
   - {fileID: 444088}
-  - {fileID: 444132}
-  - {fileID: 422212}
   - {fileID: 422188}
+  - {fileID: 422212}
+  - {fileID: 422224}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &422164
@@ -1466,7 +1466,7 @@ Transform:
   m_Children:
   - {fileID: 22422256}
   m_Father: {fileID: 422162}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!4 &422166
 Transform:
   m_ObjectHideFlags: 1
@@ -1480,7 +1480,7 @@ Transform:
   - {fileID: 422160}
   - {fileID: 422244}
   m_Father: {fileID: 422162}
-  m_RootOrder: 12
+  m_RootOrder: 9
 --- !u!4 &422174
 Transform:
   m_ObjectHideFlags: 1
@@ -1518,7 +1518,7 @@ Transform:
   m_LocalScale: {x: 1, y: 10, z: 2}
   m_Children: []
   m_Father: {fileID: 422162}
-  m_RootOrder: 18
+  m_RootOrder: 16
 --- !u!4 &422192
 Transform:
   m_ObjectHideFlags: 1
@@ -1542,7 +1542,7 @@ Transform:
   m_LocalScale: {x: 26.0375881, y: 2.86756301, z: 7.39422321}
   m_Children: []
   m_Father: {fileID: 422162}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!4 &422206
 Transform:
   m_ObjectHideFlags: 1
@@ -1615,10 +1615,10 @@ Transform:
   m_GameObject: {fileID: 122220}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
   m_LocalPosition: {x: .280000001, y: -7.69999981, z: 61.1500015}
-  m_LocalScale: {x: 49.888958, y: 2.86756301, z: 6.22665834}
+  m_LocalScale: {x: 49.888958, y: 3, z: 6.22665834}
   m_Children: []
   m_Father: {fileID: 422162}
-  m_RootOrder: 8
+  m_RootOrder: 18
 --- !u!4 &422226
 Transform:
   m_ObjectHideFlags: 1
@@ -2358,7 +2358,7 @@ Transform:
   m_LocalScale: {x: 24, y: 3, z: 8}
   m_Children: []
   m_Father: {fileID: 422162}
-  m_RootOrder: 16
+  m_RootOrder: 10
 --- !u!20 &2022258
 Camera:
   m_ObjectHideFlags: 1
@@ -2743,7 +2743,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: f342fe3a04ba00f4ba681bb4b758e562, type: 2}
+  - {fileID: 2100000, guid: 13e93b728f55ab642ac3198d6372647d, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -4410,6 +4410,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
   myAnimation: {fileID: 0}
+  triggeredByDistance: 0
+  triggerDistance: 5
   activeMaterial: {fileID: 2100000, guid: c6f10f090724d804da45cf7c24ceab92, type: 2}
 --- !u!114 &11401052
 MonoBehaviour:
@@ -4476,6 +4478,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
   myAnimation: {fileID: 0}
+  triggeredByDistance: 0
+  triggerDistance: 5
   popup: {fileID: 122210}
 --- !u!114 &11422244
 MonoBehaviour:
@@ -4527,6 +4531,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
   myAnimation: {fileID: 0}
+  triggeredByDistance: 0
+  triggerDistance: 5
   popup: {fileID: 122156}
 --- !u!114 &11422256
 MonoBehaviour:
@@ -4567,6 +4573,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
   myAnimation: {fileID: 0}
+  triggeredByDistance: 0
+  triggerDistance: 5
   popup: {fileID: 144052}
 --- !u!114 &11444124
 MonoBehaviour:
@@ -4581,6 +4589,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
   myAnimation: {fileID: 0}
+  triggeredByDistance: 0
+  triggerDistance: 5
   popup: {fileID: 144066}
 --- !u!114 &11444126
 MonoBehaviour:
@@ -4595,6 +4605,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
   myAnimation: {fileID: 0}
+  triggeredByDistance: 0
+  triggerDistance: 5
   popup: {fileID: 144080}
 --- !u!114 &11444128
 MonoBehaviour:
@@ -4609,6 +4621,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
   myAnimation: {fileID: 0}
+  triggeredByDistance: 1
+  triggerDistance: 5
   popup: {fileID: 144098}
 --- !u!114 &11444130
 MonoBehaviour:
@@ -4623,6 +4637,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
   myAnimation: {fileID: 0}
+  triggeredByDistance: 0
+  triggerDistance: 5
   popup: {fileID: 144112}
 --- !u!114 &11444132
 MonoBehaviour:
@@ -4637,6 +4653,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
   myAnimation: {fileID: 0}
+  triggeredByDistance: 0
+  triggerDistance: 5
   popup: {fileID: 144126}
 --- !u!124 &12422258
 Behaviour:
