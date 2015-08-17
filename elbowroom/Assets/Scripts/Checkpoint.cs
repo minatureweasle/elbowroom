@@ -26,4 +26,7 @@ public class Checkpoint : TriggeredTrap {
 	public override void OnTrapDeactivated(Collider c){
 
 	}
+
+	public override void OnTrapActive(){
+	}
 }

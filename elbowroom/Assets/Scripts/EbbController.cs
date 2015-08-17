@@ -160,7 +160,8 @@ public class EbbController : MonoBehaviour {
 
 	void DetectStartOfRun(){
 
-		if (Input.GetKeyDown (KeyCode.W) || Input.GetKeyDown (KeyCode.S) || Input.GetKeyDown (KeyCode.A) || Input.GetKeyDown (KeyCode.D)) {
+		if (Input.GetKeyDown (KeyCode.W) || Input.GetKeyDown (KeyCode.S) || Input.GetKeyDown (KeyCode.A) || Input.GetKeyDown (KeyCode.D) ||
+		    Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.DownArrow) || Input.GetKeyDown (KeyCode.LeftArrow) || Input.GetKeyDown (KeyCode.RightArrow)) {
 			myAnimator.SetBool("Walking", true);
 			myState = PlayerState.RUNNING;
 		}
@@ -170,7 +171,7 @@ public class EbbController : MonoBehaviour {
 
 		bool runningInZDirection = false;
 
-		if (Input.GetKey (KeyCode.W)) 
+		if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) 
 		{
 			//GetComponent<Rigidbody>().AddForce(transform.forward*20);
 			AccelerateFromToZ(forwardMinSpeed, forwardMaxSpeed, forwardAcceleration*Time.deltaTime);
@@ -179,7 +180,7 @@ public class EbbController : MonoBehaviour {
 
 			runningInZDirection = true;
 		}
-		else if (Input.GetKey (KeyCode.S)) 
+		else if (Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.DownArrow)) 
 		{
 			//GetComponent<Rigidbody>().AddForce(-transform.forward*20);
 			AccelerateFromToZ(-forwardMinSpeed, -forwardMaxSpeed, -forwardAcceleration*Time.deltaTime);
@@ -202,7 +203,7 @@ public class EbbController : MonoBehaviour {
 
 		}
 
-		if (Input.GetKey (KeyCode.A)) 
+		if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) 
 		{
 			if (targetVelocity.x > 0) 
 				targetVelocity.x = 0;
@@ -210,7 +211,7 @@ public class EbbController : MonoBehaviour {
 			AccelerateFromToX(-strafeMinSpeed, -strafeMaxSpeed, -strafeAcceleration*Time.deltaTime);
 			
 		}
-		else if (Input.GetKey (KeyCode.D)) 
+		else if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) 
 		{
 			if (targetVelocity.x < 0) 
 				targetVelocity.x = 0;

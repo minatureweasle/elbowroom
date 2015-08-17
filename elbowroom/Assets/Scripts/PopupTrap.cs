@@ -15,4 +15,7 @@ public class PopupTrap : TriggeredTrap {
 		
 	}
 
+	public override void OnTrapActive(){
+	}
+
 }
