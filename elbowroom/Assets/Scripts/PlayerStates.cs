@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerStates : MonoBehaviour {
 
-	public Transform respawnPosition;
+	public Transform startPoint;
 	public enum playerState {ALIVE, DEAD};
 	playerState state;
 
@@ -13,14 +13,14 @@ public class PlayerStates : MonoBehaviour {
 	
 	void Update () {
 	
-		if (state = playerState.DEAD) {
+		if (state == playerState.DEAD) {
 			Respawn();
 		}
 
 	}
 
 	void Respawn(){
-		transform.position = respawnPosition;
+		transform.position = startPoint.position;
 	}
 
 	public void setState(playerState s){
