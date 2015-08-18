@@ -26,6 +26,7 @@ public class EbbController : MonoBehaviour {
 	public float rollDuration = 0.5f;
 
 	public float jumpTimeOut = 0.7f;
+	float recoilTimeOut = 0.7f;
 
 	public float respawnHeight = -25;
 
@@ -39,8 +40,9 @@ public class EbbController : MonoBehaviour {
 
 	float rollEndTime = Mathf.Infinity;
 	float jumpEndTime = Mathf.Infinity;
+	float recoilEndTime = Mathf.Infinity;
 
-	public enum PlayerState {IDLE, RUNNING, JUMPING, ROLLING};
+	public enum PlayerState {IDLE, RUNNING, JUMPING, ROLLING, RECOILING};
 
 	PlayerState myState;
 
@@ -75,6 +77,15 @@ public class EbbController : MonoBehaviour {
 			jumpEndTime = Mathf.Infinity;
 		}
 
+		if (Time.time > recoilEndTime) {
+			
+			myState = PlayerState.RUNNING;
+			
+			myAnimator.SetBool ("Walking", true);
+			
+			recoilEndTime = Mathf.Infinity;
+		}
+
 
 		if (myState == PlayerState.IDLE) {
 
@@ -104,6 +115,9 @@ public class EbbController : MonoBehaviour {
 
 
 		}
+		else if (myState == PlayerState.RECOILING){			
+			
+		}
 
 		DetectFall ();
 
@@ -117,6 +131,19 @@ public class EbbController : MonoBehaviour {
 		if (faceWhereGoing)
 			if (targetVelocity != Vector3.zero)
 				transform.forward = targetVelocity;
+
+	}
+
+	public void Recoil(){
+
+		myAnimator.SetBool("Jumping", false);
+		myAnimator.SetBool("Walking", false);
+
+		myState = PlayerState.RECOILING;
+		
+		AccelerateFromToZ (-20, -20, 0);
+
+		recoilEndTime = Time.time + recoilTimeOut;
 
 	}
 

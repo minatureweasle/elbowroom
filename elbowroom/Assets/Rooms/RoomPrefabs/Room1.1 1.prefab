@@ -11,7 +11,6 @@ GameObject:
   - 33: {fileID: 3301050}
   - 65: {fileID: 6501050}
   - 23: {fileID: 2301050}
-  - 114: {fileID: 11401052}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -30,7 +29,6 @@ GameObject:
   - 33: {fileID: 3301052}
   - 65: {fileID: 6501052}
   - 23: {fileID: 2301052}
-  - 114: {fileID: 11401054}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1266,6 +1264,7 @@ GameObject:
   - 33: {fileID: 3344108}
   - 65: {fileID: 6544108}
   - 23: {fileID: 2344108}
+  - 114: {fileID: 11448252}
   m_Layer: 0
   m_Name: Popup
   m_TagString: Untagged
@@ -5622,32 +5621,6 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &11401052
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 101050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0181e7f274e7b54388e65ad90edd1d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  killPlayerOnTouch: 1
-  myAnimation: {fileID: 0}
---- !u!114 &11401054
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 101052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0181e7f274e7b54388e65ad90edd1d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  killPlayerOnTouch: 1
-  myAnimation: {fileID: 0}
 --- !u!114 &11401056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5771,6 +5744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
+  pushPlayerOnTouch: 0
   myAnimation: {fileID: 0}
   triggeredByDistance: 0
   triggerDistance: 5
@@ -5787,6 +5761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
+  pushPlayerOnTouch: 0
   myAnimation: {fileID: 0}
   triggeredByDistance: 0
   triggerDistance: 5
@@ -5803,6 +5778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
+  pushPlayerOnTouch: 0
   myAnimation: {fileID: 0}
   triggeredByDistance: 0
   triggerDistance: 5
@@ -5819,6 +5795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
+  pushPlayerOnTouch: 0
   myAnimation: {fileID: 0}
   triggeredByDistance: 0
   triggerDistance: 5
@@ -5835,6 +5812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
+  pushPlayerOnTouch: 0
   myAnimation: {fileID: 0}
   triggeredByDistance: 0
   triggerDistance: 5
@@ -5851,10 +5829,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
+  pushPlayerOnTouch: 0
   myAnimation: {fileID: 0}
   triggeredByDistance: 0
   triggerDistance: 5
   popup: {fileID: 144126}
+--- !u!114 &11448252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0181e7f274e7b54388e65ad90edd1d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killPlayerOnTouch: 0
+  pushPlayerOnTouch: 1
+  myAnimation: {fileID: 0}
 --- !u!114 &11459938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5867,6 +5860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
+  pushPlayerOnTouch: 0
   myAnimation: {fileID: 0}
   triggeredByDistance: 0
   triggerDistance: 5

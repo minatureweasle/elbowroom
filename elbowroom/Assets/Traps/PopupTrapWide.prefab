@@ -392,7 +392,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
+  pushPlayerOnTouch: 0
   myAnimation: {fileID: 0}
+  triggeredByDistance: 0
+  triggerDistance: 5
   popup: {fileID: 123706}
 --- !u!1001 &100100000
 Prefab:

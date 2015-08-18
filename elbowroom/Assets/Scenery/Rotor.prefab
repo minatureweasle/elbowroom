@@ -11,7 +11,6 @@ GameObject:
   - 33: {fileID: 3338824}
   - 65: {fileID: 6538824}
   - 23: {fileID: 2338824}
-  - 114: {fileID: 11438824}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -30,7 +29,6 @@ GameObject:
   - 33: {fileID: 3338826}
   - 65: {fileID: 6538826}
   - 23: {fileID: 2338826}
-  - 114: {fileID: 11438826}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -228,32 +226,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11438824
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0181e7f274e7b54388e65ad90edd1d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  killPlayerOnTouch: 1
-  myAnimation: {fileID: 0}
---- !u!114 &11438826
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0181e7f274e7b54388e65ad90edd1d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  killPlayerOnTouch: 1
-  myAnimation: {fileID: 0}
 --- !u!114 &11438828
 MonoBehaviour:
   m_ObjectHideFlags: 1
