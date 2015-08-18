@@ -20,10 +20,10 @@ public class TargetPlayer : MonoBehaviour {
 
 	public float maxDistance = 30;
 
-	Transform players;
+	//Transform players;
 
 	void Start () {
-		players = GameObject.Find ("Players").transform;
+		//players = GameObject.Find ("Players").transform;
 	}
 
 	void Shoot(){
