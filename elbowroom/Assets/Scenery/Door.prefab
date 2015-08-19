@@ -116,7 +116,7 @@ GameObject:
   - 65: {fileID: 6572060}
   - 114: {fileID: 11436108}
   m_Layer: 0
-  m_Name: Hole
+  m_Name: Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

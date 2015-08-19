@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 410022}
   - 114: {fileID: 11424576}
   m_Layer: 0
-  m_Name: _SceneManager
+  m_Name: _StartRace
   m_TagString: SceneManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -31,9 +31,9 @@ public class TimeManager : MonoBehaviour {
 		playing = true;
 	}
 
-	void saveTime(int playerId){
+	public void saveTime(){
 
-
+		ScoreManager.instance.setLastScore (time);
 
 
 		playing = false;

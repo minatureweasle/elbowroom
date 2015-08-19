@@ -6,6 +6,8 @@ public class SwitchScene : TriggeredTrap {
 	public bool doorToHome;
 	public string room;
 
+	public GameObject player;
+
 	void Start () {
 	
 	}
@@ -19,6 +21,7 @@ public class SwitchScene : TriggeredTrap {
 		
 		if (doorToHome) {
 				//call time manager for score saving logic
+			player.GetComponent<TimeManager>().saveTime();
 		}
 		Application.LoadLevel(room);
 	}
