@@ -28,6 +28,9 @@ public class EbbController : MonoBehaviour {
 	public float jumpTimeOut = 0.7f;
 	float recoilTimeOut = 0.7f;
 
+	public float wallJumpTimeWindow = 0.7f;
+	float wallJumpAvailabilityEnd = 0;
+
 	public float respawnHeight = -25;
 
 	public float strafeMinSpeed = 0;
@@ -86,6 +89,11 @@ public class EbbController : MonoBehaviour {
 			recoilEndTime = Mathf.Infinity;
 		}
 
+		if (Time.time < wallJumpAvailabilityEnd) {
+			
+			DetectWallJump();
+		}
+
 
 		if (myState == PlayerState.IDLE) {
 
@@ -121,6 +129,8 @@ public class EbbController : MonoBehaviour {
 
 		DetectFall ();
 
+
+
 		if (increaseGravityWhenFalling) {
 			if (myRigidbody.velocity.y < 0)
 				Physics.gravity = new Vector3 (0, -9.81f * gravityMultiplier*2f, 0);
@@ -132,6 +142,20 @@ public class EbbController : MonoBehaviour {
 			if (targetVelocity != Vector3.zero)
 				transform.forward = targetVelocity;
 
+	}
+
+	void OnCollisionEnter(Collision collision){
+		
+		if (collision.transform.tag == "Floor") {
+			if (myState == PlayerState.JUMPING)
+			{
+				myAnimator.SetBool("Jumping", false);
+				
+				myState = PlayerState.RUNNING;
+				
+				myAnimator.SetBool("Walking", true);
+			}
+		}
 	}
 
 	public void Recoil(){
@@ -147,25 +171,22 @@ public class EbbController : MonoBehaviour {
 
 	}
 
-	void OnCollisionEnter(Collision collision){
-		
-		if (collision.transform.tag == "Floor") {
-			if (myState == PlayerState.JUMPING)
-			{
-				myAnimator.SetBool("Jumping", false);
 
-				myState = PlayerState.RUNNING;
-
-				myAnimator.SetBool("Walking", true);
-			}
-		}
-	}
 
 	void DetectFall(){
 
 		if (transform.position.y < respawnHeight)
 			GetComponent<PlayerLogic> ().setState (PlayerLogic.playerState.DEAD);
 			//Application.LoadLevel (Application.loadedLevel);
+
+	}
+
+	void DetectNotRunning(){
+
+		if (targetVelocity.x == 0 && targetVelocity.z == 0) {
+			myAnimator.SetBool ("Walking", false);
+			myState = PlayerState.IDLE;
+		}
 
 	}
 
@@ -196,7 +217,7 @@ public class EbbController : MonoBehaviour {
 
 	void DetectRunning(){
 
-		bool runningInZDirection = false;
+		//bool runningInZDirection = false;
 
 		if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) 
 		{
@@ -205,7 +226,7 @@ public class EbbController : MonoBehaviour {
 
 			myAnimator.SetFloat("Speed", targetVelocity.z);
 
-			runningInZDirection = true;
+			//runningInZDirection = true;
 		}
 		else if (Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.DownArrow)) 
 		{
@@ -214,7 +235,7 @@ public class EbbController : MonoBehaviour {
 
 			myAnimator.SetFloat("Speed", Mathf.Abs(targetVelocity.z));
 
-			runningInZDirection = true;
+			//runningInZDirection = true;
 		}
 		else
 		{
@@ -255,13 +276,9 @@ public class EbbController : MonoBehaviour {
 				newVelocity.x = 0;
 				GetComponent<Rigidbody>().velocity = newVelocity;
 			}
-
-
-			if (!runningInZDirection){
-				myAnimator.SetBool("Walking", false);
-				myState = PlayerState.IDLE;
-			}
 		}
+
+		DetectNotRunning ();
 	}
 
 	void Jump(){
@@ -275,6 +292,38 @@ public class EbbController : MonoBehaviour {
 
 		jumpEndTime = Time.time + jumpTimeOut;
 
+	}
+
+	public void AllowWallJump(){
+
+		wallJumpAvailabilityEnd = Time.time + wallJumpTimeWindow;
+	}
+
+	void DetectWallJump(){
+		if (Input.GetKeyDown (KeyCode.Space)) {
+
+			WallJump();
+		}
+
+	}
+
+	void WallJump(){
+		Vector3 newVelocity = GetComponent<Rigidbody>().velocity;
+		newVelocity.y = jumpVelocity/3f;
+		
+		newVelocity.x = -1f*((transform.position.x)/Mathf.Abs(transform.position.x))*13f;
+		
+		newVelocity.z = 15f;
+
+		GetComponent<Rigidbody>().velocity = newVelocity;
+		
+		myState = PlayerState.JUMPING;
+		myAnimator.SetBool("Jumping", true);
+		
+		jumpEndTime = Time.time + 2f;
+		
+		//wall jumping is no longer available
+		wallJumpAvailabilityEnd = 0;
 	}
 
 	void Roll(){
