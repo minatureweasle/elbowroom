@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerStates : MonoBehaviour {
+public class PlayerLogic : MonoBehaviour {
 
 	Vector3 startPoint;
 	public enum playerState {ALIVE, DEAD};

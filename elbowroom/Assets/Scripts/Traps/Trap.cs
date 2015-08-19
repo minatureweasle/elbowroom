@@ -28,8 +28,8 @@ public class Trap : MonoBehaviour {
 				s.Recoil();
 			}
 			else if (killPlayerOnTouch){
-				PlayerStates s = c.transform.GetComponent<PlayerStates>();
-				s.setState(PlayerStates.playerState.DEAD);
+				PlayerLogic pLogic = c.transform.GetComponent<PlayerLogic>();
+				pLogic.setState(PlayerLogic.playerState.DEAD);
 			}
 
 

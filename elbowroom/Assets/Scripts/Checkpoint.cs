@@ -4,10 +4,13 @@ using System.Collections;
 public class Checkpoint : TriggeredTrap {
 
 	public Material activeMaterial;
+	public bool isFirst = false;
+	public GameObject _SceneManager;
+
 
 	// Use this for initialization
 	void Start () {
-	
+
 	}
 	
 	// Update is called once per frame
@@ -17,9 +20,13 @@ public class Checkpoint : TriggeredTrap {
 
 	public override void OnTrapActivated(Collider c){
 		if (c.tag == "Player") {
-			PlayerStates s = c.transform.GetComponent<PlayerStates>();
+			PlayerLogic s = c.transform.GetComponent<PlayerLogic>();
 			s.setStartPoint(transform.position + Vector3.up*6.25f);
 			GetComponent<Renderer>().material = activeMaterial;
+		}
+		if (isFirst) {
+			StartGame sG = _SceneManager.GetComponent<StartGame>();
+			sG.NewRace();
 		}
 	}
 	
