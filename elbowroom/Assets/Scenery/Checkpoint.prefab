@@ -68,8 +68,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 8.56000042, z: 1}
+  m_Center: {x: 0, y: 4.23000002, z: 0}
 --- !u!114 &11481524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -82,10 +82,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killPlayerOnTouch: 0
+  pushPlayerOnTouch: 0
   myAnimation: {fileID: 0}
   triggeredByDistance: 0
   triggerDistance: 5
   activeMaterial: {fileID: 2100000, guid: c6f10f090724d804da45cf7c24ceab92, type: 2}
+  isFirst: 0
+  _SceneManager: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
