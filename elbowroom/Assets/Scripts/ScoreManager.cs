@@ -23,6 +23,11 @@ public class ScoreManager : MonoBehaviour {
 
 	}
 
+	/*void Update(){
+		if (Input.GetKeyDown (KeyCode.Delete))
+			ClearScoresFromStorage ();
+	}*/
+
 	public string getLastScoreAsString(){
 		if (lastScore == -1)
 			return "";

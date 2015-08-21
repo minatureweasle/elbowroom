@@ -4012,7 +4012,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.51063418, y: -.75178051, z: -15.6430931}
+  m_LocalPosition: {x: 2.5, y: -.800000012, z: -18.6000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 454592}
@@ -4283,13 +4283,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faceWhereGoing: 1
   increaseGravityWhenFalling: 1
-  canMoveWhileJumping: 0
+  canMoveWhileJumping: 1
   stopSuddenly: 1
   gravityMultiplier: 4
   jumpVelocity: 16
   rollPower: 35
   rollDuration: .400000006
   jumpTimeOut: 1.39999998
+  wallJumpTimeWindow: .699999988
   respawnHeight: -20
   strafeMinSpeed: 0
   strafeMaxSpeed: 16
@@ -4345,7 +4346,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 13e93b728f55ab642ac3198d6372647d, type: 2}
+  - {fileID: 2100000, guid: 876b52e8f92651e429a9b5417187e6e1, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -4606,7 +4607,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 13e93b728f55ab642ac3198d6372647d, type: 2}
+  - {fileID: 2100000, guid: 66dd69a558ae83243b1342f6f844f471, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
