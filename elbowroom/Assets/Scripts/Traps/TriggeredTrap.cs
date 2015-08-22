@@ -3,13 +3,13 @@ using System.Collections;
 
 public abstract class TriggeredTrap : Trap {
 
-	bool trapIsActive = false;
+	public bool trapIsActive = false;
 
 	public bool triggeredByDistance = false;
 
 	public float triggerDistance = 5;
 
-	Transform players;
+	public Transform players;
 
 	void OnTriggerEnter(Collider collider){
 

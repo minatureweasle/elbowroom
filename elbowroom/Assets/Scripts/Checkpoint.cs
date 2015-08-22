@@ -7,6 +7,8 @@ public class Checkpoint : TriggeredTrap {
 	public bool isFirst = false;
 	public GameObject _SceneManager;
 
+	bool hasBeenTouched = false;
+
 
 	// Use this for initialization
 	void Start () {
@@ -24,9 +26,12 @@ public class Checkpoint : TriggeredTrap {
 			s.setStartPoint(transform.position + Vector3.up*6.25f);
 			GetComponent<Renderer>().material = activeMaterial;
 		}
-		if (isFirst) {
+
+		if (isFirst && !hasBeenTouched) {
 			StartGame sG = _SceneManager.GetComponent<StartGame>();
-			sG.NewRace();
+			sG.StartCountdown();
+
+			hasBeenTouched = true;
 		}
 	}
 	

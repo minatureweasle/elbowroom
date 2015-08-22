@@ -7,6 +7,8 @@ public class EbbController : MonoBehaviour {
 
 	Rigidbody myRigidbody;
 
+	InputDetection myInputDetection;
+
 	Vector3 targetVelocity;
 
 	public bool increaseGravityWhenFalling = true;
@@ -15,7 +17,7 @@ public class EbbController : MonoBehaviour {
 
 	public bool stopSuddenly = true;
 
-	public float gravityMultiplier = 4f;
+	//public float gravityMultiplier = 4f;
 
 	public float jumpVelocity = 15f;
 
@@ -51,8 +53,10 @@ public class EbbController : MonoBehaviour {
 
 		myAnimator = GetComponent<Animator> ();
 		myRigidbody = GetComponent<Rigidbody> ();
+		myInputDetection = GetComponent<InputDetection> ();
 
-		Physics.gravity = Physics.gravity * gravityMultiplier;
+
+		//Physics.gravity = new Vector3 (0, -9.81f * gravityMultiplier, 0);
 	}
 
 	void Update () {
@@ -130,9 +134,7 @@ public class EbbController : MonoBehaviour {
 		//fall faster than you rise
 		if (increaseGravityWhenFalling) {
 			if (myRigidbody.velocity.y < 0)
-				Physics.gravity = new Vector3 (0, -9.81f * gravityMultiplier*2f, 0);
-			else
-				Physics.gravity = new Vector3 (0, -9.81f * gravityMultiplier, 0);
+				myRigidbody.velocity += Physics.gravity*Time.deltaTime;
 		}
 
 		//face the direction in which you are going
@@ -174,8 +176,7 @@ public class EbbController : MonoBehaviour {
 
 	void DetectRun(){
 
-		if (Input.GetKeyDown (KeyCode.W) || Input.GetKeyDown (KeyCode.S) || Input.GetKeyDown (KeyCode.A) || Input.GetKeyDown (KeyCode.D) ||
-		    Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.DownArrow) || Input.GetKeyDown (KeyCode.LeftArrow) || Input.GetKeyDown (KeyCode.RightArrow)) {
+		if (myInputDetection.PressedAnyDirectionalKey()) {
 			myAnimator.SetBool("Walking", true);
 			myState = PlayerState.RUNNING;
 		}
@@ -185,18 +186,18 @@ public class EbbController : MonoBehaviour {
 
 		//bool runningInZDirection = false;
 
-		if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) 
+		if (myInputDetection.IsPressingForward()) 
 		{
-			//GetComponent<Rigidbody>().AddForce(transform.forward*20);
+			//myRigidbody.AddForce(transform.forward*20);
 			AccelerateFromToZ(forwardMinSpeed, forwardMaxSpeed, forwardAcceleration*Time.deltaTime);
 
 			myAnimator.SetFloat("Speed", targetVelocity.z);
 
 			//runningInZDirection = true;
 		}
-		else if (Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.DownArrow)) 
+		else if (myInputDetection.IsPressingBackward()) 
 		{
-			//GetComponent<Rigidbody>().AddForce(-transform.forward*20);
+			//myRigidbody.AddForce(-transform.forward*20);
 			AccelerateFromToZ(-forwardMinSpeed, -forwardMaxSpeed, -forwardAcceleration*Time.deltaTime);
 
 			myAnimator.SetFloat("Speed", Mathf.Abs(targetVelocity.z));
@@ -210,14 +211,14 @@ public class EbbController : MonoBehaviour {
 
 			if (stopSuddenly)
 			{
-				Vector3 newVelocity = GetComponent<Rigidbody>().velocity;
+				Vector3 newVelocity = myRigidbody.velocity;
 				newVelocity.z = 0;
-				GetComponent<Rigidbody>().velocity = newVelocity;
+				myRigidbody.velocity = newVelocity;
 			}
 
 		}
 
-		if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) 
+		if (myInputDetection.IsPressingLeft()) 
 		{
 			if (targetVelocity.x > 0) 
 				targetVelocity.x = 0;
@@ -225,7 +226,7 @@ public class EbbController : MonoBehaviour {
 			AccelerateFromToX(-strafeMinSpeed, -strafeMaxSpeed, -strafeAcceleration*Time.deltaTime);
 			
 		}
-		else if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) 
+		else if (myInputDetection.IsPressingRight()) 
 		{
 			if (targetVelocity.x < 0) 
 				targetVelocity.x = 0;
@@ -238,9 +239,9 @@ public class EbbController : MonoBehaviour {
 
 			if (stopSuddenly)
 			{
-				Vector3 newVelocity = GetComponent<Rigidbody>().velocity;
+				Vector3 newVelocity = myRigidbody.velocity;
 				newVelocity.x = 0;
-				GetComponent<Rigidbody>().velocity = newVelocity;
+				myRigidbody.velocity = newVelocity;
 			}
 		}
 
@@ -262,7 +263,7 @@ public class EbbController : MonoBehaviour {
 
 	void DetectJump(){
 		
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		if (myInputDetection.PressedJump()) {
 			Jump ();
 		}
 		
@@ -270,9 +271,9 @@ public class EbbController : MonoBehaviour {
 
 	void Jump(){
 
-		Vector3 newVelocity = GetComponent<Rigidbody>().velocity;
+		Vector3 newVelocity = myRigidbody.velocity;
 		newVelocity.y = jumpVelocity;
-		GetComponent<Rigidbody>().velocity = newVelocity;
+		myRigidbody.velocity = newVelocity;
 
 		myState = PlayerState.JUMPING;
 		myAnimator.SetBool("Jumping", true);
@@ -291,7 +292,7 @@ public class EbbController : MonoBehaviour {
 	}
 
 	void DetectWallJump(){
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		if (myInputDetection.PressedJump()) {
 
 			WallJump();
 		}
@@ -299,14 +300,14 @@ public class EbbController : MonoBehaviour {
 	}
 
 	void WallJump(){
-		Vector3 newVelocity = GetComponent<Rigidbody>().velocity;
+		Vector3 newVelocity = myRigidbody.velocity;
 		newVelocity.y = jumpVelocity/3f;
 		
 		newVelocity.x = -1f*((transform.position.x)/Mathf.Abs(transform.position.x))*13f;
 		
 		newVelocity.z = 15f;
 
-		GetComponent<Rigidbody>().velocity = newVelocity;
+		myRigidbody.velocity = newVelocity;
 		
 		myState = PlayerState.JUMPING;
 		myAnimator.SetBool("Jumping", true);
@@ -323,7 +324,7 @@ public class EbbController : MonoBehaviour {
 
 	void DetectRoll(){
 		
-		if (Input.GetKeyDown (KeyCode.R)) {
+		if (myInputDetection.PressedRoll()) {
 			Roll ();
 		}
 		
@@ -334,8 +335,8 @@ public class EbbController : MonoBehaviour {
 		Vector3 newVelocity = targetVelocity;
 		newVelocity.Normalize ();
 		newVelocity *= rollPower;
-		GetComponent<Rigidbody>().velocity = newVelocity;
-		
+		myRigidbody.velocity = newVelocity;
+
 		myState = PlayerState.ROLLING;
 		myAnimator.SetBool("Rolling", true);
 

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ObstructionTrap : MonoBehaviour {
 
-	public static float maxDistance = 5;
+	public static float maxDistance = 10;
 
 	public static float maxHeight = 0;
 
