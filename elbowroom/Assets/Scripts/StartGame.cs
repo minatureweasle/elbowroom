@@ -40,12 +40,13 @@ public class StartGame : MonoBehaviour {
 		yield return new WaitForSeconds (1);
 
 		countdownText.text = "RACE!";
+		NewRace ();
 
 		yield return new WaitForSeconds (0.5f);
 
 		countdownText.text = "";
 
-		NewRace ();
+
 
 	}
 }

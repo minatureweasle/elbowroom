@@ -43,8 +43,9 @@ public class MovingPlatform : TriggeredTrap {
 		}
 
 		//platformMat.renderer.material.color = new Color ( 0.4f + (timeBetweenFlips - timeUntilNextFlip) , 1f ,  0.6f);
-
-		platformMat.renderer.material.color = new Color (1 , timeUntilNextFlip ,  timeUntilNextFlip);
+		if (flipLeft || flipRight) {
+			platformMat.renderer.material.color = new Color (1 , timeUntilNextFlip ,  timeUntilNextFlip);
+		}
 
 		bool canFlip = false;
 		if (Time.time >= flipInterval) {

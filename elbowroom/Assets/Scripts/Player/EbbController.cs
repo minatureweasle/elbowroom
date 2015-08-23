@@ -110,10 +110,13 @@ public class EbbController : MonoBehaviour {
 
 			DetectJump();
 
+			DetectNotRunning ();
+
 		}
 		else if (myState == PlayerState.JUMPING) {
 			
 			if (canMoveWhileJumping){
+
 				Run();
 			}
 		}
@@ -245,7 +248,7 @@ public class EbbController : MonoBehaviour {
 			}
 		}
 
-		DetectNotRunning ();
+		//DetectNotRunning ();
 	}
 
 	void DetectNotRunning(){

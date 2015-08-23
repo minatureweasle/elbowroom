@@ -1977,6 +1977,7 @@ GameObject:
   - 33: {fileID: 211614935}
   - 65: {fileID: 211614934}
   - 23: {fileID: 211614933}
+  - 114: {fileID: 211614936}
   m_Layer: 0
   m_Name: Popup
   m_TagString: Untagged
@@ -2038,6 +2039,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 211614931}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &211614936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 211614931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0181e7f274e7b54388e65ad90edd1d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killPlayerOnTouch: 0
+  pushPlayerOnTouch: 1
+  myAnimation: {fileID: 0}
 --- !u!1 &213490617
 GameObject:
   m_ObjectHideFlags: 0
@@ -2468,7 +2483,7 @@ BoxCollider:
     type: 2}
   m_PrefabInternal: {fileID: 867438970}
   m_GameObject: {fileID: 225341076}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c5787391c229ca2409302627595f27bf, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -3265,6 +3280,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 297445581}
   - 95: {fileID: 297445582}
+  - 114: {fileID: 297445584}
   - 54: {fileID: 297445583}
   m_Layer: 0
   m_Name: Platform1
@@ -3310,19 +3326,48 @@ Animator:
 --- !u!54 &297445583
 Rigidbody:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5441126, guid: 2a562b9adf092cf40b343bd8179b5721,
-    type: 2}
-  m_PrefabInternal: {fileID: 867438970}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 297445580}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 12
   m_CollisionDetection: 0
+--- !u!114 &297445584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 297445580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd3b8dfec8d6b848ac199ffd9a616ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killPlayerOnTouch: 0
+  pushPlayerOnTouch: 0
+  myAnimation: {fileID: 0}
+  trapIsActive: 1
+  triggeredByDistance: 0
+  triggerDistance: 5
+  players: {fileID: 0}
+  moveHorizontal: 0
+  moveVertical: 0
+  flipLeft: 0
+  flipRight: 0
+  shrink: 0
+  shrinkAmount: 0
+  timeBetweenFlips: 2
+  timeUntilNextFlip: 0
+  horizontalMoveDistance: 4
+  verticalMoveDistance: 4
+  moveSpeed: 5
+  platformMat: {fileID: 225341076}
 --- !u!1 &313066297
 GameObject:
   m_ObjectHideFlags: 0
@@ -3692,6 +3737,7 @@ GameObject:
   - 33: {fileID: 344483627}
   - 65: {fileID: 344483626}
   - 23: {fileID: 344483625}
+  - 114: {fileID: 344483628}
   m_Layer: 0
   m_Name: Popup
   m_TagString: Untagged
@@ -3753,6 +3799,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 344483623}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &344483628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 344483623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0181e7f274e7b54388e65ad90edd1d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killPlayerOnTouch: 0
+  pushPlayerOnTouch: 1
+  myAnimation: {fileID: 0}
 --- !u!1 &357301696
 GameObject:
   m_ObjectHideFlags: 0
@@ -8534,8 +8594,14 @@ Prefab:
       propertyPath: m_Name
       value: Platform1
       objectReference: {fileID: 0}
+    - target: {fileID: 6541128, guid: 2a562b9adf092cf40b343bd8179b5721, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: c5787391c229ca2409302627595f27bf,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 11441126, guid: 2a562b9adf092cf40b343bd8179b5721, type: 2}
+    - {fileID: 5441126, guid: 2a562b9adf092cf40b343bd8179b5721, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2a562b9adf092cf40b343bd8179b5721, type: 2}
   m_RootGameObject: {fileID: 297445580}
   m_IsPrefabParent: 0
@@ -14908,6 +14974,7 @@ GameObject:
   - 33: {fileID: 1467998004}
   - 65: {fileID: 1467998003}
   - 23: {fileID: 1467998002}
+  - 114: {fileID: 1467998005}
   m_Layer: 0
   m_Name: Popup
   m_TagString: Untagged
@@ -14969,6 +15036,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1467998000}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1467998005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1467998000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0181e7f274e7b54388e65ad90edd1d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killPlayerOnTouch: 0
+  pushPlayerOnTouch: 1
+  myAnimation: {fileID: 0}
 --- !u!1 &1469775927
 GameObject:
   m_ObjectHideFlags: 0
@@ -16148,6 +16229,7 @@ GameObject:
   - 33: {fileID: 1616836548}
   - 65: {fileID: 1616836547}
   - 23: {fileID: 1616836546}
+  - 114: {fileID: 1616836549}
   m_Layer: 0
   m_Name: Popup
   m_TagString: Untagged
@@ -16209,6 +16291,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1616836544}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1616836549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1616836544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0181e7f274e7b54388e65ad90edd1d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killPlayerOnTouch: 0
+  pushPlayerOnTouch: 1
+  myAnimation: {fileID: 0}
 --- !u!1 &1618674572
 GameObject:
   m_ObjectHideFlags: 0
@@ -20307,6 +20403,7 @@ GameObject:
   - 33: {fileID: 1994865288}
   - 65: {fileID: 1994865287}
   - 23: {fileID: 1994865286}
+  - 114: {fileID: 1994865289}
   m_Layer: 0
   m_Name: Popup
   m_TagString: Untagged
@@ -20368,6 +20465,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1994865284}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1994865289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1994865284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0181e7f274e7b54388e65ad90edd1d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killPlayerOnTouch: 0
+  pushPlayerOnTouch: 1
+  myAnimation: {fileID: 0}
 --- !u!1 &1996982322
 GameObject:
   m_ObjectHideFlags: 0
