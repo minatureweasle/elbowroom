@@ -64,6 +64,9 @@ public class EbbController : MonoBehaviour {
 
 		if (Time.time > rollEndTime) {
 
+			forwardAcceleration *= 0.1f;
+			forwardMaxSpeed *= 0.5f;
+
 			myState = PlayerState.RUNNING;
 
 			myAnimator.SetBool ("Rolling", false);
@@ -122,8 +125,9 @@ public class EbbController : MonoBehaviour {
 		}
 		else if (myState == PlayerState.ROLLING){
 
-			//DetectStartOfJump();
-
+			Run();
+			
+			DetectNotRunning ();
 
 		}
 		else if (myState == PlayerState.RECOILING){			
@@ -328,14 +332,18 @@ public class EbbController : MonoBehaviour {
 	void DetectRoll(){
 		
 		if (myInputDetection.PressedRoll()) {
-			Roll ();
+
+			//if the previous roll has ended
+			if (myState != PlayerState.ROLLING){
+				Roll ();
+			}
 		}
 		
 	}
 
 	void Roll(){
 		
-		Vector3 newVelocity = targetVelocity;
+		/*Vector3 newVelocity = targetVelocity;
 		newVelocity.Normalize ();
 		newVelocity *= rollPower;
 		myRigidbody.velocity = newVelocity;
@@ -343,6 +351,14 @@ public class EbbController : MonoBehaviour {
 		myState = PlayerState.ROLLING;
 		myAnimator.SetBool("Rolling", true);
 
+		rollEndTime = Time.time + rollDuration;*/
+
+		forwardAcceleration *= 10;
+		forwardMaxSpeed *= 2;
+
+		myState = PlayerState.ROLLING;
+		//myAnimator.SetBool("Rolling", true);
+		
 		rollEndTime = Time.time + rollDuration;
 		
 	}
