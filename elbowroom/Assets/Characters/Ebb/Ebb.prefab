@@ -4014,7 +4014,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -.800000012, z: -18.6000004}
+  m_LocalPosition: {x: 1.10000002, y: 1.5, z: -19.6000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 454592}
@@ -4285,8 +4285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   increaseGravityWhenFalling: 1
   canMoveWhileJumping: 1
-  stopSuddenly: 1
-  gravityMultiplier: 4
+  stopSuddenly: 0
   jumpVelocity: 16
   rollPower: 35
   rollDuration: .400000006

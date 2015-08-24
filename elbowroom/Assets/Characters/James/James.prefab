@@ -4457,7 +4457,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183808}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6ddbc2da9faf07a40b78b79ccad75def, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 89fd7250e14f65f439020118a193f6f3, type: 3}
   m_Controller: {fileID: 9100000, guid: c2bd8919376bc81438e5fd5018415b44, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -4475,15 +4475,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13c2bfafbf0ec8419c5f6e9b537ad5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceWhereGoing: 1
   increaseGravityWhenFalling: 1
   canMoveWhileJumping: 0
   stopSuddenly: 1
-  gravityMultiplier: 4
   jumpVelocity: 16
   rollPower: 35
   rollDuration: .400000006
   jumpTimeOut: .699999988
+  wallJumpTimeWindow: .699999988
   respawnHeight: -20
   strafeMinSpeed: 0
   strafeMaxSpeed: 16

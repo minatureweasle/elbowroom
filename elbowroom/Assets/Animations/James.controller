@@ -51,7 +51,7 @@ BlendTree:
   m_PrefabInternal: {fileID: 0}
   m_Name: Walk and Run
   m_Childs:
-  - m_Motion: {fileID: 7400000, guid: 52f5c76e97986234585c26943e954e0e, type: 3}
+  - m_Motion: {fileID: 7400000, guid: 4497d43953248004985b8374ed23c2aa, type: 3}
     m_Threshold: 10
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -269,7 +269,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 4bcc0e93383a59f419346af5ec57eda3, type: 3}
+  - {fileID: 7400000, guid: 22b5c0424b341be4f97ca271655a9c78, type: 3}
   m_ParentStateMachine: {fileID: 110741662}
   m_Position: {x: 72, y: -144, z: 0}
   m_IKOnFeet: 0
@@ -284,7 +284,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: d7b7a78e9f09fe34c8248862b679c9c4, type: 3}
+  - {fileID: 7400000, guid: a3e0151d2b950e64c83f9422d672ae57, type: 3}
   m_ParentStateMachine: {fileID: 110741662}
   m_Position: {x: 72, y: 132, z: 0}
   m_IKOnFeet: 0
@@ -314,7 +314,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 6ddbc2da9faf07a40b78b79ccad75def, type: 3}
+  - {fileID: 7400000, guid: 89fd7250e14f65f439020118a193f6f3, type: 3}
   m_ParentStateMachine: {fileID: 110741662}
   m_Position: {x: -108, y: 0, z: 0}
   m_IKOnFeet: 0

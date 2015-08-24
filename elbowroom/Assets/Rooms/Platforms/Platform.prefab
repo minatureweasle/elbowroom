@@ -145,7 +145,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141134}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: 3.18000007, y: -.0700000003, z: 8.03999996}
+  m_LocalPosition: {x: 3.5, y: 0, z: 8}
   m_LocalScale: {x: 3.40407848, y: 5.41776466, z: 2.74707389}
   m_Children: []
   m_Father: {fileID: 455790}
@@ -175,7 +175,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174100}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: 3.40600014, y: -.0799999237, z: -8.01000977}
+  m_LocalPosition: {x: 3.5, y: 0, z: -8}
   m_LocalScale: {x: 3.40407848, y: 5.41776466, z: 2.74707389}
   m_Children: []
   m_Father: {fileID: 455790}
@@ -187,8 +187,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174102}
   m_LocalRotation: {x: 0, y: .707106888, z: 0, w: .707106769}
-  m_LocalPosition: {x: 0, y: -.0299999993, z: .129999995}
-  m_LocalScale: {x: 26.0375881, y: 2.97824192, z: 4.79184341}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 26, y: 2.97824192, z: 4.79184341}
   m_Children: []
   m_Father: {fileID: 455790}
   m_RootOrder: 2
@@ -199,7 +199,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174104}
   m_LocalRotation: {x: .707106829, y: -4.4478293e-16, z: 4.4478293e-16, w: .707106829}
-  m_LocalPosition: {x: -3.48000002, y: -.0700000003, z: 8.03999996}
+  m_LocalPosition: {x: -3.5, y: 0, z: 8}
   m_LocalScale: {x: 3.40407872, y: 5.41776466, z: 2.74707389}
   m_Children: []
   m_Father: {fileID: 455790}
@@ -211,7 +211,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174106}
   m_LocalRotation: {x: .707106829, y: -4.4478293e-16, z: 4.4478293e-16, w: .707106829}
-  m_LocalPosition: {x: -3.48000169, y: -.0800051689, z: -8.01000977}
+  m_LocalPosition: {x: -3.5, y: 0, z: -8}
   m_LocalScale: {x: 3.40407872, y: 5.41776466, z: 2.74707389}
   m_Children: []
   m_Father: {fileID: 455790}

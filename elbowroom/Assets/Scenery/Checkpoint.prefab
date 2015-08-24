@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6.98000002, z: -41.5099983}
+  m_LocalPosition: {x: 0, y: -6.98999977, z: -41.5099983}
   m_LocalScale: {x: 26, y: 2, z: 1.70000005}
   m_Children: []
   m_Father: {fileID: 0}
@@ -43,7 +43,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 13e93b728f55ab642ac3198d6372647d, type: 2}
+  - {fileID: 2100000, guid: 491831d06b3947f42b8c238d55110d8b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -84,8 +84,10 @@ MonoBehaviour:
   killPlayerOnTouch: 0
   pushPlayerOnTouch: 0
   myAnimation: {fileID: 0}
+  trapIsActive: 0
   triggeredByDistance: 0
   triggerDistance: 5
+  players: {fileID: 0}
   activeMaterial: {fileID: 2100000, guid: c6f10f090724d804da45cf7c24ceab92, type: 2}
   isFirst: 0
   _SceneManager: {fileID: 0}
