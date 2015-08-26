@@ -11,6 +11,8 @@ public class EbbController : MonoBehaviour {
 
 	Vector3 targetVelocity;
 
+	public bool useForce = false;
+
 	public bool increaseGravityWhenFalling = true;
 
 	public bool canMoveWhileJumping = true;
@@ -145,8 +147,7 @@ public class EbbController : MonoBehaviour {
 		}
 
 		//face the direction in which you are going
-		if (targetVelocity != Vector3.zero)
-			transform.forward = targetVelocity;
+		if (targetVelocity != Vector3.zero) transform.forward = targetVelocity;
 
 	}
 
@@ -195,8 +196,16 @@ public class EbbController : MonoBehaviour {
 
 		if (myInputDetection.IsPressingForward()) 
 		{
-			//myRigidbody.AddForce(transform.forward*20);
-			AccelerateFromToZ(forwardMinSpeed, forwardMaxSpeed, forwardAcceleration*Time.deltaTime);
+			if (useForce){
+				if (myRigidbody.velocity.z < forwardMaxSpeed){
+					myRigidbody.AddForce(Vector3.forward*forwardAcceleration*20f);
+				}
+
+				targetVelocity.z = myRigidbody.velocity.z;
+			}
+			else{
+				AccelerateFromToZ(forwardMinSpeed, forwardMaxSpeed, forwardAcceleration*Time.deltaTime);
+			}
 
 			myAnimator.SetFloat("Speed", targetVelocity.z);
 
@@ -213,7 +222,6 @@ public class EbbController : MonoBehaviour {
 		}
 		else
 		{
-
 			targetVelocity.z = 0;
 
 			if (stopSuddenly)

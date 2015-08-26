@@ -1282,7 +1282,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 876b52e8f92651e429a9b5417187e6e1, type: 2}
+  - {fileID: 2100000, guid: f3e99a8c7de99a246a2a3856bf35d211, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2108,7 +2108,7 @@ Animator:
   m_PrefabInternal: {fileID: 398644737}
   m_GameObject: {fileID: 298929788}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6ddbc2da9faf07a40b78b79ccad75def, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 89fd7250e14f65f439020118a193f6f3, type: 3}
   m_Controller: {fileID: 9100000, guid: c2bd8919376bc81438e5fd5018415b44, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -2157,11 +2157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13c2bfafbf0ec8419c5f6e9b537ad5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceWhereGoing: 1
   increaseGravityWhenFalling: 1
   canMoveWhileJumping: 0
   stopSuddenly: 1
-  gravityMultiplier: 4
   jumpVelocity: 16
   rollPower: 35
   rollDuration: .400000006
@@ -7553,6 +7551,7 @@ GameObject:
   - 54: {fileID: 1187722602}
   - 136: {fileID: 1187722601}
   - 114: {fileID: 1187722600}
+  - 114: {fileID: 1187722606}
   m_Layer: 0
   m_Name: Ebb
   m_TagString: Player
@@ -7646,11 +7645,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13c2bfafbf0ec8419c5f6e9b537ad5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceWhereGoing: 1
   increaseGravityWhenFalling: 1
   canMoveWhileJumping: 1
-  stopSuddenly: 1
-  gravityMultiplier: 4
+  stopSuddenly: 0
   jumpVelocity: 16
   rollPower: 35
   rollDuration: .400000006
@@ -7675,6 +7672,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4ba913168f1d24e831a3f0fe80fe2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1187722606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11470070, guid: 2106c871173fae646aef24887ce73510,
+    type: 2}
+  m_PrefabInternal: {fileID: 1649253232}
+  m_GameObject: {fileID: 1187722598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2be3b49557bae94e8f91ff7e229eac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myIdentity: 0
 --- !u!1 &1190096870
 GameObject:
   m_ObjectHideFlags: 0
@@ -9883,8 +9893,10 @@ MonoBehaviour:
   killPlayerOnTouch: 0
   pushPlayerOnTouch: 0
   myAnimation: {fileID: 0}
+  trapIsActive: 0
   triggeredByDistance: 0
   triggerDistance: 5
+  players: {fileID: 0}
   doorToHome: 0
   room: Room1
   player: {fileID: 0}
@@ -10307,6 +10319,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   players:
   - {fileID: 0}
+  countdownText: {fileID: 0}
+  invisibleWall: {fileID: 0}
 --- !u!4 &1669275161
 Transform:
   m_ObjectHideFlags: 0
@@ -12408,6 +12422,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2050543972}
+  - 135: {fileID: 2050543973}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -12422,11 +12437,24 @@ Transform:
   m_PrefabInternal: {fileID: 1649253232}
   m_GameObject: {fileID: 2050543971}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.52999997, z: 0}
+  m_LocalPosition: {x: 0, y: 1.52999997, z: .280000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1187722599}
   m_RootOrder: 0
+--- !u!135 &2050543973
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13520070, guid: 2106c871173fae646aef24887ce73510,
+    type: 2}
+  m_PrefabInternal: {fileID: 1649253232}
+  m_GameObject: {fileID: 2050543971}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .400000006
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2051196448
 GameObject:
   m_ObjectHideFlags: 0
