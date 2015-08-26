@@ -69,9 +69,11 @@ public class EbbController : MonoBehaviour {
 			forwardAcceleration *= 0.1f;
 			forwardMaxSpeed *= 0.5f;
 
+			if (myState == PlayerState.ROLLING){
 			myState = PlayerState.RUNNING;
 
 			myAnimator.SetBool ("Rolling", false);
+			}
 
 			rollEndTime = Mathf.Infinity;
 		}
@@ -128,6 +130,8 @@ public class EbbController : MonoBehaviour {
 		else if (myState == PlayerState.ROLLING){
 
 			Run();
+
+			DetectJump();
 			
 			DetectNotRunning ();
 
