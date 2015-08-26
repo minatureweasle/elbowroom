@@ -2017,6 +2017,7 @@ GameObject:
   - 136: {fileID: 13606388}
   - 114: {fileID: 11425414}
   - 114: {fileID: 11470070}
+  - 65: {fileID: 6525954}
   m_Layer: 0
   m_Name: Ebb
   m_TagString: Player
@@ -2272,7 +2273,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 454592}
-  - 135: {fileID: 13520070}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -4014,7 +4014,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.10000002, y: 1.5, z: -19.6000004}
+  m_LocalPosition: {x: 1.10000002, y: -.370000005, z: -19.6000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 454592}
@@ -4257,6 +4257,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!65 &6525954
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106356}
+  m_Material: {fileID: 13400000, guid: 1344e7f3f206ca14dba011bc7e74fd59, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .5, y: .899999976, z: .75}
+  m_Center: {x: 0, y: .61966908, z: .300000012}
 --- !u!95 &9506388
 Animator:
   serializedVersion: 3
@@ -4283,12 +4295,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13c2bfafbf0ec8419c5f6e9b537ad5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useForce: 0
   increaseGravityWhenFalling: 1
   canMoveWhileJumping: 1
   stopSuddenly: 0
   jumpVelocity: 16
-  rollPower: 35
-  rollDuration: .400000006
+  boostDuration: .699999988
+  boostMaxSpeed: 36
+  boostAcceleration: 100
   jumpTimeOut: 1.39999998
   wallJumpTimeWindow: .699999988
   respawnHeight: -20
@@ -4333,18 +4347,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myIdentity: 0
---- !u!135 &13520070
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154592}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .400000006
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &13606388
 CapsuleCollider:
   m_ObjectHideFlags: 1

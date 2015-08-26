@@ -77,7 +77,7 @@ public class InputDetection : MonoBehaviour {
 		return false;
 	}
 
-	public bool PressedRoll(){
+	public bool PressedBoost(){
 		if (Input.GetKeyDown (rollKey))
 			return true;
 		return false;

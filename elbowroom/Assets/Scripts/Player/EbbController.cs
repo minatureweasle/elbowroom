@@ -21,11 +21,13 @@ public class EbbController : MonoBehaviour {
 
 	//public float gravityMultiplier = 4f;
 
-	public float jumpVelocity = 15f;
+	public float jumpVelocity = 16f;
 
-	public float rollPower = 30;
+	//public float rollPower = 30;
 
-	public float rollDuration = 0.5f;
+	public float boostDuration = 0.7f;
+	public float boostMaxSpeed = 36;
+	public float boostAcceleration = 100;
 
 	public float jumpTimeOut = 0.7f;
 	float recoilTimeOut = 0.7f;
@@ -33,7 +35,7 @@ public class EbbController : MonoBehaviour {
 	public float wallJumpTimeWindow = 0.7f;
 	float wallJumpAvailabilityEnd = 0;
 
-	public float respawnHeight = -25;
+	public float respawnHeight = -20;
 
 	public float strafeMinSpeed = 0;
 	public float strafeMaxSpeed = 16;
@@ -43,11 +45,14 @@ public class EbbController : MonoBehaviour {
 	public float forwardMaxSpeed = 18;
 	public float forwardAcceleration = 10;
 
-	float rollEndTime = Mathf.Infinity;
+	float currentMaxSpeed;
+	float currentAcceleration;
+
+	float boostEndTime = Mathf.Infinity;
 	float jumpEndTime = Mathf.Infinity;
 	float recoilEndTime = Mathf.Infinity;
 
-	public enum PlayerState {IDLE, RUNNING, JUMPING, ROLLING, RECOILING};
+	public enum PlayerState {IDLE, RUNNING, JUMPING, BOOSTING, RECOILING};
 
 	PlayerState myState = PlayerState.IDLE;
 
@@ -57,25 +62,27 @@ public class EbbController : MonoBehaviour {
 		myRigidbody = GetComponent<Rigidbody> ();
 		myInputDetection = GetComponent<InputDetection> ();
 
+		currentMaxSpeed = forwardMaxSpeed;
+		currentAcceleration = forwardAcceleration;
 
-		//Physics.gravity = new Vector3 (0, -9.81f * gravityMultiplier, 0);
 	}
 
 	void Update () {
 		//Debug.Log (myState);
 
-		if (Time.time > rollEndTime) {
+		if (Time.time > boostEndTime) {
 
-			forwardAcceleration *= 0.1f;
-			forwardMaxSpeed *= 0.5f;
+			currentAcceleration = forwardAcceleration;
+			currentMaxSpeed = forwardMaxSpeed;
 
-			if (myState == PlayerState.ROLLING){
-			myState = PlayerState.RUNNING;
+			//might have changed to jumping. if you didn't, and finished a boost without changing state, change back to jumping
+			if (myState == PlayerState.BOOSTING){
+				myState = PlayerState.RUNNING;
 
-			myAnimator.SetBool ("Rolling", false);
+				myAnimator.SetBool ("Rolling", false);
 			}
 
-			rollEndTime = Mathf.Infinity;
+			boostEndTime = Mathf.Infinity;
 		}
 
 		if (Time.time > jumpEndTime) {
@@ -91,7 +98,7 @@ public class EbbController : MonoBehaviour {
 			
 			myState = PlayerState.RUNNING;
 			
-			myAnimator.SetBool ("Walking", true);
+			myAnimator.SetBool ("Running", true);
 			
 			recoilEndTime = Mathf.Infinity;
 		}
@@ -108,12 +115,14 @@ public class EbbController : MonoBehaviour {
 
 			DetectJump();
 
+			DetectBoost();
+
 		}
 		else if (myState == PlayerState.RUNNING) {
 
 			Run();
 
-			DetectRoll();
+			DetectBoost();
 
 			DetectJump();
 
@@ -127,7 +136,7 @@ public class EbbController : MonoBehaviour {
 				Run();
 			}
 		}
-		else if (myState == PlayerState.ROLLING){
+		else if (myState == PlayerState.BOOSTING){
 
 			Run();
 
@@ -164,7 +173,7 @@ public class EbbController : MonoBehaviour {
 				
 				myState = PlayerState.RUNNING;
 				
-				myAnimator.SetBool("Walking", true);
+				myAnimator.SetBool("Running", true);
 			}
 		}
 	}
@@ -172,7 +181,7 @@ public class EbbController : MonoBehaviour {
 	public void Recoil(){
 
 		myAnimator.SetBool("Jumping", false);
-		myAnimator.SetBool("Walking", false);
+		myAnimator.SetBool("Running", false);
 
 		myState = PlayerState.RECOILING;
 		
@@ -189,7 +198,7 @@ public class EbbController : MonoBehaviour {
 	void DetectRun(){
 
 		if (myInputDetection.PressedAnyDirectionalKey()) {
-			myAnimator.SetBool("Walking", true);
+			myAnimator.SetBool("Running", true);
 			myState = PlayerState.RUNNING;
 		}
 	}
@@ -201,28 +210,26 @@ public class EbbController : MonoBehaviour {
 		if (myInputDetection.IsPressingForward()) 
 		{
 			if (useForce){
-				if (myRigidbody.velocity.z < forwardMaxSpeed){
-					myRigidbody.AddForce(Vector3.forward*forwardAcceleration*20f);
+				if (myRigidbody.velocity.z < currentMaxSpeed){
+					myRigidbody.AddForce(Vector3.forward*currentAcceleration*20f);
 				}
 
 				targetVelocity.z = myRigidbody.velocity.z;
 			}
 			else{
-				AccelerateFromToZ(forwardMinSpeed, forwardMaxSpeed, forwardAcceleration*Time.deltaTime);
+				AccelerateFromToZ(forwardMinSpeed, currentMaxSpeed, currentAcceleration*Time.deltaTime);
 			}
 
 			myAnimator.SetFloat("Speed", targetVelocity.z);
 
-			//runningInZDirection = true;
 		}
 		else if (myInputDetection.IsPressingBackward()) 
 		{
 			//myRigidbody.AddForce(-transform.forward*20);
-			AccelerateFromToZ(-forwardMinSpeed, -forwardMaxSpeed, -forwardAcceleration*Time.deltaTime);
+			AccelerateFromToZ(-forwardMinSpeed, -currentMaxSpeed, -currentAcceleration*Time.deltaTime);
 
 			myAnimator.SetFloat("Speed", Mathf.Abs(targetVelocity.z));
 
-			//runningInZDirection = true;
 		}
 		else
 		{
@@ -270,7 +277,7 @@ public class EbbController : MonoBehaviour {
 	void DetectNotRunning(){
 		
 		if (targetVelocity.x == 0 && targetVelocity.z == 0) {
-			myAnimator.SetBool ("Walking", false);
+			myAnimator.SetBool ("Running", false);
 			myState = PlayerState.IDLE;
 		}
 		
@@ -338,40 +345,30 @@ public class EbbController : MonoBehaviour {
 	}
 
 	//========================================
-	//ROLLING
+	//BOOSTING
 	//========================================
 
-	void DetectRoll(){
+	void DetectBoost(){
 		
-		if (myInputDetection.PressedRoll()) {
+		if (myInputDetection.PressedBoost()) {
 
 			//if the previous roll has ended
-			if (myState != PlayerState.ROLLING){
-				Roll ();
+			if (myState != PlayerState.BOOSTING){
+				Boost ();
 			}
 		}
 		
 	}
 
-	void Roll(){
-		
-		/*Vector3 newVelocity = targetVelocity;
-		newVelocity.Normalize ();
-		newVelocity *= rollPower;
-		myRigidbody.velocity = newVelocity;
+	void Boost(){
 
-		myState = PlayerState.ROLLING;
-		myAnimator.SetBool("Rolling", true);
+		currentAcceleration = boostAcceleration;
+		currentMaxSpeed = boostMaxSpeed;
 
-		rollEndTime = Time.time + rollDuration;*/
-
-		forwardAcceleration *= 10;
-		forwardMaxSpeed *= 2;
-
-		myState = PlayerState.ROLLING;
+		myState = PlayerState.BOOSTING;
 		//myAnimator.SetBool("Rolling", true);
 		
-		rollEndTime = Time.time + rollDuration;
+		boostEndTime = Time.time + boostDuration;
 		
 	}
 
