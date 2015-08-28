@@ -349,7 +349,8 @@ public class EbbController : MonoBehaviour {
 	//========================================
 
 	void DetectBoost(){
-		
+
+
 		if (myInputDetection.PressedBoost()) {
 
 			//if the previous roll has ended
@@ -357,6 +358,7 @@ public class EbbController : MonoBehaviour {
 				Boost ();
 			}
 		}
+
 		
 	}
 
@@ -410,7 +412,7 @@ public class EbbController : MonoBehaviour {
 			targetVelocity.z += acceleration*Time.deltaTime*55f;
 		//if youre greater or equal to the max, stay at the max
 		else
-			targetVelocity.z = maxVelocity;
+			targetVelocity.z = Mathf.Lerp(targetVelocity.z, maxVelocity, 0.1f);//targetVelocity.z = maxVelocity;
 		
 		newVelocity.z = targetVelocity.z;
 		

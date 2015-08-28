@@ -15,7 +15,7 @@ public class WallTrap : MonoBehaviour {
 
 	int currentWall = 0;
 
-
+	float initialLocalHeight;
 
 	void Start () {
 		wallRising = new bool[walls.Length];
@@ -24,6 +24,8 @@ public class WallTrap : MonoBehaviour {
 		}
 
 		wallRising [0] = false;
+
+		initialLocalHeight = walls[0].localPosition.y;
 
 		timeOfNextWallChange = Time.time + wallChangeInterval;
 	}
@@ -44,14 +46,14 @@ public class WallTrap : MonoBehaviour {
 		for (int i = 0; i < walls.Length; i++) {
 			if (wallRising[i]){
 				Vector3 destination = walls[i].localPosition;
-				destination.y = 0;
+				destination.y = initialLocalHeight;
 				walls[i].localPosition = Vector3.Lerp(walls[i].localPosition, destination, 10f*Time.deltaTime);
 			}
 			else{
 				Vector3 destination = walls[i].localPosition;
-				destination.y = -6;
+				destination.y = initialLocalHeight -6;
 				if (fallHalfway)
-					destination.y = -3;
+					destination.y = initialLocalHeight -3;
 				walls[i].localPosition = Vector3.Lerp(walls[i].localPosition, destination, 10f*Time.deltaTime);
 			}
 		}

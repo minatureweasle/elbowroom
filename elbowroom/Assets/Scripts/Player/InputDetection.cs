@@ -8,7 +8,7 @@ public class InputDetection : MonoBehaviour {
 	KeyCode leftKey;
 	KeyCode rightKey;
 	KeyCode jumpKey;
-	KeyCode rollKey;
+	KeyCode boostKey;
 
 	public enum PlayerIdentity {PLAYER1, PLAYER2};
 
@@ -23,14 +23,14 @@ public class InputDetection : MonoBehaviour {
 			leftKey = KeyCode.A;
 			rightKey = KeyCode.D;
 			jumpKey = KeyCode.Space;
-			rollKey = KeyCode.R;
+			boostKey = KeyCode.R;
 		} else {
 			forwardKey = KeyCode.UpArrow;
 			backwardKey = KeyCode.DownArrow;
 			leftKey = KeyCode.LeftArrow;
 			rightKey = KeyCode.RightArrow;
 			jumpKey = KeyCode.RightControl;
-			rollKey = KeyCode.Slash;
+			boostKey = KeyCode.Slash;
 		}
 	
 	}
@@ -78,7 +78,13 @@ public class InputDetection : MonoBehaviour {
 	}
 
 	public bool PressedBoost(){
-		if (Input.GetKeyDown (rollKey))
+		if (Input.GetKeyDown (boostKey))
+			return true;
+		return false;
+	}
+
+	public bool PressingBoost(){
+		if (Input.GetKey (boostKey))
 			return true;
 		return false;
 	}
