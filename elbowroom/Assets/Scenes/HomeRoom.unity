@@ -3035,6 +3035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lastScoreText: {fileID: 1735426136}
   bestScoreText: {fileID: 376757313}
+  myPortal: {fileID: 598303958}
 --- !u!1 &286462756
 GameObject:
   m_ObjectHideFlags: 0
@@ -18867,6 +18868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lastScoreText: {fileID: 955363559}
   bestScoreText: {fileID: 1240013310}
+  myPortal: {fileID: 1579240478}
 --- !u!114 &2084026097
 MonoBehaviour:
   m_ObjectHideFlags: 0

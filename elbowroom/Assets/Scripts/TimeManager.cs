@@ -33,7 +33,7 @@ public class TimeManager : MonoBehaviour {
 
 	public void saveTime(){
 
-		ScoreManager.instance.setLastScore (time);
+		ScoreManager.instance.setLastScore (Application.loadedLevelName, time);
 
 
 		playing = false;

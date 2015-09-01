@@ -5,8 +5,11 @@ public class ScoreManager : MonoBehaviour {
 
 	public static ScoreManager instance;
 
-	float lastScore = -1;
-	float bestScore = -1;
+	//float lastScore = -1;
+	//float bestScore = -1;
+
+	//Hashtable lastScores;
+	//Hashtable bestScores;
 
 	void Awake () {
 
@@ -17,68 +20,95 @@ public class ScoreManager : MonoBehaviour {
 		else
 			Destroy (gameObject);
 
-		ReadStoredLastScore ();
-		ReadStoredBestScore ();
+		//ReadStoredLastScore ();
+		//ReadStoredBestScore ();
 
 
 	}
 
-	/*void Update(){
+	void Update(){
 		if (Input.GetKeyDown (KeyCode.Delete))
 			ClearScoresFromStorage ();
-	}*/
-
-	public string getLastScoreAsString(){
-		if (lastScore == -1)
-			return "";
-		else
-			return lastScore + "";
 	}
 
-	public string getBestScoreAsString(){
-		if (bestScore == -1)
-			return "";
+	public string getLastScoreAsString(string levelName){
+		if (GetLastScore(levelName) == -1)
+			return "?";
 		else
-			return bestScore + "";
+			return GetLastScore(levelName) + "";
 	}
 
-	void ReadStoredLastScore(){
+	public string getBestScoreAsString(string levelName){
+		if (GetBestScore(levelName) == -1)
+			return "?";
+		else
+			return GetBestScore(levelName) + "";
+	}
+
+	private float GetLastScore(string levelName){
+		//initialise it if it doesnt exist yet
+		if (!PlayerPrefs.HasKey (levelName + "lastScore"))
+			PlayerPrefs.SetFloat (levelName + "lastScore", -1);
+
+		return PlayerPrefs.GetFloat (levelName + "lastScore");
+	}
+
+	private float GetBestScore(string levelName){
+		//initialise it if it doesnt exist yet
+		if (!PlayerPrefs.HasKey (levelName + "bestScore"))
+			PlayerPrefs.SetFloat (levelName + "bestScore", -1);
+		
+		return PlayerPrefs.GetFloat (levelName + "bestScore");
+	}
+
+	/*void ReadStoredLastScore(){
 		//initialise it if it doesnt exist yet
 		if (!PlayerPrefs.HasKey ("lastScore"))
 			PlayerPrefs.SetFloat ("lastScore", -1);
-		else
-			lastScore = PlayerPrefs.GetFloat ("lastScore");
+
+		//then retrieve the score from storage
+		lastScore = PlayerPrefs.GetFloat ("lastScore");
+
+		//go through settings and get each scene name. 
+		//then check if scores are stored for that scene, and load them into the hashtable
+		foreach (UnityEditor.EditorBuildSettingsScene S in UnityEditor.EditorBuildSettings.scenes)
+		{
+			if (S.enabled)
+			{
+				string name = S.path.Substring(S.path.LastIndexOf('/')+1);
+				name = name.Substring(0,name.Length-6);
+			}
+		}
 	}
 
 	void ReadStoredBestScore(){
 		//initialise it if it doesnt exist yet
 		if (!PlayerPrefs.HasKey ("bestScore"))
 			PlayerPrefs.SetFloat ("bestScore", -1);
-		else
-			bestScore = PlayerPrefs.GetFloat ("bestScore");
-	}
 
-	void WriteLastScoreToStorage(){
-		PlayerPrefs.SetFloat ("lastScore", lastScore);
+		bestScore = PlayerPrefs.GetFloat ("bestScore");
+	}*/
+
+	void WriteLastScoreToStorage(string levelName, float scoreToWrite){
+		PlayerPrefs.SetFloat (levelName + "lastScore", scoreToWrite);
 	}
 	
-	void WriteBestScoreToStorage(){
-		PlayerPrefs.SetFloat ("bestScore", bestScore);
+	void WriteBestScoreToStorage(string levelName, float scoreToWrite){
+		PlayerPrefs.SetFloat (levelName + "bestScore", scoreToWrite);
+	}
+
+	public void setLastScore(string levelName, float newScore){
+		//lastScore = newScore;
+		WriteLastScoreToStorage(levelName, newScore);
+
+		//Is this your new best?
+		if (newScore < GetBestScore(levelName) || GetBestScore(levelName) == -1) {
+			WriteBestScoreToStorage(levelName, newScore);
+		}
 	}
 
 	void ClearScoresFromStorage(){
 		PlayerPrefs.DeleteKey ("lastScore");
 		PlayerPrefs.DeleteKey ("bestScore");
-	}
-
-	public void setLastScore(float newScore){
-		lastScore = newScore;
-		WriteLastScoreToStorage();
-
-		//Is this your new best? Or do you not have a best yet?
-		if (lastScore < bestScore || bestScore == -1) {
-			bestScore = lastScore;
-			WriteBestScoreToStorage();
-		}
 	}
 }

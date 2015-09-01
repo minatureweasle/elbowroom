@@ -9,12 +9,16 @@ public class ScoreDisplay : MonoBehaviour {
 	public Text lastScoreText;
 	public Text bestScoreText;
 
+	public GameObject myPortal;
+
 	// Use this for initialization
 	void Start () {
 
+		string doorLeadsTo = myPortal.GetComponent<SwitchScene> ().room;
+
 		scoreManager = GameObject.Find ("_ScoreManager");
-		lastScoreText.text = scoreManager.GetComponent<ScoreManager> ().getLastScoreAsString ();
-		bestScoreText.text = scoreManager.GetComponent<ScoreManager> ().getBestScoreAsString ();
+		lastScoreText.text = scoreManager.GetComponent<ScoreManager> ().getLastScoreAsString (doorLeadsTo);
+		bestScoreText.text = scoreManager.GetComponent<ScoreManager> ().getBestScoreAsString (doorLeadsTo);
 	
 	}
 	
