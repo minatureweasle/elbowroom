@@ -38,6 +38,13 @@ public class ScoreManager : MonoBehaviour {
 			return GetLastScore(levelName) + "";
 	}
 
+	public string getWinner(string levelName){
+		if (PlayerPrefs.GetString(levelName) == ""){
+			return "?";
+		}
+		return PlayerPrefs.GetString(levelName);
+	}
+
 	public string getBestScoreAsString(string levelName){
 		if (GetBestScore(levelName) == -1)
 			return "?";
@@ -95,6 +102,10 @@ public class ScoreManager : MonoBehaviour {
 	
 	void WriteBestScoreToStorage(string levelName, float scoreToWrite){
 		PlayerPrefs.SetFloat (levelName + "bestScore", scoreToWrite);
+	}
+
+	public void WriteWinnerName(string levelName, string winnerName){
+		PlayerPrefs.SetString (levelName, winnerName); 
 	}
 
 	public void setLastScore(string levelName, float newScore){

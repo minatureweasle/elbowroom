@@ -8,6 +8,7 @@ public class ScoreDisplay : MonoBehaviour {
 
 	public Text lastScoreText;
 	public Text bestScoreText;
+	public Text welcomeText;
 
 	public GameObject myPortal;
 
@@ -19,6 +20,7 @@ public class ScoreDisplay : MonoBehaviour {
 		scoreManager = GameObject.Find ("_ScoreManager");
 		lastScoreText.text = scoreManager.GetComponent<ScoreManager> ().getLastScoreAsString (doorLeadsTo);
 		bestScoreText.text = scoreManager.GetComponent<ScoreManager> ().getBestScoreAsString (doorLeadsTo);
+		welcomeText.text = doorLeadsTo + "\n" + "winner: " + scoreManager.GetComponent<ScoreManager>().getWinner (doorLeadsTo);
 	
 	}
 	

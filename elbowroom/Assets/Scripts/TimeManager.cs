@@ -31,10 +31,10 @@ public class TimeManager : MonoBehaviour {
 		playing = true;
 	}
 
-	public void saveTime(){
+	public void saveTime(string playerName){
 
 		ScoreManager.instance.setLastScore (Application.loadedLevelName, time);
-
+		ScoreManager.instance.WriteWinnerName(Application.loadedLevelName, playerName); 
 
 		playing = false;
 	}

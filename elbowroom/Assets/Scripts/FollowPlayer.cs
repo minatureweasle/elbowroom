@@ -15,7 +15,7 @@ public class FollowPlayer : MonoBehaviour {
 
 		transform.position = new Vector3(transform.position.x, transform.position.y, playerToFollow.transform.position.z - 8);
 
-		if (Mathf.Abs (playerToFollow.transform.position.x - transform.position.x) > 5) {
+		if (Mathf.Abs (playerToFollow.transform.position.x - transform.position.x) > 3) {
 			Pan ();
 		} else if (Mathf.Abs (playerToFollow.transform.position.x - transform.position.x) < 1) {
 			GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x /3,0,GetComponent<Rigidbody>().velocity.z);

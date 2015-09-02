@@ -7,9 +7,10 @@ public class SwitchScene : TriggeredTrap {
 	public string room;
 
 	public GameObject player;
+	int playerCount = 0; 
 
 	void Start () {
-	
+
 	}
 	
 
@@ -21,12 +22,18 @@ public class SwitchScene : TriggeredTrap {
 		
 		if (doorToHome) {
 				//call time manager for score saving logic
-			player.GetComponent<TimeManager>().saveTime();
+			player.GetComponent<TimeManager>().saveTime(c.name);
 		}
-		Application.LoadLevel(room);
+		playerCount++;
+		if (playerCount >= 2){
+			Application.LoadLevel(room);
+		} 
 	}
 
-	public override void OnTrapDeactivated(Collider c){}
+	public override void OnTrapDeactivated(Collider c){
+		playerCount--;
+		//Debug.Log (playerCount);
+	}
 	public override void OnTrapActive(){}
 
 }
