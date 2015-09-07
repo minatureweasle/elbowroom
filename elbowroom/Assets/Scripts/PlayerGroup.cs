@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AllPlayers : MonoBehaviour {
+public class PlayerGroup : MonoBehaviour {
 
-	public static AllPlayers instance;
+	public static PlayerGroup instance;
 
 	public Transform players;
 

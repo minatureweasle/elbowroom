@@ -24,4 +24,8 @@ public class Fade : MonoBehaviour {
 		yield return new WaitForSeconds (fadeDelay);
 		image.CrossFadeAlpha(0, fadeDuration, true);
 	}
+
+	public void fadeOut(){
+		image.CrossFadeAlpha(1, fadeDuration, true);
+	}
 }

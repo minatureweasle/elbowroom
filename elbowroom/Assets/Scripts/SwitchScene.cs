@@ -8,6 +8,8 @@ public class SwitchScene : TriggeredTrap {
 
 	public GameObject player;
 
+	public Fade fader;
+
 	int playerCount = 0;
 
     public override void OnTrapActivated(Collider c){
@@ -15,13 +17,19 @@ public class SwitchScene : TriggeredTrap {
 			player.GetComponent<TimeManager>().saveTime(c.name);
 		playerCount++;
 		if (playerCount >= 2)
-			Application.LoadLevel(room);
+			StartCoroutine(FadeAndExit());
 	}
 
 	public override void OnTrapActive(){}
 
 	public override void OnTrapDeactivated(Collider c){
 		playerCount--;
+	}
+
+	IEnumerator FadeAndExit(){
+		fader.GetComponent<Fade>().fadeOut();
+		yield return new WaitForSeconds(0.6f);
+		Application.LoadLevel(room);
 	}
 
 

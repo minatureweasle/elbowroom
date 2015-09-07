@@ -9,12 +9,11 @@ public abstract class TriggeredTrap : Trap {
 	bool trapIsActive = false;
 
 	void Update(){
-		if (trapIsActive) {
+		if (trapIsActive)
 			OnTrapActive ();
-		} 
 		else {
 			if (triggeredByDistance) {
-				if (AllPlayers.instance.IsAnyPlayerWithinRange(transform.position, triggerDistance)){
+				if (PlayerGroup.instance.IsAnyPlayerWithinRange(transform.position, triggerDistance)){
 					OnTrapActivated (collider);
 					trapIsActive = true;
 				}
