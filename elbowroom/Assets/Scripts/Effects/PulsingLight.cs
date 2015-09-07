@@ -5,16 +5,12 @@ public class PulsingLight : MonoBehaviour {
 
 	float startingIntensity;
 
-	float offset = 0;
-
-	// Use this for initialization
 	void Start () {
 		startingIntensity = GetComponent<Light> ().intensity;
 	}
-	
-	// Update is called once per frame
+
+	//continuously set the light's intensity to a follow a Sine wave
 	void Update () {
-		offset += Random.Range (-0.05f, 0.05f);
-		GetComponent<Light> ().intensity = startingIntensity + Mathf.Sin(Time.time + offset)/3;
+		GetComponent<Light> ().intensity = startingIntensity + Mathf.Sin(Time.time)/3;
 	}
 }

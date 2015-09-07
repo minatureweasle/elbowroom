@@ -9,22 +9,13 @@ public class OpenDoor : MonoBehaviour {
 		myAnimator = GetComponentInChildren<Animator> ();
 	}
 
-	void Update () {
-	
-	}
-
 	void OnTriggerEnter(Collider collider){
-
-		if (collider.tag == "Player") {
+		if (collider.tag == "Player")
 			myAnimator.Play("OpenDoor");
-		}
 	}
 
 	void OnTriggerExit(Collider collider){
-		
-		if (collider.tag == "Player") {
+		if (collider.tag == "Player")
 			myAnimator.Play("CloseDoor");
-		}
-		
 	}
 }

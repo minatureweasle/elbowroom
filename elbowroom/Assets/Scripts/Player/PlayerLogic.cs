@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerLogic : MonoBehaviour {
 
 	Vector3 startPoint;
+
 	public enum playerState {ALIVE, DEAD};
 	playerState state;
 
@@ -12,11 +13,9 @@ public class PlayerLogic : MonoBehaviour {
 	}
 	
 	void Update () {
-	
 		if (state == playerState.DEAD) {
 			Respawn();
 		}
-
 	}
 
 	void Respawn(){

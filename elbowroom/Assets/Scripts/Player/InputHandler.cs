@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class InputDetection : MonoBehaviour {
+public class InputHandler : MonoBehaviour {
 
 	KeyCode forwardKey;
 	KeyCode backwardKey;
@@ -11,12 +11,10 @@ public class InputDetection : MonoBehaviour {
 	KeyCode boostKey;
 
 	public enum PlayerIdentity {PLAYER1, PLAYER2};
-
 	public PlayerIdentity myIdentity;
 
-	// Use this for initialization
+	//set the input keys depending on the player's identity
 	void Start () {
-
 		if (myIdentity == PlayerIdentity.PLAYER1) {
 			forwardKey = KeyCode.W;
 			backwardKey = KeyCode.S;
@@ -32,12 +30,6 @@ public class InputDetection : MonoBehaviour {
 			jumpKey = KeyCode.RightControl;
 			boostKey = KeyCode.Slash;
 		}
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 
 	public bool PressedAnyDirectionalKey(){

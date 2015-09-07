@@ -5,36 +5,23 @@ using UnityEngine.UI;
 
 public class Fade : MonoBehaviour {
 
-	public bool fadeIn;
-	public float fadeTime;
-	//public float delay;
+	public bool fadeInAtStart = true;
+	public float fadeDelay = 0.5f;
+	public float fadeDuration = 0.4f;
 
-	public Image vignette;
+	Image image;
 
 	void Start () {
-		//renderer.material.color = new Color(0,0,0,1);
-		if (fadeIn){
-
+		image = GetComponent<Image> ();
+		if (fadeInAtStart){
 			StartCoroutine(fadeInLogoCoroutine());
 		}
 	}
-	
-	void Update () {
-//		fadeTime = fadeTime - Time.deltaTime;
-//		renderer.material.color -= new Color(0,0,0, 2f * Time.deltaTime);
-//
-	//	if (fadeTime < 0)
-	//		Destroy (gameObject);
 
-	}	
-
+	//make the image opaque, wait a moment, then fade it away
 	IEnumerator fadeInLogoCoroutine(){
-
-		vignette.color = Color.white;
-
-		yield return new WaitForSeconds(0.5f);
-
-		vignette.CrossFadeAlpha(0, fadeTime, true);
-
+		image.color = Color.white;
+		yield return new WaitForSeconds (fadeDelay);
+		image.CrossFadeAlpha(0, fadeDuration, true);
 	}
 }

@@ -3,25 +3,27 @@ using System.Collections;
 
 public class AutoRotate : MonoBehaviour {
 
-	public float rotateSpeed = 100;
-
 	public enum Axis {X, Y, Z};
-
 	public Axis rotationAxis = Axis.Y;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		Vector3 axis = transform.up;
-		if (rotationAxis == Axis.X)
-			axis = transform.right;
-		else if (rotationAxis == Axis.Z)
-			axis = transform.forward;
+	public float rotateSpeed = 100;
 
-		transform.RotateAround (transform.position, axis, rotateSpeed * Time.deltaTime);
+	Vector3 axisVector;
+
+	void Start(){
+		SetAxis ();
+	}
+
+	void Update () {
+		transform.RotateAround (transform.position, axisVector, rotateSpeed * Time.deltaTime);
+	}
+
+	//set the axis that this object will rotate around
+	void SetAxis(){
+		Vector3 axisVector = transform.up;
+		if (rotationAxis == Axis.X)
+			axisVector = transform.right;
+		else if (rotationAxis == Axis.Z)
+			axisVector = transform.forward;
 	}
 }

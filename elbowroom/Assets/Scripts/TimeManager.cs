@@ -4,38 +4,26 @@ using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour {
 
-	//int playerId;
-	//string localPlayerName;
-	//public GameObject localPlayer;
-	bool playing = false;
 	public Text timeText;
 
-	float time;
+	float time = 0;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
+	bool playing = false;
+
 	void Update () {
 		if (playing) {
 			time += Time.deltaTime;
-
 			timeText.text = time + "";
 		}
-	
 	}
 
-	public void startTime(){
+	public void startTimer(){
 		playing = true;
 	}
 
 	public void saveTime(string playerName){
-
-		ScoreManager.instance.setLastScore (Application.loadedLevelName, time);
-		ScoreManager.instance.WriteWinnerName(Application.loadedLevelName, playerName); 
-
 		playing = false;
+		ScoreManager.instance.setLastScore (Application.loadedLevelName, time);
+		ScoreManager.instance.WriteWinnerName(Application.loadedLevelName, playerName);
 	}
 }

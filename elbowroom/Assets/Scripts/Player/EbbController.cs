@@ -1,13 +1,11 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class EbbController : MonoBehaviour {
 
 	Animator myAnimator;
-
 	Rigidbody myRigidbody;
-
-	InputDetection myInputDetection;
+	InputHandler myInputDetection;
 
 	Vector3 targetVelocity;
 
@@ -19,11 +17,7 @@ public class EbbController : MonoBehaviour {
 
 	public bool stopSuddenly = true;
 
-	//public float gravityMultiplier = 4f;
-
 	public float jumpVelocity = 16f;
-
-	//public float rollPower = 30;
 
 	public float boostDuration = 0.7f;
 	public float boostMaxSpeed = 36;
@@ -60,7 +54,7 @@ public class EbbController : MonoBehaviour {
 
 		myAnimator = GetComponent<Animator> ();
 		myRigidbody = GetComponent<Rigidbody> ();
-		myInputDetection = GetComponent<InputDetection> ();
+		myInputDetection = GetComponent<InputHandler> ();
 
 		currentMaxSpeed = forwardMaxSpeed;
 		currentAcceleration = forwardAcceleration;

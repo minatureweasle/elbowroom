@@ -181,14 +181,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 178522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2657e5921784eee4ea9b906404f3d0dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e2ebd2225d4b6a4989fcd9f1c2e9626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   lerpSpeed: 1
   turretShootingDelay: .100000001
-  bulletPrefab: {fileID: 101222, guid: 5578bf58a1c1d3c4a86bbc51d096945e, type: 2}
-  firepoint: {fileID: 470444}
+  bulletPrefab: {fileID: 0}
+  firepoint: {fileID: 0}
+  maxDistance: 30
 --- !u!120 &12078522
 LineRenderer:
   m_ObjectHideFlags: 1

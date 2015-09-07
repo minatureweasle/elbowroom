@@ -12,7 +12,6 @@ public class ScoreDisplay : MonoBehaviour {
 
 	public GameObject myPortal;
 
-	// Use this for initialization
 	void Start () {
 
 		string doorLeadsTo = myPortal.GetComponent<SwitchScene> ().room;
@@ -21,13 +20,6 @@ public class ScoreDisplay : MonoBehaviour {
 		lastScoreText.text = scoreManager.GetComponent<ScoreManager> ().getLastScoreAsString (doorLeadsTo);
 		bestScoreText.text = scoreManager.GetComponent<ScoreManager> ().getBestScoreAsString (doorLeadsTo);
 		welcomeText.text = doorLeadsTo + "\n" + "winner: " + scoreManager.GetComponent<ScoreManager>().getWinner (doorLeadsTo);
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-
 	
 	}
 }
