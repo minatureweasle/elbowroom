@@ -30,7 +30,7 @@ public class Fade : MonoBehaviour {
 
 	IEnumerator fadeInLogoCoroutine(){
 
-		vignette.CrossFadeAlpha(1, 0.5f, true);
+		vignette.color = Color.white;
 
 		yield return new WaitForSeconds(0.5f);
 

@@ -5,13 +5,13 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: JamesSmooth
+  m_Name: JamesStrafe
   serializedVersion: 2
   m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
-    m_StateMachine: {fileID: 110728416}
+    m_StateMachine: {fileID: 110794504}
     m_Mask: {fileID: 0}
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1
@@ -20,34 +20,34 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &110250382
+--- !u!1102 &110296294
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Run
+  m_Name: New State
   m_Speed: 1
-  m_CycleOffset: .5
+  m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: df8ec1610e7ca5f4fa6306ac1d5b27db, type: 3}
-  m_ParentStateMachine: {fileID: 110728416}
-  m_Position: {x: 106, y: 5, z: 0}
+  - {fileID: 7400000, guid: 098d53a9fbde55a4381afbf35d4a8acd, type: 3}
+  m_ParentStateMachine: {fileID: 110794504}
+  m_Position: {x: 180, y: -7, z: 0}
   m_IKOnFeet: 0
-  m_Mirror: 1
+  m_Mirror: 0
   m_Tag: 
---- !u!1107 &110728416
+--- !u!1107 &110794504
 StateMachine:
   serializedVersion: 2
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Base Layer
-  m_DefaultState: {fileID: 110250382}
+  m_DefaultState: {fileID: 110296294}
   m_States:
-  - {fileID: 110250382}
+  - {fileID: 110296294}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions: {}
   m_MotionSetCount: 1
-  m_AnyStatePosition: {x: -120, y: 12, z: 0}
+  m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
