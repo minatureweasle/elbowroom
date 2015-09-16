@@ -31,10 +31,10 @@ public abstract class TriggeredTrap : Trap {
 		OnTrapDeactivated (collider);
 	}
 
-	public abstract void OnTrapActivated(Collider collider);
+    public virtual void OnTrapActivated(Collider collider) { }
 
-	public abstract void OnTrapActive();
+    public virtual void OnTrapActive() { }
 
-	public abstract void OnTrapDeactivated(Collider collider);
+    public virtual void OnTrapDeactivated(Collider collider) { }
 
 }

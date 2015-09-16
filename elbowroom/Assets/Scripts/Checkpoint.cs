@@ -24,8 +24,5 @@ public class Checkpoint : TriggeredTrap
 			hasBeenActivated = true;
 		}
 	}
-	
-	public override void OnTrapDeactivated (Collider c){}
 
-	public override void OnTrapActive (){}
 }

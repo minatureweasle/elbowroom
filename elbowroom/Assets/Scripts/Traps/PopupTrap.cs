@@ -9,10 +9,4 @@ public class PopupTrap : TriggeredTrap {
 		popup.GetComponent<Animation> ().Play ();
 	}
 
-	public override void OnTrapDeactivated(Collider collider){
-	}
-
-	public override void OnTrapActive(){
-	}
-
 }
