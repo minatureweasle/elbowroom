@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour {
 
 	public bool useForce = false;
 
+    public bool animateRoll = false;
+
 	public bool increaseGravityWhenFalling = true;
 
 	public bool canMoveWhileJumping = true;
@@ -343,17 +345,12 @@ public class PlayerController : MonoBehaviour {
 	//========================================
 
 	void DetectBoost(){
-
-
 		if (myInputDetection.PressedBoost()) {
-
 			//if the previous roll has ended
 			if (myState != PlayerState.BOOSTING){
 				Boost ();
 			}
 		}
-
-		
 	}
 
 	void Boost(){
@@ -362,7 +359,8 @@ public class PlayerController : MonoBehaviour {
 		currentMaxSpeed = boostMaxSpeed;
 
 		myState = PlayerState.BOOSTING;
-		//myAnimator.SetBool("Rolling", true);
+        if (animateRoll)
+		    myAnimator.SetBool("Rolling", true);
 		
 		boostEndTime = Time.time + boostDuration;
 		
