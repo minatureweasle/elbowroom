@@ -1,0 +1,14 @@
+animation keys.
+
+here are the numbers of the different movements
+in the timeline
+
+there are frames in between that are not going to 
+be used,ignore those. just use the numbers that i give you.
+
+1         = t pose
+2-16      = run
+18-33     = straf(left)
+34-54     = jump
+56-76     = roll
+82-121    = idle

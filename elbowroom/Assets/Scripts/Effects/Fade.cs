@@ -5,14 +5,19 @@ using UnityEngine.UI;
 
 public class Fade : MonoBehaviour {
 
+    public static Fade instance;
+
 	public bool fadeInAtStart = true;
 	public float fadeDelay = 0.5f;
 	public float fadeDuration = 0.4f;
 
-	Image image;
+	public Image image;
+
+    void Awake(){
+        instance = this;
+    }
 
 	void Start () {
-		image = GetComponent<Image> ();
 		if (fadeInAtStart){
 			StartCoroutine(fadeInLogoCoroutine());
 		}

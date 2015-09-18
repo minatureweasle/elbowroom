@@ -18,4 +18,22 @@ public class PlayerGroup : MonoBehaviour {
 		}
 		return false;
 	}
+
+    /*public void startTimers()
+    {
+        for (int i = 0; i < players.childCount; i++)
+        {
+            Transform currentPlayer = players.GetChild(i);
+            currentPlayer.GetComponent<TimeManager>().startTimer();
+        }
+    }
+
+    public void stopTimers()
+    {
+        for (int i = 0; i < players.childCount; i++)
+        {
+            Transform currentPlayer = players.GetChild(i);
+            currentPlayer.GetComponent<TimeManager>().saveTime();
+        }
+    }*/
 }

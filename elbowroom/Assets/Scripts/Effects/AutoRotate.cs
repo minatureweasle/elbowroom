@@ -20,7 +20,7 @@ public class AutoRotate : MonoBehaviour {
 
 	//set the axis that this object will rotate around
 	void SetAxis(){
-		Vector3 axisVector = transform.up;
+		axisVector = transform.up;
 		if (rotationAxis == Axis.X)
 			axisVector = transform.right;
 		else if (rotationAxis == Axis.Z)

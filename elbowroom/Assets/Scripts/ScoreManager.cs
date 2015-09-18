@@ -8,8 +8,10 @@ public class ScoreManager : MonoBehaviour {
 	void Awake () {
 		//the first ScoreManager to find that instance is null/unassigned, gets assigned to instance. 
 		//Any others at any time will find that instance isn't null, it has already been assigned, and destroy themselves
-		if (instance == null)
-			instance = this;
+		if (instance == null){
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
 		else
 			Destroy (gameObject);
 	}

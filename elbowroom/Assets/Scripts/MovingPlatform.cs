@@ -27,6 +27,7 @@ public class MovingPlatform : TriggeredTrap {
 
 	public GameObject platformMat;
 	
+    //store initial data and cache components
 	void Start () {
 		startingPosition = transform.position;
 		flipInterval = Time.time + timeBetweenFlips;
@@ -73,7 +74,7 @@ public class MovingPlatform : TriggeredTrap {
 		}
 	}
 
-bool pMoveHorizontal(bool moveLeft){
+    bool pMoveHorizontal(bool moveLeft){
 
 		if (moveLeft) {
 			Vector3 destination = transform.localPosition;
@@ -116,8 +117,4 @@ bool pMoveHorizontal(bool moveLeft){
 	void pFlipRight(){
 		platformAnimator.Play ("FlipRight");
 	}
-
-	// unimplemented 
-	public override void OnTrapDeactivated(Collider collider){}
-	public override void OnTrapActivated(Collider collider){}
 }

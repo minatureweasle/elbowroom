@@ -14,12 +14,11 @@ public class ScoreDisplay : MonoBehaviour {
 
 	void Start () {
 
-		string doorLeadsTo = myPortal.GetComponent<SwitchScene> ().room;
+		string doorLeadsTo = myPortal.GetComponent<DoorPortal> ().room;
 
-		scoreManager = GameObject.Find ("_ScoreManager");
-		lastScoreText.text = scoreManager.GetComponent<ScoreManager> ().getLastScoreAsString (doorLeadsTo);
-		bestScoreText.text = scoreManager.GetComponent<ScoreManager> ().getBestScoreAsString (doorLeadsTo);
-		welcomeText.text = doorLeadsTo + "\n" + "winner: " + scoreManager.GetComponent<ScoreManager>().getWinner (doorLeadsTo);
+		lastScoreText.text = ScoreManager.instance.getLastScoreAsString (doorLeadsTo);
+		bestScoreText.text = ScoreManager.instance.getBestScoreAsString (doorLeadsTo);
+		welcomeText.text = doorLeadsTo + "\n" + "winner: " + ScoreManager.instance.getWinner (doorLeadsTo);
 	
 	}
 }

@@ -6,6 +6,7 @@ public class FollowPlayer : MonoBehaviour {
 	public GameObject playerToFollow;
 	public int panSpeed = 2;
 
+    //Checks the players position, and if the player is far from the camera, it will pan towards the player
 	void Update () {
 		transform.position = new Vector3(transform.position.x, transform.position.y, playerToFollow.transform.position.z - 8);
 
@@ -17,6 +18,7 @@ public class FollowPlayer : MonoBehaviour {
 
 	}
 
+    //The camera changes its velocity so that it moves towards the player
 	void Pan(){
 		if (transform.position.x < playerToFollow.transform.position.x){
 			GetComponent<Rigidbody>().velocity += new Vector3(1,0,0);

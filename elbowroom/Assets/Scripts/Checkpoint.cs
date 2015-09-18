@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Checkpoint : TriggeredTrap
+public class Checkpoint : MonoBehaviour
 {
 
-	public GameObject _SceneManager;
+	public RaceManager raceManager;
 	public bool isFirst = false;
 	public Material activeMaterial;
 
 	bool hasBeenActivated = false;
 
-	public override void OnTrapActivated (Collider c)
+	void OnTriggerEnter(Collider c)
 	{
 		if (c.tag == "Player") {
 			PlayerLogic s = c.transform.GetComponent<PlayerLogic> ();
@@ -19,8 +19,7 @@ public class Checkpoint : TriggeredTrap
 		}
 
 		if (isFirst && !hasBeenActivated) {
-			StartGame sG = _SceneManager.GetComponent<StartGame> ();
-			sG.StartCountdown ();
+            raceManager.StartCountdown();
 			hasBeenActivated = true;
 		}
 	}
