@@ -16,7 +16,7 @@ public class RaceManager : MonoBehaviour {
     }
 
 	//start the timers for each player and disable the invisible wall
-	public void NewRace()
+	void NewRace()
     {
         //PlayerGroup.instance.startTimers();
         TimeManager.instance.startTimer();

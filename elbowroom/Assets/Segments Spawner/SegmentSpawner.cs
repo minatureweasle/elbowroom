@@ -18,7 +18,7 @@ public class SegmentSpawner : MonoBehaviour {
 
 	public float minimumLengthBehind = 20f;
 
-	float furthestPositionBack = 0;
+	//float furthestPositionBack = 0;
 
 	//always stored in advance
 	GameObject nextPrefab;

@@ -4,14 +4,13 @@ using UnityEngine.UI;
 
 public class ScoreDisplay : MonoBehaviour {
 
-	GameObject scoreManager;
-
 	public Text lastScoreText;
 	public Text bestScoreText;
 	public Text welcomeText;
 
 	public GameObject myPortal;
 
+    //Fetch this room's scores and winner and show them on the canvas as text
 	void Start () {
 
 		string doorLeadsTo = myPortal.GetComponent<DoorPortal> ().room;

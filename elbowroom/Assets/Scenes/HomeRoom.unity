@@ -2431,7 +2431,7 @@ Transform:
   m_GameObject: {fileID: 297347648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.6300011, y: 7.97000027, z: 20.8600006}
-  m_LocalScale: {x: 66.4209671, y: 1, z: 1}
+  m_LocalScale: {x: 66.4209671, y: 1, z: .600000024}
   m_Children: []
   m_Father: {fileID: 841949352}
   m_RootOrder: 0
@@ -7911,7 +7911,6 @@ MonoBehaviour:
   boostAcceleration: 100
   jumpTimeOut: 1.39999998
   wallJumpTimeWindow: .699999988
-  respawnHeight: -20
   strafeMinSpeed: 0
   strafeMaxSpeed: 16
   strafeAcceleration: 30
@@ -9187,7 +9186,6 @@ MonoBehaviour:
   boostAcceleration: 100
   jumpTimeOut: 1.39999998
   wallJumpTimeWindow: .699999988
-  respawnHeight: -20
   strafeMinSpeed: 0
   strafeMaxSpeed: 16
   strafeAcceleration: 30

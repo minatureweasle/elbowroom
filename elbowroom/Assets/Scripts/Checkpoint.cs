@@ -3,13 +3,13 @@ using System.Collections;
 
 public class Checkpoint : MonoBehaviour
 {
-
-	public RaceManager raceManager;
 	public bool isFirst = false;
 	public Material activeMaterial;
 
 	bool hasBeenActivated = false;
 
+    //activate the checkpoint so that the player who touched it will return to it if they die
+    //if this is the first checkpoint in the scene, start a race
 	void OnTriggerEnter(Collider c)
 	{
 		if (c.tag == "Player") {
@@ -19,7 +19,7 @@ public class Checkpoint : MonoBehaviour
 		}
 
 		if (isFirst && !hasBeenActivated) {
-            raceManager.StartCountdown();
+            RaceManager.instance.StartCountdown();
 			hasBeenActivated = true;
 		}
 	}

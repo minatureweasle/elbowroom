@@ -458,7 +458,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34cd846b30b14b94a98e37774a7d65cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raceManager: {fileID: 1618674573}
   isFirst: 0
   activeMaterial: {fileID: 2100000, guid: c6f10f090724d804da45cf7c24ceab92, type: 2}
 --- !u!23 &21255459
@@ -1088,7 +1087,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 441476, guid: a56ea971f4d39fd4090ada14634687e9, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 11441476, guid: a56ea971f4d39fd4090ada14634687e9, type: 2}
       propertyPath: timeText
@@ -5573,11 +5572,11 @@ Transform:
   m_PrefabInternal: {fileID: 2008563027}
   m_GameObject: {fileID: 419132073}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .690002441, y: .0999984741, z: 23}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &420022905
 GameObject:
   m_ObjectHideFlags: 0
@@ -7282,7 +7281,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 463490, guid: ae095d19dc2574345b9a07223d37d9d8, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11463490, guid: ae095d19dc2574345b9a07223d37d9d8, type: 2}
       propertyPath: players
@@ -8909,6 +8908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useForce: 0
+  animateRoll: 0
   increaseGravityWhenFalling: 1
   canMoveWhileJumping: 1
   stopSuddenly: 0
@@ -9076,7 +9076,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &731962471
 GameObject:
   m_ObjectHideFlags: 0
@@ -16866,7 +16866,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &1467998000
 GameObject:
   m_ObjectHideFlags: 0
@@ -17568,7 +17568,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34cd846b30b14b94a98e37774a7d65cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raceManager: {fileID: 1618674573}
   isFirst: 1
   activeMaterial: {fileID: 2100000, guid: c6f10f090724d804da45cf7c24ceab92, type: 2}
 --- !u!23 &1547107913
@@ -18245,7 +18244,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &1619726589
 GameObject:
   m_ObjectHideFlags: 0
@@ -20252,6 +20251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useForce: 0
+  animateRoll: 0
   increaseGravityWhenFalling: 1
   canMoveWhileJumping: 1
   stopSuddenly: 0
@@ -22264,15 +22264,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 495898, guid: 1c99b64e551e96b41a8e0eb465a7ec99, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .690002441
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 495898, guid: 1c99b64e551e96b41a8e0eb465a7ec99, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .0999984741
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 495898, guid: 1c99b64e551e96b41a8e0eb465a7ec99, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 23
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 495898, guid: 1c99b64e551e96b41a8e0eb465a7ec99, type: 2}
       propertyPath: m_LocalRotation.x

@@ -13,6 +13,10 @@ public class PlayerLogic : MonoBehaviour {
 	}
 	
 	void Update () {
+        //return the player to the last checkpoint if they have fallen
+        if (transform.position.y < -20)
+            state = playerState.DEAD;
+
 		if (state == playerState.DEAD) {
 			Respawn();
 		}

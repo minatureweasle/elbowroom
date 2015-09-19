@@ -5,15 +5,15 @@ public class PulsingLight : MonoBehaviour {
 
 	float startingIntensity;
 
-    Light light;
+    Light myLight;
 
 	void Start () {
-        light = GetComponent<Light>();
-        startingIntensity = light.intensity;
+        myLight = GetComponent<Light>();
+        startingIntensity = myLight.intensity;
 	}
 
 	//continuously set the light's intensity to a follow a Sine wave
 	void Update () {
-        light.intensity = startingIntensity + Mathf.Sin(Time.time) / 3;
+        myLight.intensity = startingIntensity + Mathf.Sin(Time.time) / 3;
 	}
 }

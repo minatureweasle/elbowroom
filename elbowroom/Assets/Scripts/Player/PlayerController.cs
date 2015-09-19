@@ -31,8 +31,6 @@ public class PlayerController : MonoBehaviour {
 	public float wallJumpTimeWindow = 0.7f;
 	float wallJumpAvailabilityEnd = 0;
 
-	public float respawnHeight = -20;
-
 	public float strafeMinSpeed = 0;
 	public float strafeMaxSpeed = 16;
 	public float strafeAcceleration = 30;
@@ -144,10 +142,6 @@ public class PlayerController : MonoBehaviour {
 		else if (myState == PlayerState.RECOILING){			
 			
 		}
-
-		//return the player to the last checkpoint if they have fallen
-		if (transform.position.y < respawnHeight)
-			GetComponent<PlayerLogic> ().setState (PlayerLogic.playerState.DEAD);
 
 		//fall faster than you rise
 		if (increaseGravityWhenFalling) {
