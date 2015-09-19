@@ -11,7 +11,8 @@ public class PlayerLogic : MonoBehaviour {
 	void Start () {
 		state = playerState.ALIVE;
 	}
-	
+
+	//Change the player's state and react to the player's state
 	void Update () {
         //return the player to the last checkpoint if they have fallen
         if (transform.position.y < -20)

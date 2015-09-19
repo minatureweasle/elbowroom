@@ -121,7 +121,7 @@ GameObject:
   - 54: {fileID: 5479984}
   - 114: {fileID: 11479984}
   m_Layer: 0
-  m_Name: Segment
+  m_Name: SmallPlatform
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -435,7 +435,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11479984
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179996}
@@ -457,13 +457,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd3b8dfec8d6b848ac199ffd9a616ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killPlayerOnTouch: 0
-  pushPlayerOnTouch: 0
-  myAnimation: {fileID: 0}
-  trapIsActive: 1
+  trapAction: 0
   triggeredByDistance: 0
   triggerDistance: 5
-  players: {fileID: 0}
   moveHorizontal: 0
   moveVertical: 0
   flipLeft: 0
