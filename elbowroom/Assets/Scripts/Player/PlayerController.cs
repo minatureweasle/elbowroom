@@ -28,8 +28,8 @@ public class PlayerController : MonoBehaviour {
 	public float jumpTimeOut = 0.7f;
 	float recoilTimeOut = 0.7f;
 
-	public float wallJumpTimeWindow = 0.7f;
-	float wallJumpAvailabilityEnd = 0;
+	//public float wallJumpTimeWindow = 0.7f;
+	//float wallJumpAvailabilityEnd = 0;
 
 	public float strafeMinSpeed = 0;
 	public float strafeMaxSpeed = 16;
@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour {
 
 	PlayerState myState = PlayerState.IDLE;
 
+    //cache components
 	void Start () {
 
 		myAnimator = GetComponent<Animator> ();
@@ -61,7 +62,8 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
-
+    //check if a boost, jump or recoil has ended
+    //and do actions specific to the current state
 	void Update () {
 		//Debug.Log (myState);
 
@@ -98,10 +100,10 @@ public class PlayerController : MonoBehaviour {
 			recoilEndTime = Mathf.Infinity;
 		}
 
-		if (Time.time < wallJumpAvailabilityEnd) {
+		/*if (Time.time < wallJumpAvailabilityEnd) {
 			
 			DetectWallJump();
-		}
+		}*/
 
 
 		if (myState == PlayerState.IDLE) {
@@ -155,6 +157,7 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
+    //when the player touches the floor, they are no longer jumping and can jump again
 	void OnCollisionEnter(Collision collision){
 		
 		if (collision.transform.tag == "Floor") {
@@ -169,6 +172,7 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+    //The player changes state and moves backwards while recoiling
 	public void Recoil(){
 
 		myAnimator.SetBool("Jumping", false);
@@ -186,6 +190,7 @@ public class PlayerController : MonoBehaviour {
 	//RUNNING
 	//========================================
 
+    //see if the player should change to the running state depending on what keys they're pressing
 	void DetectRun(){
 
 		if (myInputDetection.PressedAnyDirectionalKey()) {
@@ -194,6 +199,7 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+    //accelerate the player in the XZ plane according their key presses
 	void Run(){
 
 		//bool runningInZDirection = false;
@@ -265,6 +271,7 @@ public class PlayerController : MonoBehaviour {
 		//DetectNotRunning ();
 	}
 
+    //change states to IDLE if the player is not moving
 	void DetectNotRunning(){
 		
 		if (targetVelocity.x == 0 && targetVelocity.z == 0) {
@@ -278,6 +285,7 @@ public class PlayerController : MonoBehaviour {
 	//JUMPING
 	//========================================
 
+    //do a jump if the player pressed their jump button
 	void DetectJump(){
 		
 		if (myInputDetection.PressedJump()) {
@@ -286,6 +294,8 @@ public class PlayerController : MonoBehaviour {
 		
 	}
 
+    //add an upwards force to the player, change to JUMPING state
+    //and schedule a time when the jump ends forcefully if it doesn't end naturally before that
 	void Jump(){
 
 		Vector3 newVelocity = myRigidbody.velocity;
@@ -303,7 +313,7 @@ public class PlayerController : MonoBehaviour {
 	//WALL JUMPING
 	//========================================
 
-	public void AllowWallJump(){
+	/*public void AllowWallJump(){
 
 		wallJumpAvailabilityEnd = Time.time + wallJumpTimeWindow;
 	}
@@ -333,12 +343,13 @@ public class PlayerController : MonoBehaviour {
 		
 		//wall jumping is no longer available
 		wallJumpAvailabilityEnd = 0;
-	}
+	}*/
 
 	//========================================
 	//BOOSTING
 	//========================================
 
+    //do a boost if the player pressed their boost button
 	void DetectBoost(){
 		if (myInputDetection.PressedBoost()) {
 			//if the previous roll has ended
@@ -348,6 +359,9 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+    //give the player a greater maximum speed and acceleration,
+    //change states to BOOSTING
+    //and schedule a time when the boost will end
 	void Boost(){
 
 		currentAcceleration = boostAcceleration;
@@ -365,6 +379,8 @@ public class PlayerController : MonoBehaviour {
 	//CONTROLLING PLAYER VELOCITY
 	//========================================
 
+    //change the player's velocity so that it starts at the initial velocity
+    //and rises up to the maximum velocity, in the X direction
 	void AccelerateFromToX(float initialVelocity, float maxVelocity, float acceleration){
 
 		Vector3 newVelocity = myRigidbody.velocity;
@@ -386,6 +402,8 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
+    //change the player's velocity so that it starts at the initial velocity
+    //and rises up to the maximum velocity, in the Z direction
 	void AccelerateFromToZ(float initialVelocity, float maxVelocity, float acceleration){
 		
 		Vector3 newVelocity = myRigidbody.velocity;

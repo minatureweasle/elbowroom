@@ -16,6 +16,7 @@ public class RocketLauncher : MonoBehaviour {
 
 	public float maxDistance = 30;
 
+    //Target the player, and shoot at the player if ready
 	void Update () {
 		TargetPlayer ();
 		if (Time.time > waitEndTime)
@@ -57,16 +58,19 @@ public class RocketLauncher : MonoBehaviour {
 		}
 	}
 
+    //Create a rocket pointing in the same direction as the turret and stop shooting
 	void Shoot(){
 		Instantiate(bulletPrefab, firepoint.position, transform.rotation);
 		StopWaitingToShoot();
 	}
 
+    //stop shooting by setting the time of the next shot to infinity which will never be reached
 	void StopWaitingToShoot(){
 		waiting = false;
 		waitEndTime = Mathf.Infinity;
 	}
 
+    //schedule the time of the next shot to be ahead of the current time by some amount of seconds
 	void WaitToShoot(float duration){
 		waiting = true;
 		waitEndTime = Time.time + duration;

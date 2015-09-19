@@ -32,6 +32,7 @@ public class InputHandler : MonoBehaviour {
 		}
 	}
 
+    //returns true if the player pressed their forward, backward, left or right keys this frame
 	public bool PressedAnyDirectionalKey(){
 		if (Input.GetKeyDown (forwardKey) || Input.GetKeyDown (backwardKey) || Input.GetKeyDown (leftKey) || Input.GetKeyDown (rightKey)) {
 			return true;
@@ -39,45 +40,55 @@ public class InputHandler : MonoBehaviour {
 		return false;
 	}
 
+    //returns true if the player is holding down their forward key on this frame
 	public bool IsPressingForward(){
 		if (Input.GetKey (forwardKey))
 			return true;
 		return false;
 	}
 
+    //returns true if the player is holding down their backward key on this frame
 	public bool IsPressingBackward(){
 		if (Input.GetKey (backwardKey))
 			return true;
 		return false;
 	}
 
+    //returns true if the player is holding down their left key on this frame
 	public bool IsPressingLeft(){
 		if (Input.GetKey (leftKey))
 			return true;
 		return false;
 	}
 
+    //returns true if the player is holding down their right key on this frame
 	public bool IsPressingRight(){
 		if (Input.GetKey (rightKey))
 			return true;
 		return false;
 	}
 
+    //returns true if the player is holding down their boost key on this frame
+    public bool IsPressingBoost()
+    {
+        if (Input.GetKey(boostKey))
+            return true;
+        return false;
+    }
+
+    //returns true if the player pressed the jump key on this frame
 	public bool PressedJump(){
 		if (Input.GetKeyDown (jumpKey))
 			return true;
 		return false;
 	}
 
+    //returns true if the player pressed their boost key on this frame
 	public bool PressedBoost(){
 		if (Input.GetKeyDown (boostKey))
 			return true;
 		return false;
 	}
 
-	public bool PressingBoost(){
-		if (Input.GetKey (boostKey))
-			return true;
-		return false;
-	}
+    
 }

@@ -7,6 +7,7 @@ public class PulsingLight : MonoBehaviour {
 
     Light myLight;
 
+    //cache the this object's Light component and store its starting intensity
 	void Start () {
         myLight = GetComponent<Light>();
         startingIntensity = myLight.intensity;

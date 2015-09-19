@@ -10,10 +10,12 @@ public class AutoRotate : MonoBehaviour {
 
 	Vector3 axisVector;
 
+    //set the axis vector so that the object knows what axis to rotate around
 	void Start(){
 		SetAxis ();
 	}
 
+    //rotate the object around the axis vector set using SetAxis()
 	void Update () {
 		transform.RotateAround (transform.position, axisVector, rotateSpeed * Time.deltaTime);
 	}

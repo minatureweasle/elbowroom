@@ -13,10 +13,12 @@ public class Fade : MonoBehaviour {
 
 	public Image image;
 
+    //store a static instance for easy access of this class's public functions from other classes
     void Awake(){
         instance = this;
     }
 
+    //fade the scene in (by fading the image out) when the scene starts
 	void Start () {
 		if (fadeInAtStart){
 			StartCoroutine(fadeInLogoCoroutine());
@@ -30,6 +32,7 @@ public class Fade : MonoBehaviour {
 		image.CrossFadeAlpha(0, fadeDuration, true);
 	}
 
+    //fade the scene out by making the black image opaque (alpha of 1), obscuring the view of the scene
 	public void fadeOut(){
 		image.CrossFadeAlpha(1, fadeDuration, true);
 	}

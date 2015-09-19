@@ -23,6 +23,7 @@ public class PlayerLogic : MonoBehaviour {
 		}
 	}
 
+    //Return the player to its starting point and set its state to ALIVE
 	void Respawn(){
 		transform.position = startPoint;
 		state = playerState.ALIVE;

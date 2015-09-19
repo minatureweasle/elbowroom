@@ -10,6 +10,7 @@ public class SplitScreen : MonoBehaviour {
 
 	Camera myCamera;
 
+    //resize the camera occording the the ViewType
 	void Start () {
 
 		myCamera = GetComponent<Camera> ();

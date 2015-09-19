@@ -18,6 +18,7 @@ public class DoorPortal : MonoBehaviour {
         }
 	}
 
+    //if a player leaves the trigger volume, one less player is at the door
     void OnTriggerExit(Collider c){
 		playerCount--;
 	}

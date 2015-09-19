@@ -35,6 +35,7 @@ public class MovingPlatform : TriggeredTrap {
 
 	}
 
+    //check what actions the platform should take while it is active
 	public override void OnTrapActive(){
 
 		timeUntilNextFlip = flipInterval - Time.time;
@@ -74,6 +75,7 @@ public class MovingPlatform : TriggeredTrap {
 		}
 	}
 
+    //smoothly move the platform to a specified distance away, left or right
     bool pMoveHorizontal(bool moveLeft){
 
 		if (moveLeft) {
@@ -100,6 +102,7 @@ public class MovingPlatform : TriggeredTrap {
 
 	}
 
+    //shrink the scale of the platform
 	void pShrink(){
 
 		if (transform.localScale.x <= 0) {
@@ -110,10 +113,12 @@ public class MovingPlatform : TriggeredTrap {
 		renderer.material.color += new Color(0,0,shrinkAmount);
 	}
 
+    //play an animation in which the platform rotates anticlockwise
 	void pFlipLeft(){
 		platformAnimator.Play ("FlipLeft");
 	}
 
+    //play an animation in which the platform rotates clockwise
 	void pFlipRight(){
 		platformAnimator.Play ("FlipRight");
 	}

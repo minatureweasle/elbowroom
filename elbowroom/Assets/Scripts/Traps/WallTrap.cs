@@ -12,13 +12,15 @@ public class WallTrap : MonoBehaviour {
 
 	float initialHeight;
 
+    //initialise values and start the next wall falling
 	void Start () {
 		shouldRise = new bool[walls.Length];
-		shouldRise [0] = false;
 		initialHeight = walls[0].position.y;
 		ChangeWalls();
 	}
 
+    //move each wall according to whether it should be rising or falling 
+    //and change walls if the time has come
 	void Update () {
 		MoveWalls ();
 		if (Time.time > nextWallChangeTime)

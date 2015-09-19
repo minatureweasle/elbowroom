@@ -8,6 +8,8 @@ public abstract class TriggeredTrap : Trap {
 
 	bool trapIsActive = false;
 
+    //Activates the trap if any player is close enough and the trap is triggered by distance
+    //Calls the OnTrapActive function if the trap is active, every frame
 	void Update(){
 		if (trapIsActive)
 			OnTrapActive ();
@@ -21,11 +23,13 @@ public abstract class TriggeredTrap : Trap {
 		}
 	}
 
+    //Activates the trap
 	void OnTriggerEnter(Collider collider){
 		OnTrapActivated (collider);
 		trapIsActive = true;
 	}
 	
+    //Deactivates the trap
 	void OnTriggerExit(Collider collider){
 		trapIsActive = false;
 		OnTrapDeactivated (collider);

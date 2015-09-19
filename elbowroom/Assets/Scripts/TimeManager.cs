@@ -13,10 +13,13 @@ public class TimeManager : MonoBehaviour {
 
 	bool playing = false;
 
+    //store a static instance for easy access of this class's public functions from other classes
     void Awake(){
         instance = this;
     }
 
+    //increase the time since the race began by the time between frames
+    //and write the times to the canvas's Text elements
 	void Update () {
 		if (playing) {
 			time += Time.deltaTime;
@@ -25,6 +28,7 @@ public class TimeManager : MonoBehaviour {
 		}
 	}
 
+    //start increasing the time every frame
 	public void startTimer(){
         time = 0;
 		playing = true;

@@ -10,7 +10,7 @@ public class CubeField : MonoBehaviour {
 
 	Transform[,] cubes;
 
-	//initialise the array
+	//initialise the array of cubes
 	void Awake(){
 		cubes = new Transform[rows,columns];
 	}
