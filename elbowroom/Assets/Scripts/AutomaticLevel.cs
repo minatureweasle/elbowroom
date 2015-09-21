@@ -12,6 +12,9 @@ public class AutomaticLevel : MonoBehaviour {
     public int distRoom;
     public int distPlatform;
 
+    //is level constructed
+    bool is_constructed = false;
+
     //to keep track of where to spawn objects
     public float creationDistance;
     private float spawnPoint;
@@ -29,26 +32,29 @@ public class AutomaticLevel : MonoBehaviour {
 	// Generates the next object if the player is a certain 
     // distance from the last spawned object
 	void Update () {
-        Transform players = PlayerGroup.instance.players;
-        for (int i = 0; i < players.childCount; i++)
-        {
-            float playerZPos = players.GetChild(i).position.z;
-            float distanceFromSpawn = Mathf.Abs(spawnPoint - playerZPos);
-            if (distanceFromSpawn > creationDistance)
+        if (is_constructed == false) {
+            Transform players = PlayerGroup.instance.players;
+            for (int i = 0; i < players.childCount; i++)
             {
-                float spawnIncrement = pawp();
-                if (spawnIncrement > 0)
+                float playerZPos = players.GetChild(i).position.z;
+                float distanceFromSpawn = spawnPoint - playerZPos;
+                if (distanceFromSpawn > creationDistance)
                 {
-                    spawnPoint += spawnIncrement;
+                    float spawnIncrement = pawp();
+                    if (spawnIncrement > 0)
+                    {
+                        spawnPoint += spawnIncrement;
+                    }
+                    else
+                    {
+                        is_constructed = true;
+                        break;
+                    }
                 }
-                else
-                {
-                    Debug.Log("Error in removing element from queue");
-                }
-            }
-        }
-
+            }        
+        }   
 	}
+  
 
     //adds to the level queue the amount of rooms and platforms specified
     void buildLevel()
@@ -62,6 +68,7 @@ public class AutomaticLevel : MonoBehaviour {
                 level.Enqueue("Platform");
             }
         }
+        level.Enqueue("End");
     }
     //removes an element from the level queue and spawns the correct game object
     float pawp()
@@ -78,6 +85,10 @@ public class AutomaticLevel : MonoBehaviour {
         {
              Instantiate(platform, new Vector3(0,0,spawnPoint), Quaternion.identity);
              spawnIncrement = distPlatform;
+        }
+        else if (ele == "End")
+        {
+
         }
         return spawnIncrement;
     }
