@@ -26,7 +26,7 @@ public class MovingPlatform : TriggeredTrap {
 	Vector3 startingPosition;
 
 	public GameObject platformMat;
-	
+
     //store initial data and cache components
 	void Start () {
 		startingPosition = transform.position;
@@ -36,22 +36,17 @@ public class MovingPlatform : TriggeredTrap {
 	}
 
     //check what actions the platform should take while it is active
-	public override void OnTrapActive(){
+	void Update(){
 
 		timeUntilNextFlip = flipInterval - Time.time;
 	
-		if (timeUntilNextFlip > 1) {
-			timeUntilNextFlip =1;
-		}
-
 		//platformMat.renderer.material.color = new Color ( 0.4f + (timeBetweenFlips - timeUntilNextFlip) , 1f ,  0.6f);
 		if (flipLeft || flipRight) {
 			platformMat.renderer.material.color = new Color (1 , timeUntilNextFlip ,  timeUntilNextFlip);
 		}
 
 		bool canFlip = false;
-		if (Time.time >= flipInterval) {
-		
+		if (timeUntilNextFlip <= 0) {
 			canFlip = true;
 			flipInterval = Time.time + timeBetweenFlips;
 		}

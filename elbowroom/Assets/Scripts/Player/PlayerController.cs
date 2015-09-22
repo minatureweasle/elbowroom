@@ -50,6 +50,8 @@ public class PlayerController : MonoBehaviour {
 
 	PlayerState myState = PlayerState.IDLE;
 
+	public GameObject boostStreamPrefab;
+
     //cache components
 	void Start () {
 
@@ -363,6 +365,8 @@ public class PlayerController : MonoBehaviour {
     //change states to BOOSTING
     //and schedule a time when the boost will end
 	void Boost(){
+
+		Instantiate(boostStreamPrefab, transform.position + Vector3.up, transform.rotation);
 
 		currentAcceleration = boostAcceleration;
 		currentMaxSpeed = boostMaxSpeed;

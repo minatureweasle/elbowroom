@@ -10425,7 +10425,7 @@ MonoBehaviour:
   distPlatform: 11
   distEndPlatform: 28
   creationDistance: 30
-  randomnessX: 0
+  randomnessX: 7
   randomnessY: 0
   rooms:
   - {fileID: 150592, guid: 13040fa7be5df524d888b5e1648a5614, type: 2}
