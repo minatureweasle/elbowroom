@@ -1113,7 +1113,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'RACE TWO!: THE RETURN OF THE SAME THING'
+  m_Text: warning! dangerous heights
 --- !u!222 &112133981
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scenes/RaceTwo.unity
   - enabled: 1
     path: Assets/Scenes/RandomRace.unity
+  - enabled: 1
+    path: Assets/Scenes/DangerousRandomRace.unity

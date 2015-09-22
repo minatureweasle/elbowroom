@@ -4,7 +4,7 @@ using System.Collections;
 [RequireComponent(typeof(LineRenderer))]
 public class RocketLauncher : MonoBehaviour {
 
-	public GameObject player;
+	//public GameObject player;
 	public GameObject bulletPrefab;
 	public Transform firepoint;
 
@@ -25,8 +25,11 @@ public class RocketLauncher : MonoBehaviour {
 
 	//the launcher turns to point at the player and when the player is in sight it schedules rockets to be fired
 	void TargetPlayer(){
-		Vector3 directionToPlayer = player.transform.position - transform.position;
-		
+		//Vector3 directionToPlayer = player.transform.position - transform.position;
+		Vector3 directionToPlayer = PlayerGroup.instance.GetClosestPlayerTo(transform.position).position - transform.position;
+		//point at his head rather than his feet
+		directionToPlayer += Vector3.up*1.5f;
+
 		//point launcher towards player
 		if (directionToPlayer.magnitude < maxDistance && directionToPlayer.z < 0)
 			transform.up = Vector3.Lerp (transform.up, directionToPlayer, 0.001f * lerpFactor);

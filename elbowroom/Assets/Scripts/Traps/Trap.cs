@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 
@@ -11,12 +11,12 @@ public class Trap : MonoBehaviour {
 	void OnCollisionEnter(Collision c){
 		if (c.transform.tag == "Player"){
 			if (trapAction == TrapAction.PUSH){
-				PlayerController s = c.transform.GetComponent<PlayerController>();
+				PlayerLogic s = c.transform.GetComponent<PlayerLogic>();
 				s.Recoil();
 			}
 			else if (trapAction == TrapAction.KILL){
-				PlayerLogic pLogic = c.transform.GetComponent<PlayerLogic>();
-				pLogic.setState(PlayerLogic.playerState.DEAD);
+				PlayerResetter pLogic = c.transform.GetComponent<PlayerResetter>();
+				pLogic.setState(PlayerResetter.playerState.DEAD);
 			}
 		}
 	}

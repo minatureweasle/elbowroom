@@ -457,7 +457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34cd846b30b14b94a98e37774a7d65cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFirst: 0
   activeMaterial: {fileID: 2100000, guid: c6f10f090724d804da45cf7c24ceab92, type: 2}
 --- !u!23 &21255459
 Renderer:
@@ -1624,7 +1623,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: room one
+  m_Text: we all gotta' start somewhere
 --- !u!222 &112133981
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8916,13 +8915,13 @@ MonoBehaviour:
   boostMaxSpeed: 36
   boostAcceleration: 100
   jumpTimeOut: 1.39999998
-  wallJumpTimeWindow: .699999988
   strafeMinSpeed: 0
   strafeMaxSpeed: 16
   strafeAcceleration: 30
   forwardMinSpeed: 6
   forwardMaxSpeed: 30
   forwardAcceleration: 20
+  boostStreamPrefab: {fileID: 119318, guid: e6261b18e2e7a014299a94c4f55803eb, type: 2}
 --- !u!114 &714297606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16535,7 +16534,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: eef2be5dff5be184889b4817c2fafd2e, type: 2}
+  - {fileID: 2100000, guid: 491831d06b3947f42b8c238d55110d8b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -17566,7 +17565,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34cd846b30b14b94a98e37774a7d65cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFirst: 1
   activeMaterial: {fileID: 2100000, guid: c6f10f090724d804da45cf7c24ceab92, type: 2}
 --- !u!23 &1547107913
 Renderer:
@@ -20258,13 +20256,13 @@ MonoBehaviour:
   boostMaxSpeed: 36
   boostAcceleration: 100
   jumpTimeOut: 1.39999998
-  wallJumpTimeWindow: .699999988
   strafeMinSpeed: 0
   strafeMaxSpeed: 16
   strafeAcceleration: 30
   forwardMinSpeed: 6
   forwardMaxSpeed: 30
   forwardAcceleration: 20
+  boostStreamPrefab: {fileID: 119318, guid: e6261b18e2e7a014299a94c4f55803eb, type: 2}
 --- !u!95 &1815698685
 Animator:
   serializedVersion: 3

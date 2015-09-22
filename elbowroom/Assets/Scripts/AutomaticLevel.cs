@@ -12,7 +12,7 @@ public class AutomaticLevel : MonoBehaviour {
     public float distRoom = 104;
 	public float distPlatform = 11;
 	public float distEndPlatform = 28;
-
+	public float distanceBetweenObjects; 
     //is level constructed
     bool is_constructed = false;
 
@@ -91,12 +91,14 @@ public class AutomaticLevel : MonoBehaviour {
 			spawnPoint += distRoom/2;
 			Instantiate(rooms[0], new Vector3(spawnPointX,spawnPointY,spawnPoint), Quaternion.identity);
             spawnIncrement = distRoom/2;
-        }
+			spawnIncrement += distanceBetweenObjects; 
+		}
         else if (ele == "Platform")
         {
 			spawnPoint += distPlatform/2;
 			Instantiate(platform, new Vector3(spawnPointX,spawnPointY,spawnPoint), Quaternion.identity);
             spawnIncrement = distPlatform/2;
+			spawnIncrement += distanceBetweenObjects; 
         }
         else if (ele == "End")
         {

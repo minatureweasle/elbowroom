@@ -13,7 +13,7 @@ public class Checkpoint : MonoBehaviour
 	void OnTriggerEnter(Collider c)
 	{
 		if (c.tag == "Player") {
-			PlayerLogic s = c.transform.GetComponent<PlayerLogic> ();
+			PlayerResetter s = c.transform.GetComponent<PlayerResetter> ();
 			s.setStartPoint (transform.position + Vector3.up * 6.25f);
 			GetComponent<Renderer> ().material = activeMaterial;
 		}

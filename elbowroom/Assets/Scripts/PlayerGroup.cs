@@ -20,4 +20,18 @@ public class PlayerGroup : MonoBehaviour {
 		}
 		return false;
 	}
+
+	public Transform GetClosestPlayerTo(Vector3 target){
+		Transform closestPlayer = players.GetChild (0);
+		float closestDistance = Mathf.Infinity;
+		for (int i = 0; i < players.childCount; i++) {
+			float thisDistance = (target - players.GetChild (i).transform.position).magnitude;
+			if (thisDistance < closestDistance && players.GetChild (i).transform.position.z < target.z){
+				closestDistance = thisDistance;
+				closestPlayer = players.GetChild(i);
+			}
+		}
+
+		return closestPlayer;
+	}
 }
