@@ -31,7 +31,8 @@ public class RaceManager : MonoBehaviour {
 
 	//start the race countdown. The race begins when it reaches 0
 	public void StartCountdown(){
-		StartCoroutine (Countdown());
+		if (!TimeManager.instance.gameIsUnderway())
+			StartCoroutine (Countdown());
 	}
 
     //display numbers counting down every second from 3, and start the race at 0 seconds

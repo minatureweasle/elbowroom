@@ -661,7 +661,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: -9.19999981, z: 123.769997}
+  m_LocalPosition: {x: -89.028389, y: 53.2252731, z: 2.23788071}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 407180}
@@ -1045,7 +1045,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: eef2be5dff5be184889b4817c2fafd2e, type: 2}
+  - {fileID: 2100000, guid: 491831d06b3947f42b8c238d55110d8b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1400,16 +1400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e029e45fb6ed9145b429de5a5c87dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killPlayerOnTouch: 0
-  pushPlayerOnTouch: 0
-  myAnimation: {fileID: 0}
-  trapIsActive: 0
-  triggeredByDistance: 0
-  triggerDistance: 5
-  players: {fileID: 0}
-  doorToHome: 1
   room: HomeRoom
-  player: {fileID: 0}
 --- !u!135 &13507178
 SphereCollider:
   m_ObjectHideFlags: 1

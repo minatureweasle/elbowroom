@@ -30,6 +30,9 @@ public class SceneManager : MonoBehaviour {
     IEnumerator WaitThenExit(string room)
     {
         yield return new WaitForSeconds(0.6f);
-        Application.LoadLevel(room);
+		if (room == "Exit" || room == "exit" || room == "")
+			Application.Quit();
+		else
+        	Application.LoadLevel(room);
     }
 }

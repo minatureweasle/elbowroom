@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 410022}
   - 114: {fileID: 11424576}
   m_Layer: 0
-  m_Name: _StartRace
+  m_Name: _RaceManager
   m_TagString: SceneManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,8 +39,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4706cb61f4c5b4c9a783761d992445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players:
-  - {fileID: 0}
+  countdownText: {fileID: 0}
+  invisibleWall: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

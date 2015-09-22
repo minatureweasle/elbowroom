@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Checkpoint : MonoBehaviour
 {
-	public bool isFirst = false;
+	//public bool isFirst = false;
 	public Material activeMaterial;
 
 	bool hasBeenActivated = false;
@@ -18,7 +18,7 @@ public class Checkpoint : MonoBehaviour
 			GetComponent<Renderer> ().material = activeMaterial;
 		}
 
-		if (isFirst && !hasBeenActivated) {
+		if (!hasBeenActivated) {
             RaceManager.instance.StartCountdown();
 			hasBeenActivated = true;
 		}

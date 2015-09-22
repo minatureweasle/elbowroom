@@ -16,6 +16,10 @@ public class DoorPortal : MonoBehaviour {
         if (playerCount >= 2){
             SceneManager.instance.SwitchScenes(room);
         }
+		//if even just one player is at the exit door, the game will exit
+		else if (room == "Exit" || room == "exit" || room == ""){
+			SceneManager.instance.SwitchScenes(room);
+		}
 	}
 
     //if a player leaves the trigger volume, one less player is at the door
