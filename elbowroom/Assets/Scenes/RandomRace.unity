@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myViewType: 2
-  spacing: .00999999978
+  spacing: 0
 --- !u!54 &253286524
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3424,13 +3424,13 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 727641843}
-  - 114: {fileID: 727641851}
-  - 114: {fileID: 727641850}
   - 95: {fileID: 727641849}
   - 54: {fileID: 727641848}
   - 136: {fileID: 727641847}
-  - 114: {fileID: 727641845}
   - 65: {fileID: 727641844}
+  - 114: {fileID: 727641850}
+  - 114: {fileID: 727641846}
+  - 114: {fileID: 727641845}
   m_Layer: 0
   m_Name: Ebb
   m_TagString: Player
@@ -3469,16 +3469,44 @@ BoxCollider:
 --- !u!114 &727641845
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11470070, guid: 2106c871173fae646aef24887ce73510,
+  m_PrefabParentObject: {fileID: 11405124, guid: 2106c871173fae646aef24887ce73510,
     type: 2}
   m_PrefabInternal: {fileID: 76053929}
   m_GameObject: {fileID: 727641842}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9453247440530e41b3ac9fc5111a9c5, type: 3}
+  m_Script: {fileID: 11500000, guid: ce26115759527f44c975c6b78a849d1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myIdentity: 0
+  useForce: 0
+  animateRoll: 0
+  increaseGravityWhenFalling: 1
+  canMoveWhileJumping: 1
+  stopSuddenly: 0
+  jumpVelocity: 16
+  boostDuration: .699999988
+  boostMaxSpeed: 36
+  boostAcceleration: 100
+  jumpTimeOut: 1
+  strafeMinSpeed: 0
+  strafeMaxSpeed: 16
+  strafeAcceleration: 30
+  forwardMinSpeed: 6
+  forwardMaxSpeed: 30
+  forwardAcceleration: 20
+  boostStreamPrefab: {fileID: 119318, guid: e6261b18e2e7a014299a94c4f55803eb, type: 2}
+--- !u!114 &727641846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11485830, guid: 2106c871173fae646aef24887ce73510,
+    type: 2}
+  m_PrefabInternal: {fileID: 76053929}
+  m_GameObject: {fileID: 727641842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4ba913168f1d24e831a3f0fe80fe2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &727641847
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3528,7 +3556,7 @@ Animator:
 --- !u!114 &727641850
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406388, guid: 2106c871173fae646aef24887ce73510,
+  m_PrefabParentObject: {fileID: 11443558, guid: 2106c871173fae646aef24887ce73510,
     type: 2}
   m_PrefabInternal: {fileID: 76053929}
   m_GameObject: {fileID: 727641842}
@@ -3537,35 +3565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13c2bfafbf0ec8419c5f6e9b537ad5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useForce: 0
-  animateRoll: 0
-  increaseGravityWhenFalling: 1
-  canMoveWhileJumping: 1
-  stopSuddenly: 0
-  jumpVelocity: 16
-  boostDuration: .699999988
-  boostMaxSpeed: 36
-  boostAcceleration: 100
-  jumpTimeOut: 1.39999998
-  strafeMinSpeed: 0
-  strafeMaxSpeed: 16
-  strafeAcceleration: 30
-  forwardMinSpeed: 6
-  forwardMaxSpeed: 30
-  forwardAcceleration: 20
-  boostStreamPrefab: {fileID: 119318, guid: e6261b18e2e7a014299a94c4f55803eb, type: 2}
---- !u!114 &727641851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11435038, guid: 2106c871173fae646aef24887ce73510,
-    type: 2}
-  m_PrefabInternal: {fileID: 76053929}
-  m_GameObject: {fileID: 727641842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f4ba913168f1d24e831a3f0fe80fe2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  myIdentity: 0
 --- !u!1 &734432171
 GameObject:
   m_ObjectHideFlags: 0
@@ -5356,6 +5356,70 @@ SkinnedMeshRenderer:
     m_Center: {x: -.117935956, y: -.0540537089, z: 2.38418579e-07}
     m_Extent: {x: .985232651, y: .461377203, z: 1.6874609}
   m_DirtyAABB: 0
+--- !u!1 &992933844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 123944, guid: 8c5f3386134b22441b56f4b213066c8d, type: 2}
+  m_PrefabInternal: {fileID: 1930740898}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 992933845}
+  - 222: {fileID: 992933847}
+  - 114: {fileID: 992933846}
+  m_Layer: 5
+  m_Name: ScreenDivider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &992933845
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22423944, guid: 8c5f3386134b22441b56f4b213066c8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1930740898}
+  m_GameObject: {fileID: 992933844}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1307864913}
+  m_RootOrder: 3
+  m_AnchorMin: {x: .5, y: 0}
+  m_AnchorMax: {x: .5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 30, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &992933846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11423944, guid: 8c5f3386134b22441b56f4b213066c8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1930740898}
+  m_GameObject: {fileID: 992933844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &992933847
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22223944, guid: 8c5f3386134b22441b56f4b213066c8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1930740898}
+  m_GameObject: {fileID: 992933844}
 --- !u!1 &1004114128
 GameObject:
   m_ObjectHideFlags: 0
@@ -5787,13 +5851,13 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1083346196}
-  - 114: {fileID: 1083346204}
-  - 114: {fileID: 1083346203}
   - 95: {fileID: 1083346202}
   - 54: {fileID: 1083346201}
   - 136: {fileID: 1083346200}
-  - 114: {fileID: 1083346198}
   - 65: {fileID: 1083346197}
+  - 114: {fileID: 1083346203}
+  - 114: {fileID: 1083346199}
+  - 114: {fileID: 1083346198}
   m_Layer: 0
   m_Name: Ebb2
   m_TagString: Player
@@ -5832,16 +5896,44 @@ BoxCollider:
 --- !u!114 &1083346198
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11414170, guid: 2c64b828af9d4504896a990e606610e8,
+  m_PrefabParentObject: {fileID: 11482456, guid: 2c64b828af9d4504896a990e606610e8,
     type: 2}
   m_PrefabInternal: {fileID: 1468237105}
   m_GameObject: {fileID: 1083346195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9453247440530e41b3ac9fc5111a9c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f4ba913168f1d24e831a3f0fe80fe2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myIdentity: 1
+--- !u!114 &1083346199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11411758, guid: 2c64b828af9d4504896a990e606610e8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1468237105}
+  m_GameObject: {fileID: 1083346195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce26115759527f44c975c6b78a849d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useForce: 0
+  animateRoll: 0
+  increaseGravityWhenFalling: 1
+  canMoveWhileJumping: 1
+  stopSuddenly: 0
+  jumpVelocity: 16
+  boostDuration: .699999988
+  boostMaxSpeed: 36
+  boostAcceleration: 100
+  jumpTimeOut: 1
+  strafeMinSpeed: 0
+  strafeMaxSpeed: 16
+  strafeAcceleration: 30
+  forwardMinSpeed: 6
+  forwardMaxSpeed: 30
+  forwardAcceleration: 20
+  boostStreamPrefab: {fileID: 119318, guid: e6261b18e2e7a014299a94c4f55803eb, type: 2}
 --- !u!136 &1083346200
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5891,7 +5983,7 @@ Animator:
 --- !u!114 &1083346203
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11414174, guid: 2c64b828af9d4504896a990e606610e8,
+  m_PrefabParentObject: {fileID: 11443506, guid: 2c64b828af9d4504896a990e606610e8,
     type: 2}
   m_PrefabInternal: {fileID: 1468237105}
   m_GameObject: {fileID: 1083346195}
@@ -5900,35 +5992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13c2bfafbf0ec8419c5f6e9b537ad5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useForce: 0
-  animateRoll: 0
-  increaseGravityWhenFalling: 1
-  canMoveWhileJumping: 1
-  stopSuddenly: 0
-  jumpVelocity: 16
-  boostDuration: .699999988
-  boostMaxSpeed: 36
-  boostAcceleration: 100
-  jumpTimeOut: 1.39999998
-  strafeMinSpeed: 0
-  strafeMaxSpeed: 16
-  strafeAcceleration: 30
-  forwardMinSpeed: 6
-  forwardMaxSpeed: 30
-  forwardAcceleration: 20
-  boostStreamPrefab: {fileID: 119318, guid: e6261b18e2e7a014299a94c4f55803eb, type: 2}
---- !u!114 &1083346204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11414176, guid: 2c64b828af9d4504896a990e606610e8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1468237105}
-  m_GameObject: {fileID: 1083346195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f4ba913168f1d24e831a3f0fe80fe2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  myIdentity: 1
 --- !u!1 &1085437854
 GameObject:
   m_ObjectHideFlags: 0
@@ -6607,7 +6671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myViewType: 1
-  spacing: .00999999978
+  spacing: 0
 --- !u!54 &1208383062
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7220,6 +7284,7 @@ RectTransform:
   - {fileID: 259926199}
   - {fileID: 758307572}
   - {fileID: 1362729229}
+  - {fileID: 992933845}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_AnchorMin: {x: 0, y: 0}
