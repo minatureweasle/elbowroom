@@ -1257,13 +1257,13 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 414336}
-  - 114: {fileID: 11414176}
-  - 114: {fileID: 11414174}
   - 95: {fileID: 9514170}
   - 54: {fileID: 5414170}
   - 136: {fileID: 13614170}
-  - 114: {fileID: 11414170}
   - 65: {fileID: 6514170}
+  - 114: {fileID: 11443506}
+  - 114: {fileID: 11411758}
+  - 114: {fileID: 11482456}
   m_Layer: 0
   m_Name: Ebb2
   m_TagString: Player
@@ -4283,7 +4283,7 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11414170
+--- !u!114 &11411758
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -4291,7 +4291,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 114336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52c6914fa586ff447ba34951da61d560, type: 3}
+  m_Script: {fileID: 11500000, guid: ce26115759527f44c975c6b78a849d1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   useForce: 0
@@ -4303,7 +4303,7 @@ MonoBehaviour:
   boostDuration: .699999988
   boostMaxSpeed: 36
   boostAcceleration: 100
-  jumpTimeOut: .699999988
+  jumpTimeOut: 1
   strafeMinSpeed: 0
   strafeMaxSpeed: 16
   strafeAcceleration: 30
@@ -4311,7 +4311,7 @@ MonoBehaviour:
   forwardMaxSpeed: 30
   forwardAcceleration: 20
   boostStreamPrefab: {fileID: 119318, guid: e6261b18e2e7a014299a94c4f55803eb, type: 2}
---- !u!114 &11414174
+--- !u!114 &11443506
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -4323,7 +4323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myIdentity: 1
---- !u!114 &11414176
+--- !u!114 &11482456
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

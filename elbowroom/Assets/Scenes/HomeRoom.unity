@@ -73,7 +73,6 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
-    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1 &1126041
 GameObject:
@@ -1203,8 +1202,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  ignoreReversedGraphics: 1
+  blockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2579,8 +2578,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  ignoreReversedGraphics: 1
+  blockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -5144,8 +5143,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  ignoreReversedGraphics: 1
+  blockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -8940,13 +8939,13 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 995526236}
-  - 114: {fileID: 995526244}
-  - 114: {fileID: 995526243}
   - 95: {fileID: 995526242}
   - 54: {fileID: 995526241}
   - 136: {fileID: 995526240}
-  - 114: {fileID: 995526238}
   - 65: {fileID: 995526245}
+  - 114: {fileID: 995526239}
+  - 114: {fileID: 995526238}
+  - 114: {fileID: 995526237}
   m_Layer: 0
   m_Name: Ebb2
   m_TagString: Player
@@ -8969,16 +8968,28 @@ Transform:
   - {fileID: 1016825612}
   m_Father: {fileID: 1269775163}
   m_RootOrder: 0
---- !u!114 &995526238
+--- !u!114 &995526237
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11414170, guid: 2c64b828af9d4504896a990e606610e8,
+  m_PrefabParentObject: {fileID: 11482456, guid: 2c64b828af9d4504896a990e606610e8,
     type: 2}
   m_PrefabInternal: {fileID: 1748410798}
   m_GameObject: {fileID: 995526235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52c6914fa586ff447ba34951da61d560, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f4ba913168f1d24e831a3f0fe80fe2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &995526238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11411758, guid: 2c64b828af9d4504896a990e606610e8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1748410798}
+  m_GameObject: {fileID: 995526235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce26115759527f44c975c6b78a849d1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   useForce: 0
@@ -8990,7 +9001,7 @@ MonoBehaviour:
   boostDuration: .699999988
   boostMaxSpeed: 36
   boostAcceleration: 100
-  jumpTimeOut: .699999988
+  jumpTimeOut: 1
   strafeMinSpeed: 0
   strafeMaxSpeed: 16
   strafeAcceleration: 30
@@ -8998,6 +9009,19 @@ MonoBehaviour:
   forwardMaxSpeed: 30
   forwardAcceleration: 20
   boostStreamPrefab: {fileID: 119318, guid: e6261b18e2e7a014299a94c4f55803eb, type: 2}
+--- !u!114 &995526239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11443506, guid: 2c64b828af9d4504896a990e606610e8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1748410798}
+  m_GameObject: {fileID: 995526235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f13c2bfafbf0ec8419c5f6e9b537ad5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myIdentity: 1
 --- !u!136 &995526240
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9044,31 +9068,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &995526243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11414174, guid: 2c64b828af9d4504896a990e606610e8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1748410798}
-  m_GameObject: {fileID: 995526235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f13c2bfafbf0ec8419c5f6e9b537ad5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myIdentity: 1
---- !u!114 &995526244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11414176, guid: 2c64b828af9d4504896a990e606610e8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1748410798}
-  m_GameObject: {fileID: 995526235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f4ba913168f1d24e831a3f0fe80fe2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &995526245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10275,8 +10274,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  ignoreReversedGraphics: 1
+  blockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -10411,13 +10410,13 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1187722599}
-  - 114: {fileID: 1187722605}
-  - 114: {fileID: 1187722604}
   - 95: {fileID: 1187722603}
   - 54: {fileID: 1187722602}
   - 136: {fileID: 1187722601}
-  - 114: {fileID: 1187722606}
   - 65: {fileID: 1187722607}
+  - 114: {fileID: 1187722605}
+  - 114: {fileID: 1187722604}
+  - 114: {fileID: 1187722600}
   m_Layer: 0
   m_Name: Ebb
   m_TagString: Player
@@ -10440,6 +10439,35 @@ Transform:
   - {fileID: 525746163}
   m_Father: {fileID: 1269775163}
   m_RootOrder: 1
+--- !u!114 &1187722600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11405124, guid: 2106c871173fae646aef24887ce73510,
+    type: 2}
+  m_PrefabInternal: {fileID: 1481471480}
+  m_GameObject: {fileID: 1187722598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce26115759527f44c975c6b78a849d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useForce: 0
+  animateRoll: 0
+  increaseGravityWhenFalling: 1
+  canMoveWhileJumping: 1
+  stopSuddenly: 0
+  jumpVelocity: 16
+  boostDuration: .699999988
+  boostMaxSpeed: 36
+  boostAcceleration: 100
+  jumpTimeOut: 1
+  strafeMinSpeed: 0
+  strafeMaxSpeed: 16
+  strafeAcceleration: 30
+  forwardMinSpeed: 6
+  forwardMaxSpeed: 30
+  forwardAcceleration: 20
+  boostStreamPrefab: {fileID: 119318, guid: e6261b18e2e7a014299a94c4f55803eb, type: 2}
 --- !u!136 &1187722601
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10489,7 +10517,19 @@ Animator:
 --- !u!114 &1187722604
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406388, guid: 2106c871173fae646aef24887ce73510,
+  m_PrefabParentObject: {fileID: 11485830, guid: 2106c871173fae646aef24887ce73510,
+    type: 2}
+  m_PrefabInternal: {fileID: 1481471480}
+  m_GameObject: {fileID: 1187722598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4ba913168f1d24e831a3f0fe80fe2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1187722605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11443558, guid: 2106c871173fae646aef24887ce73510,
     type: 2}
   m_PrefabInternal: {fileID: 1481471480}
   m_GameObject: {fileID: 1187722598}
@@ -10499,47 +10539,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myIdentity: 0
---- !u!114 &1187722605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11435038, guid: 2106c871173fae646aef24887ce73510,
-    type: 2}
-  m_PrefabInternal: {fileID: 1481471480}
-  m_GameObject: {fileID: 1187722598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f4ba913168f1d24e831a3f0fe80fe2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1187722606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11470070, guid: 2106c871173fae646aef24887ce73510,
-    type: 2}
-  m_PrefabInternal: {fileID: 1481471480}
-  m_GameObject: {fileID: 1187722598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52c6914fa586ff447ba34951da61d560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useForce: 0
-  animateRoll: 0
-  increaseGravityWhenFalling: 1
-  canMoveWhileJumping: 1
-  stopSuddenly: 0
-  jumpVelocity: 16
-  boostDuration: .699999988
-  boostMaxSpeed: 36
-  boostAcceleration: 100
-  jumpTimeOut: .699999988
-  strafeMinSpeed: 0
-  strafeMaxSpeed: 16
-  strafeAcceleration: 30
-  forwardMinSpeed: 6
-  forwardMaxSpeed: 30
-  forwardAcceleration: 20
-  boostStreamPrefab: {fileID: 119318, guid: e6261b18e2e7a014299a94c4f55803eb, type: 2}
 --- !u!65 &1187722607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15740,8 +15739,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  ignoreReversedGraphics: 1
+  blockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -16629,8 +16628,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  ignoreReversedGraphics: 1
+  blockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295

@@ -17,7 +17,7 @@ public class PlayerLogic : MonoBehaviour {
 
 	public bool canMoveWhileJumping = true;
 
-	public bool stopSuddenly = true;
+	public bool stopSuddenly = false;
 
 	public float jumpVelocity = 16f;
 
@@ -25,7 +25,7 @@ public class PlayerLogic : MonoBehaviour {
 	public float boostMaxSpeed = 36;
 	public float boostAcceleration = 100;
 
-	public float jumpTimeOut = 0.7f;
+	public float jumpTimeOut = 1f;
 	float recoilTimeOut = 0.7f;
 
 	//public float wallJumpTimeWindow = 0.7f;
@@ -35,9 +35,9 @@ public class PlayerLogic : MonoBehaviour {
 	public float strafeMaxSpeed = 16;
 	public float strafeAcceleration = 30;
 
-	public float forwardMinSpeed = 3;
-	public float forwardMaxSpeed = 18;
-	public float forwardAcceleration = 10;
+	public float forwardMinSpeed = 6;
+	public float forwardMaxSpeed = 30;
+	public float forwardAcceleration = 20;
 
 	float currentMaxSpeed;
 	float currentAcceleration;
