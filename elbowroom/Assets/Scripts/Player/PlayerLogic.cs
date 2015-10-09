@@ -6,6 +6,7 @@ public class PlayerLogic : MonoBehaviour {
 	Animator myAnimator;
 	Rigidbody myRigidbody;
 	PlayerController myInputDetection;
+    PlayerJump myJumpHandler;
 
 	Vector3 targetVelocity;
 
@@ -26,7 +27,7 @@ public class PlayerLogic : MonoBehaviour {
 	public float boostAcceleration = 100;
 
 	public float jumpTimeOut = 1f;
-	float recoilTimeOut = 0.7f;
+	public float recoilTimeOut = 0.7f;
 
 	//public float wallJumpTimeWindow = 0.7f;
 	//float wallJumpAvailabilityEnd = 0;
@@ -58,6 +59,7 @@ public class PlayerLogic : MonoBehaviour {
 		myAnimator = GetComponent<Animator> ();
 		myRigidbody = GetComponent<Rigidbody> ();
 		myInputDetection = GetComponent<PlayerController> ();
+        myJumpHandler = GetComponent<PlayerJump>();
 
 		currentMaxSpeed = forwardMaxSpeed;
 		currentAcceleration = forwardAcceleration;
@@ -84,14 +86,14 @@ public class PlayerLogic : MonoBehaviour {
 			boostEndTime = Mathf.Infinity;
 		}
 
-		if (Time.time > jumpEndTime) {
+		/*if (Time.time > jumpEndTime) {
 
 			myState = PlayerState.RUNNING;
 
 			myAnimator.SetBool ("Jumping", false);
 			
 			jumpEndTime = Mathf.Infinity;
-		}
+		}*/
 
 		if (Time.time > recoilEndTime) {
 			
@@ -129,11 +131,24 @@ public class PlayerLogic : MonoBehaviour {
 
 		}
 		else if (myState == PlayerState.JUMPING) {
-			
-			if (canMoveWhileJumping){
 
-				Run();
-			}
+            if (canMoveWhileJumping)
+            {
+                Run();
+            }
+
+            if (myRigidbody.velocity.y <= 0)
+            {
+                if (myJumpHandler.IsOnGround())
+                {
+                    myAnimator.SetBool("Jumping", false);
+
+                    myState = PlayerState.RUNNING;
+
+                    myAnimator.SetBool("Running", true);
+                }
+            }
+			
 		}
 		else if (myState == PlayerState.BOOSTING){
 
@@ -159,10 +174,31 @@ public class PlayerLogic : MonoBehaviour {
 
 	}
 
+    /*void FixedUpdate()
+    {
+        if (myState == PlayerState.RUNNING) {
+
+			Run();
+
+		}
+		else if (myState == PlayerState.JUMPING) {
+			
+			if (canMoveWhileJumping){
+
+				Run();
+			}
+		}
+		else if (myState == PlayerState.BOOSTING){
+
+			Run();
+
+		}
+    }*/
+
     //when the player touches the floor, they are no longer jumping and can jump again
 	void OnCollisionEnter(Collision collision){
 		
-		if (collision.transform.tag == "Floor") {
+		/*if (collision.transform.tag == "Floor") {
 			if (myState == PlayerState.JUMPING)
 			{
 				myAnimator.SetBool("Jumping", false);
@@ -171,7 +207,7 @@ public class PlayerLogic : MonoBehaviour {
 				
 				myAnimator.SetBool("Running", true);
 			}
-		}
+		}*/
 	}
 
     //The player changes state and moves backwards while recoiling
@@ -300,14 +336,20 @@ public class PlayerLogic : MonoBehaviour {
     //and schedule a time when the jump ends forcefully if it doesn't end naturally before that
 	void Jump(){
 
-		Vector3 newVelocity = myRigidbody.velocity;
-		newVelocity.y = jumpVelocity;
-		myRigidbody.velocity = newVelocity;
+        //you must be on the ground to jump
+        if (myJumpHandler.IsOnGround()) { 
+		    Vector3 newVelocity = myRigidbody.velocity;
+		    newVelocity.y = jumpVelocity;
+		    myRigidbody.velocity = newVelocity;
 
-		myState = PlayerState.JUMPING;
-		myAnimator.SetBool("Jumping", true);
+		    myState = PlayerState.JUMPING;
+		    myAnimator.SetBool("Jumping", true);
 
-		jumpEndTime = Time.time + jumpTimeOut;
+            myAnimator.StopPlayback();
+            myAnimator.Play("Jump");
+
+		    jumpEndTime = Time.time + jumpTimeOut;
+        }
 
 	}
 
@@ -395,7 +437,7 @@ public class PlayerLogic : MonoBehaviour {
 		}
 		//accelerate up to the max
 		else if (Mathf.Abs (targetVelocity.x) < Mathf.Abs (maxVelocity))
-			targetVelocity.x += acceleration*Time.deltaTime*55f;
+			targetVelocity.x += acceleration*Time.fixedDeltaTime*55f;
 		//if youre greater or equal to the max, stay at the max
 		else
 			targetVelocity.x = maxVelocity;
@@ -418,7 +460,7 @@ public class PlayerLogic : MonoBehaviour {
 		}
 		//accelerate up to the max
 		else if (Mathf.Abs (targetVelocity.z) < Mathf.Abs (maxVelocity))
-			targetVelocity.z += acceleration*Time.deltaTime*55f;
+            targetVelocity.z += acceleration * Time.fixedDeltaTime * 55f;
 		//if youre greater or equal to the max, stay at the max
 		else
 			targetVelocity.z = Mathf.Lerp(targetVelocity.z, maxVelocity, 0.1f);//targetVelocity.z = maxVelocity;
