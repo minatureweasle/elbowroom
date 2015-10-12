@@ -1,0 +1,1473 @@
+fileFormatVersion: 2
+guid: 508b217d828c3ea44bcb9d259627f739
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: all_anim
+    100002: body_anim
+    100004: body_Ugeo
+    100006: bot_teeth_Ugeo
+    100008: chest_anim
+    100010: chest_anim_const
+    100012: chest_Ujoint
+    100014: eye_Ugeo_grp
+    100016: face_anim_grp
+    100018: face_chin_anim
+    100020: face_chin_ctrl
+    100022: face_chin_Ujoint
+    100024: face_ctrl_grp
+    100026: face_grp
+    100028: face_head_grp
+    100030: face_jaw_grp
+    100032: face_l_brow_01_anim
+    100034: face_l_brow_01_ctrl
+    100036: face_l_brow_01_UI_anim
+    100038: face_l_brow_01_Ujoint
+    100040: face_l_brow_02_anim
+    100042: face_l_brow_02_ctrl
+    100044: face_l_brow_02_Ujoint
+    100046: face_l_brow_03_anim
+    100048: face_l_brow_03_ctrl
+    100050: face_l_brow_03_UI_anim
+    100052: face_l_brow_03_Ujoint
+    100054: face_l_cheek_anim
+    100056: face_l_cheek_ctrl
+    100058: face_l_cheek_Ujoint
+    100060: face_l_eye_bot_01_anim
+    100062: face_l_eye_bot_01_ctrl
+    100064: face_l_eye_bot_01_rem_ctrl
+    100066: face_l_eye_bot_01_rot_ctrl
+    100068: face_l_eye_bot_01_Ujoint
+    100070: face_l_eye_bot_02_anim
+    100072: face_l_eye_bot_02_ctrl
+    100074: face_l_eye_bot_02_rem_ctrl
+    100076: face_l_eye_bot_02_rot_ctrl
+    100078: face_l_eye_bot_02_UI_anim
+    100080: face_l_eye_bot_02_Ujoint
+    100082: face_l_eye_bot_03_anim
+    100084: face_l_eye_bot_03_ctrl
+    100086: face_l_eye_bot_03_rem_ctrl
+    100088: face_l_eye_bot_03_rot_ctrl
+    100090: face_l_eye_bot_03_Ujoint
+    100092: face_l_eye_top_01_anim
+    100094: face_l_eye_top_01_ctrl
+    100096: face_l_eye_top_01_rem_ctrl
+    100098: face_l_eye_top_01_rot_ctrl
+    100100: face_l_eye_top_01_Ujoint
+    100102: face_l_eye_top_02_anim
+    100104: face_l_eye_top_02_ctrl
+    100106: face_l_eye_top_02_rem_ctrl
+    100108: face_l_eye_top_02_rot_ctrl
+    100110: face_l_eye_top_02_UI_anim
+    100112: face_l_eye_top_02_Ujoint
+    100114: face_l_eye_top_03_anim
+    100116: face_l_eye_top_03_ctrl
+    100118: face_l_eye_top_03_rem_ctrl
+    100120: face_l_eye_top_03_rot_ctrl
+    100122: face_l_eye_top_03_Ujoint
+    100124: face_l_grp
+    100126: face_l_lip_bot_corner_ctrl
+    100128: face_l_lip_bot_ctrl
+    100130: face_l_lip_bot_pos_ctrl
+    100132: face_l_lip_side_UI_anim
+    100134: face_l_lip_top_corner_ctrl
+    100136: face_l_lip_top_ctrl
+    100138: face_l_lip_top_pos_ctrl
+    100140: face_l_nostril_anim
+    100142: face_l_nostril_ctrl
+    100144: face_l_nostril_Ujoint
+    100146: face_lip_bot_l_1_anim
+    100148: face_lip_bot_l_1_Ujoint
+    100150: face_lip_bot_l_2_anim
+    100152: face_lip_bot_l_2_Ujoint
+    100154: face_lip_bot_mid_anim
+    100156: face_lip_bot_mid_ctrl
+    100158: face_lip_bot_mid_UI_anim
+    100160: face_lip_bot_mid_Ujoint
+    100162: face_lip_bot_r_1_anim
+    100164: face_lip_bot_r_1_Ujoint
+    100166: face_lip_bot_r_2_anim
+    100168: face_lip_bot_r_2_Ujoint
+    100170: face_lip_top_l_1_anim
+    100172: face_lip_top_l_1_Ujoint
+    100174: face_lip_top_l_2_anim
+    100176: face_lip_top_l_2_Ujoint
+    100178: face_lip_top_mid_anim
+    100180: face_lip_top_mid_ctrl
+    100182: face_lip_top_mid_UI_anim
+    100184: face_lip_top_mid_Ujoint
+    100186: face_lip_top_r_1_anim
+    100188: face_lip_top_r_1_Ujoint
+    100190: face_lip_top_r_2_anim
+    100192: face_lip_top_r_2_Ujoint
+    100194: face_nose_anim
+    100196: face_nose_UI_anim
+    100198: face_nose_Ujoint
+    100200: face_r_brow_01_anim
+    100202: face_r_brow_01_ctrl
+    100204: face_r_brow_01_UI_anim
+    100206: face_r_brow_01_Ujoint
+    100208: face_r_brow_02_anim
+    100210: face_r_brow_02_ctrl
+    100212: face_r_brow_02_Ujoint
+    100214: face_r_brow_03_anim
+    100216: face_r_brow_03_ctrl
+    100218: face_r_brow_03_UI_anim
+    100220: face_r_brow_03_Ujoint
+    100222: face_r_cheek_anim
+    100224: face_r_cheek_ctrl
+    100226: face_r_cheek_Ujoint
+    100228: face_r_eye_bot_01_anim
+    100230: face_r_eye_bot_01_ctrl
+    100232: face_r_eye_bot_01_rem_ctrl
+    100234: face_r_eye_bot_01_rot_ctrl
+    100236: face_r_eye_bot_01_Ujoint
+    100238: face_r_eye_bot_02_anim
+    100240: face_r_eye_bot_02_ctrl
+    100242: face_r_eye_bot_02_rem_ctrl
+    100244: face_r_eye_bot_02_rot_ctrl
+    100246: face_r_eye_bot_02_UI_anim
+    100248: face_r_eye_bot_02_Ujoint
+    100250: face_r_eye_bot_03_anim
+    100252: face_r_eye_bot_03_ctrl
+    100254: face_r_eye_bot_03_rem_ctrl
+    100256: face_r_eye_bot_03_rot_ctrl
+    100258: face_r_eye_bot_03_Ujoint
+    100260: face_r_eye_top_01_anim
+    100262: face_r_eye_top_01_ctrl
+    100264: face_r_eye_top_01_rem_ctrl
+    100266: face_r_eye_top_01_rot_ctrl
+    100268: face_r_eye_top_01_Ujoint
+    100270: face_r_eye_top_02_anim
+    100272: face_r_eye_top_02_ctrl
+    100274: face_r_eye_top_02_rem_ctrl
+    100276: face_r_eye_top_02_rot_ctrl
+    100278: face_r_eye_top_02_UI_anim
+    100280: face_r_eye_top_02_Ujoint
+    100282: face_r_eye_top_03_anim
+    100284: face_r_eye_top_03_ctrl
+    100286: face_r_eye_top_03_rem_ctrl
+    100288: face_r_eye_top_03_rot_ctrl
+    100290: face_r_eye_top_03_Ujoint
+    100292: face_r_grp
+    100294: face_r_lip_bot_corner_ctrl
+    100296: face_r_lip_bot_ctrl
+    100298: face_r_lip_bot_pos_ctrl
+    100300: face_r_lip_side_UI_anim
+    100302: face_r_lip_top_corner_ctrl
+    100304: face_r_lip_top_ctrl
+    100306: face_r_lip_top_pos_ctrl
+    100308: face_r_nostril_anim
+    100310: face_r_nostril_ctrl
+    100312: face_r_nostril_Ujoint
+    100314: face_rig_anim
+    100316: face_rig_anim_const
+    100318: head_anim
+    100320: head_anim_const
+    100322: head_anim_grp
+    100324: head_anim_o_const
+    100326: head_grp
+    100328: head_Ugeo
+    100330: head_Ujoint
+    100332: help
+    100334: hip_anim
+    100336: hip_anim_const
+    100338: hip_Ujoint
+    100340: jaw_anim
+    100342: jaw_anim_const
+    100344: jaw_Ugeo_grp
+    100346: jaw_Ujoint
+    100348: l_arm_anim_grp
+    100350: l_arm_FK_anim_const
+    100352: l_arm_grp
+    100354: l_eye_Ugeo
+    100356: l_eye_Ugeo_grp
+    100358: l_eye_Ujoint
+    100360: l_fing_index_01_Ujoint
+    100362: l_fing_index_02_Ujoint
+    100364: l_fing_index_03_Ujoint
+    100366: l_fing_index_04_Ujoint
+    100368: l_fing_index_end_Ujoint
+    100370: l_fing_middle_01_Ujoint
+    100372: l_fing_middle_02_Ujoint
+    100374: l_fing_middle_03_Ujoint
+    100376: l_fing_middle_04_Ujoint
+    100378: l_fing_middle_end_Ujoint
+    100380: l_fing_pinky_01_Ujoint
+    100382: l_fing_pinky_02_Ujoint
+    100384: l_fing_pinky_03_Ujoint
+    100386: l_fing_pinky_04_Ujoint
+    100388: l_fing_pinky_end_Ujoint
+    100390: l_fing_ring_01_Ujoint
+    100392: l_fing_ring_02_Ujoint
+    100394: l_fing_ring_03_Ujoint
+    100396: l_fing_ring_04_Ujoint
+    100398: l_fing_ring_end_Ujoint
+    100400: l_fing_thumb_01_Ujoint
+    100402: l_fing_thumb_02_Ujoint
+    100404: l_fing_thumb_03_Ujoint
+    100406: l_fing_thumb_end_Ujoint
+    100408: l_foot_anim
+    100410: l_foot_IK_anim
+    100412: l_foot_result_Ujoint
+    100414: l_hand_FK_anim
+    100416: l_hand_FK_anim_trans
+    100418: l_hand_gimbal_top_anim
+    100420: l_hand_Ujoint
+    100422: l_heel_Ujoint
+    100424: l_knee_IK_anim_const
+    100426: l_leg_anim_grp
+    100428: l_leg_grp
+    100430: l_leg_IK_anim_grp
+    100432: l_loArm_FK_anim
+    100434: l_loArm_FK_anim_trans
+    100436: l_loArm_gimbal_bot_anim
+    100438: l_loArm_gimbal_top_anim
+    100440: l_loArm_twist_01_Ujoint
+    100442: l_loArm_twist_02_Ujoint
+    100444: l_loArm_twist_03_Ujoint
+    100446: l_loArm_twist_04_Ujoint
+    100448: l_loLeg_result_Ujoint
+    100450: l_shldr_anim
+    100452: l_shldr_anim_const
+    100454: l_shldr_breathe_ctrl
+    100456: l_shldr_Ujoint
+    100458: l_toe_end_result_Ujoint
+    100460: l_toe_result_Ujoint
+    100462: l_upArm_FK_anim
+    100464: l_upArm_FK_anim_trans
+    100466: l_upArm_gimbal_bot_anim
+    100468: l_upArm_gimbal_top_anim
+    100470: l_upArm_twist_01_Ujoint
+    100472: l_upArm_twist_02_Ujoint
+    100474: l_upArm_twist_03_Ujoint
+    100476: l_upArm_twist_04_Ujoint
+    100478: l_upLeg_result_Ujoint
+    100480: neck_01_Ujoint
+    100482: neck_02_Ujoint
+    100484: nose_ctrl
+    100486: //RootNode
+    100488: r_arm_anim_grp
+    100490: r_arm_FK_anim_const
+    100492: r_arm_grp
+    100494: r_eye_Ugeo
+    100496: r_eye_Ugeo_grp
+    100498: r_eye_Ujoint
+    100500: r_fing_index_01_Ujoint
+    100502: r_fing_index_02_Ujoint
+    100504: r_fing_index_03_Ujoint
+    100506: r_fing_index_04_Ujoint
+    100508: r_fing_index_end_Ujoint
+    100510: r_fing_middle_01_Ujoint
+    100512: r_fing_middle_02_Ujoint
+    100514: r_fing_middle_03_Ujoint
+    100516: r_fing_middle_04_Ujoint
+    100518: r_fing_middle_end_Ujoint
+    100520: r_fing_pinky_01_Ujoint
+    100522: r_fing_pinky_02_Ujoint
+    100524: r_fing_pinky_03_Ujoint
+    100526: r_fing_pinky_04_Ujoint
+    100528: r_fing_pinky_end_Ujoint
+    100530: r_fing_ring_01_Ujoint
+    100532: r_fing_ring_02_Ujoint
+    100534: r_fing_ring_03_Ujoint
+    100536: r_fing_ring_04_Ujoint
+    100538: r_fing_ring_end_Ujoint
+    100540: r_fing_thumb_01_Ujoint
+    100542: r_fing_thumb_02_Ujoint
+    100544: r_fing_thumb_03_Ujoint
+    100546: r_fing_thumb_end_Ujoint
+    100548: r_foot_anim
+    100550: r_foot_IK_anim
+    100552: r_foot_result_Ujoint
+    100554: r_hand_FK_anim
+    100556: r_hand_FK_anim_trans
+    100558: r_hand_gimbal_top_anim
+    100560: r_hand_Ujoint
+    100562: r_heel_Ujoint
+    100564: r_knee_IK_anim_const
+    100566: r_leg_anim_grp
+    100568: r_leg_grp
+    100570: r_leg_IK_anim_grp
+    100572: r_loArm_FK_anim
+    100574: r_loArm_FK_anim_trans
+    100576: r_loArm_gimbal_bot_anim
+    100578: r_loArm_gimbal_top_anim
+    100580: r_loArm_twist_01_Ujoint
+    100582: r_loArm_twist_02_Ujoint
+    100584: r_loArm_twist_03_Ujoint
+    100586: r_loArm_twist_04_Ujoint
+    100588: r_loLeg_result_Ujoint
+    100590: r_shldr_anim
+    100592: r_shldr_anim_const
+    100594: r_shldr_breathe_ctrl
+    100596: r_shldr_Ujoint
+    100598: r_toe_end_result_Ujoint
+    100600: r_toe_result_Ujoint
+    100602: r_upArm_FK_anim
+    100604: r_upArm_FK_trans
+    100606: r_upArm_gimbal_bot_anim
+    100608: r_upArm_gimbal_top_anim
+    100610: r_upArm_twist_01_Ujoint
+    100612: r_upArm_twist_02_Ujoint
+    100614: r_upArm_twist_03_Ujoint
+    100616: r_upArm_twist_04_Ujoint
+    100618: r_upLeg_result_Ujoint
+    100620: skinning_Ugeo_grp
+    100622: skull_Ugeo_grp
+    100624: tongue_01_Ujoint
+    100626: tongue_02_Ujoint
+    100628: tongue_03_Ujoint
+    100630: tongue_04_Ujoint
+    100632: tongue_05_Ujoint
+    100634: tongue_06_Ujoint
+    100636: tongue_anim
+    100638: tongue_end_Ujoint
+    100640: tongue_Ugeo
+    100642: top_teeth_Ugeo
+    100644: torso_02_result_Ujoint
+    100646: torso_03_result_Ujoint
+    100648: torso_04_result_Ujoint
+    100650: torso_05_result_Ujoint
+    100652: torso_06_result_Ujoint
+    100654: torso_anim_grp
+    100656: torso_FK_01_anim
+    100658: torso_FK_02_anim
+    100660: torso_grp
+    100662: transform1
+    100664: transform2
+    100666: transform3
+    100668: transform4
+    100670: transform5
+    100672: transform6
+    100674: transform7
+    100676: transform8
+    100678: U_grp
+    100680: Ugeo_grp
+    100682: UI_anim_grp
+    100684: Ujoint_grp
+    400000: all_anim
+    400002: body_anim
+    400004: body_Ugeo
+    400006: bot_teeth_Ugeo
+    400008: chest_anim
+    400010: chest_anim_const
+    400012: chest_Ujoint
+    400014: eye_Ugeo_grp
+    400016: face_anim_grp
+    400018: face_chin_anim
+    400020: face_chin_ctrl
+    400022: face_chin_Ujoint
+    400024: face_ctrl_grp
+    400026: face_grp
+    400028: face_head_grp
+    400030: face_jaw_grp
+    400032: face_l_brow_01_anim
+    400034: face_l_brow_01_ctrl
+    400036: face_l_brow_01_UI_anim
+    400038: face_l_brow_01_Ujoint
+    400040: face_l_brow_02_anim
+    400042: face_l_brow_02_ctrl
+    400044: face_l_brow_02_Ujoint
+    400046: face_l_brow_03_anim
+    400048: face_l_brow_03_ctrl
+    400050: face_l_brow_03_UI_anim
+    400052: face_l_brow_03_Ujoint
+    400054: face_l_cheek_anim
+    400056: face_l_cheek_ctrl
+    400058: face_l_cheek_Ujoint
+    400060: face_l_eye_bot_01_anim
+    400062: face_l_eye_bot_01_ctrl
+    400064: face_l_eye_bot_01_rem_ctrl
+    400066: face_l_eye_bot_01_rot_ctrl
+    400068: face_l_eye_bot_01_Ujoint
+    400070: face_l_eye_bot_02_anim
+    400072: face_l_eye_bot_02_ctrl
+    400074: face_l_eye_bot_02_rem_ctrl
+    400076: face_l_eye_bot_02_rot_ctrl
+    400078: face_l_eye_bot_02_UI_anim
+    400080: face_l_eye_bot_02_Ujoint
+    400082: face_l_eye_bot_03_anim
+    400084: face_l_eye_bot_03_ctrl
+    400086: face_l_eye_bot_03_rem_ctrl
+    400088: face_l_eye_bot_03_rot_ctrl
+    400090: face_l_eye_bot_03_Ujoint
+    400092: face_l_eye_top_01_anim
+    400094: face_l_eye_top_01_ctrl
+    400096: face_l_eye_top_01_rem_ctrl
+    400098: face_l_eye_top_01_rot_ctrl
+    400100: face_l_eye_top_01_Ujoint
+    400102: face_l_eye_top_02_anim
+    400104: face_l_eye_top_02_ctrl
+    400106: face_l_eye_top_02_rem_ctrl
+    400108: face_l_eye_top_02_rot_ctrl
+    400110: face_l_eye_top_02_UI_anim
+    400112: face_l_eye_top_02_Ujoint
+    400114: face_l_eye_top_03_anim
+    400116: face_l_eye_top_03_ctrl
+    400118: face_l_eye_top_03_rem_ctrl
+    400120: face_l_eye_top_03_rot_ctrl
+    400122: face_l_eye_top_03_Ujoint
+    400124: face_l_grp
+    400126: face_l_lip_bot_corner_ctrl
+    400128: face_l_lip_bot_ctrl
+    400130: face_l_lip_bot_pos_ctrl
+    400132: face_l_lip_side_UI_anim
+    400134: face_l_lip_top_corner_ctrl
+    400136: face_l_lip_top_ctrl
+    400138: face_l_lip_top_pos_ctrl
+    400140: face_l_nostril_anim
+    400142: face_l_nostril_ctrl
+    400144: face_l_nostril_Ujoint
+    400146: face_lip_bot_l_1_anim
+    400148: face_lip_bot_l_1_Ujoint
+    400150: face_lip_bot_l_2_anim
+    400152: face_lip_bot_l_2_Ujoint
+    400154: face_lip_bot_mid_anim
+    400156: face_lip_bot_mid_ctrl
+    400158: face_lip_bot_mid_UI_anim
+    400160: face_lip_bot_mid_Ujoint
+    400162: face_lip_bot_r_1_anim
+    400164: face_lip_bot_r_1_Ujoint
+    400166: face_lip_bot_r_2_anim
+    400168: face_lip_bot_r_2_Ujoint
+    400170: face_lip_top_l_1_anim
+    400172: face_lip_top_l_1_Ujoint
+    400174: face_lip_top_l_2_anim
+    400176: face_lip_top_l_2_Ujoint
+    400178: face_lip_top_mid_anim
+    400180: face_lip_top_mid_ctrl
+    400182: face_lip_top_mid_UI_anim
+    400184: face_lip_top_mid_Ujoint
+    400186: face_lip_top_r_1_anim
+    400188: face_lip_top_r_1_Ujoint
+    400190: face_lip_top_r_2_anim
+    400192: face_lip_top_r_2_Ujoint
+    400194: face_nose_anim
+    400196: face_nose_UI_anim
+    400198: face_nose_Ujoint
+    400200: face_r_brow_01_anim
+    400202: face_r_brow_01_ctrl
+    400204: face_r_brow_01_UI_anim
+    400206: face_r_brow_01_Ujoint
+    400208: face_r_brow_02_anim
+    400210: face_r_brow_02_ctrl
+    400212: face_r_brow_02_Ujoint
+    400214: face_r_brow_03_anim
+    400216: face_r_brow_03_ctrl
+    400218: face_r_brow_03_UI_anim
+    400220: face_r_brow_03_Ujoint
+    400222: face_r_cheek_anim
+    400224: face_r_cheek_ctrl
+    400226: face_r_cheek_Ujoint
+    400228: face_r_eye_bot_01_anim
+    400230: face_r_eye_bot_01_ctrl
+    400232: face_r_eye_bot_01_rem_ctrl
+    400234: face_r_eye_bot_01_rot_ctrl
+    400236: face_r_eye_bot_01_Ujoint
+    400238: face_r_eye_bot_02_anim
+    400240: face_r_eye_bot_02_ctrl
+    400242: face_r_eye_bot_02_rem_ctrl
+    400244: face_r_eye_bot_02_rot_ctrl
+    400246: face_r_eye_bot_02_UI_anim
+    400248: face_r_eye_bot_02_Ujoint
+    400250: face_r_eye_bot_03_anim
+    400252: face_r_eye_bot_03_ctrl
+    400254: face_r_eye_bot_03_rem_ctrl
+    400256: face_r_eye_bot_03_rot_ctrl
+    400258: face_r_eye_bot_03_Ujoint
+    400260: face_r_eye_top_01_anim
+    400262: face_r_eye_top_01_ctrl
+    400264: face_r_eye_top_01_rem_ctrl
+    400266: face_r_eye_top_01_rot_ctrl
+    400268: face_r_eye_top_01_Ujoint
+    400270: face_r_eye_top_02_anim
+    400272: face_r_eye_top_02_ctrl
+    400274: face_r_eye_top_02_rem_ctrl
+    400276: face_r_eye_top_02_rot_ctrl
+    400278: face_r_eye_top_02_UI_anim
+    400280: face_r_eye_top_02_Ujoint
+    400282: face_r_eye_top_03_anim
+    400284: face_r_eye_top_03_ctrl
+    400286: face_r_eye_top_03_rem_ctrl
+    400288: face_r_eye_top_03_rot_ctrl
+    400290: face_r_eye_top_03_Ujoint
+    400292: face_r_grp
+    400294: face_r_lip_bot_corner_ctrl
+    400296: face_r_lip_bot_ctrl
+    400298: face_r_lip_bot_pos_ctrl
+    400300: face_r_lip_side_UI_anim
+    400302: face_r_lip_top_corner_ctrl
+    400304: face_r_lip_top_ctrl
+    400306: face_r_lip_top_pos_ctrl
+    400308: face_r_nostril_anim
+    400310: face_r_nostril_ctrl
+    400312: face_r_nostril_Ujoint
+    400314: face_rig_anim
+    400316: face_rig_anim_const
+    400318: head_anim
+    400320: head_anim_const
+    400322: head_anim_grp
+    400324: head_anim_o_const
+    400326: head_grp
+    400328: head_Ugeo
+    400330: head_Ujoint
+    400332: help
+    400334: hip_anim
+    400336: hip_anim_const
+    400338: hip_Ujoint
+    400340: jaw_anim
+    400342: jaw_anim_const
+    400344: jaw_Ugeo_grp
+    400346: jaw_Ujoint
+    400348: l_arm_anim_grp
+    400350: l_arm_FK_anim_const
+    400352: l_arm_grp
+    400354: l_eye_Ugeo
+    400356: l_eye_Ugeo_grp
+    400358: l_eye_Ujoint
+    400360: l_fing_index_01_Ujoint
+    400362: l_fing_index_02_Ujoint
+    400364: l_fing_index_03_Ujoint
+    400366: l_fing_index_04_Ujoint
+    400368: l_fing_index_end_Ujoint
+    400370: l_fing_middle_01_Ujoint
+    400372: l_fing_middle_02_Ujoint
+    400374: l_fing_middle_03_Ujoint
+    400376: l_fing_middle_04_Ujoint
+    400378: l_fing_middle_end_Ujoint
+    400380: l_fing_pinky_01_Ujoint
+    400382: l_fing_pinky_02_Ujoint
+    400384: l_fing_pinky_03_Ujoint
+    400386: l_fing_pinky_04_Ujoint
+    400388: l_fing_pinky_end_Ujoint
+    400390: l_fing_ring_01_Ujoint
+    400392: l_fing_ring_02_Ujoint
+    400394: l_fing_ring_03_Ujoint
+    400396: l_fing_ring_04_Ujoint
+    400398: l_fing_ring_end_Ujoint
+    400400: l_fing_thumb_01_Ujoint
+    400402: l_fing_thumb_02_Ujoint
+    400404: l_fing_thumb_03_Ujoint
+    400406: l_fing_thumb_end_Ujoint
+    400408: l_foot_anim
+    400410: l_foot_IK_anim
+    400412: l_foot_result_Ujoint
+    400414: l_hand_FK_anim
+    400416: l_hand_FK_anim_trans
+    400418: l_hand_gimbal_top_anim
+    400420: l_hand_Ujoint
+    400422: l_heel_Ujoint
+    400424: l_knee_IK_anim_const
+    400426: l_leg_anim_grp
+    400428: l_leg_grp
+    400430: l_leg_IK_anim_grp
+    400432: l_loArm_FK_anim
+    400434: l_loArm_FK_anim_trans
+    400436: l_loArm_gimbal_bot_anim
+    400438: l_loArm_gimbal_top_anim
+    400440: l_loArm_twist_01_Ujoint
+    400442: l_loArm_twist_02_Ujoint
+    400444: l_loArm_twist_03_Ujoint
+    400446: l_loArm_twist_04_Ujoint
+    400448: l_loLeg_result_Ujoint
+    400450: l_shldr_anim
+    400452: l_shldr_anim_const
+    400454: l_shldr_breathe_ctrl
+    400456: l_shldr_Ujoint
+    400458: l_toe_end_result_Ujoint
+    400460: l_toe_result_Ujoint
+    400462: l_upArm_FK_anim
+    400464: l_upArm_FK_anim_trans
+    400466: l_upArm_gimbal_bot_anim
+    400468: l_upArm_gimbal_top_anim
+    400470: l_upArm_twist_01_Ujoint
+    400472: l_upArm_twist_02_Ujoint
+    400474: l_upArm_twist_03_Ujoint
+    400476: l_upArm_twist_04_Ujoint
+    400478: l_upLeg_result_Ujoint
+    400480: neck_01_Ujoint
+    400482: neck_02_Ujoint
+    400484: nose_ctrl
+    400486: //RootNode
+    400488: r_arm_anim_grp
+    400490: r_arm_FK_anim_const
+    400492: r_arm_grp
+    400494: r_eye_Ugeo
+    400496: r_eye_Ugeo_grp
+    400498: r_eye_Ujoint
+    400500: r_fing_index_01_Ujoint
+    400502: r_fing_index_02_Ujoint
+    400504: r_fing_index_03_Ujoint
+    400506: r_fing_index_04_Ujoint
+    400508: r_fing_index_end_Ujoint
+    400510: r_fing_middle_01_Ujoint
+    400512: r_fing_middle_02_Ujoint
+    400514: r_fing_middle_03_Ujoint
+    400516: r_fing_middle_04_Ujoint
+    400518: r_fing_middle_end_Ujoint
+    400520: r_fing_pinky_01_Ujoint
+    400522: r_fing_pinky_02_Ujoint
+    400524: r_fing_pinky_03_Ujoint
+    400526: r_fing_pinky_04_Ujoint
+    400528: r_fing_pinky_end_Ujoint
+    400530: r_fing_ring_01_Ujoint
+    400532: r_fing_ring_02_Ujoint
+    400534: r_fing_ring_03_Ujoint
+    400536: r_fing_ring_04_Ujoint
+    400538: r_fing_ring_end_Ujoint
+    400540: r_fing_thumb_01_Ujoint
+    400542: r_fing_thumb_02_Ujoint
+    400544: r_fing_thumb_03_Ujoint
+    400546: r_fing_thumb_end_Ujoint
+    400548: r_foot_anim
+    400550: r_foot_IK_anim
+    400552: r_foot_result_Ujoint
+    400554: r_hand_FK_anim
+    400556: r_hand_FK_anim_trans
+    400558: r_hand_gimbal_top_anim
+    400560: r_hand_Ujoint
+    400562: r_heel_Ujoint
+    400564: r_knee_IK_anim_const
+    400566: r_leg_anim_grp
+    400568: r_leg_grp
+    400570: r_leg_IK_anim_grp
+    400572: r_loArm_FK_anim
+    400574: r_loArm_FK_anim_trans
+    400576: r_loArm_gimbal_bot_anim
+    400578: r_loArm_gimbal_top_anim
+    400580: r_loArm_twist_01_Ujoint
+    400582: r_loArm_twist_02_Ujoint
+    400584: r_loArm_twist_03_Ujoint
+    400586: r_loArm_twist_04_Ujoint
+    400588: r_loLeg_result_Ujoint
+    400590: r_shldr_anim
+    400592: r_shldr_anim_const
+    400594: r_shldr_breathe_ctrl
+    400596: r_shldr_Ujoint
+    400598: r_toe_end_result_Ujoint
+    400600: r_toe_result_Ujoint
+    400602: r_upArm_FK_anim
+    400604: r_upArm_FK_trans
+    400606: r_upArm_gimbal_bot_anim
+    400608: r_upArm_gimbal_top_anim
+    400610: r_upArm_twist_01_Ujoint
+    400612: r_upArm_twist_02_Ujoint
+    400614: r_upArm_twist_03_Ujoint
+    400616: r_upArm_twist_04_Ujoint
+    400618: r_upLeg_result_Ujoint
+    400620: skinning_Ugeo_grp
+    400622: skull_Ugeo_grp
+    400624: tongue_01_Ujoint
+    400626: tongue_02_Ujoint
+    400628: tongue_03_Ujoint
+    400630: tongue_04_Ujoint
+    400632: tongue_05_Ujoint
+    400634: tongue_06_Ujoint
+    400636: tongue_anim
+    400638: tongue_end_Ujoint
+    400640: tongue_Ugeo
+    400642: top_teeth_Ugeo
+    400644: torso_02_result_Ujoint
+    400646: torso_03_result_Ujoint
+    400648: torso_04_result_Ujoint
+    400650: torso_05_result_Ujoint
+    400652: torso_06_result_Ujoint
+    400654: torso_anim_grp
+    400656: torso_FK_01_anim
+    400658: torso_FK_02_anim
+    400660: torso_grp
+    400662: transform1
+    400664: transform2
+    400666: transform3
+    400668: transform4
+    400670: transform5
+    400672: transform6
+    400674: transform7
+    400676: transform8
+    400678: U_grp
+    400680: Ugeo_grp
+    400682: UI_anim_grp
+    400684: Ujoint_grp
+    4300000: body_Ugeo
+    4300002: head_Ugeo
+    4300004: l_eye_Ugeo
+    4300006: r_eye_Ugeo
+    4300008: top_teeth_Ugeo
+    4300010: bot_teeth_Ugeo
+    4300012: tongue_Ugeo
+    7400000: James_QuickJump
+    9500000: //RootNode
+    13700000: body_Ugeo
+    13700002: bot_teeth_Ugeo
+    13700004: head_Ugeo
+    13700006: l_eye_Ugeo
+    13700008: r_eye_Ugeo
+    13700010: tongue_Ugeo
+    13700012: top_teeth_Ugeo
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: James_QuickJump
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: all_anim
+        weight: 1
+      - path: all_anim/face_grp
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_brow_01_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_brow_01_ctrl/face_l_brow_01_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_brow_02_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_brow_02_ctrl/face_l_brow_02_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_brow_03_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_brow_03_ctrl/face_l_brow_03_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_cheek_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_cheek_ctrl/face_l_cheek_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_bot_01_rem_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_bot_01_rem_ctrl/face_l_eye_bot_01_rot_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_bot_01_rem_ctrl/face_l_eye_bot_01_rot_ctrl/face_l_eye_bot_01_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_bot_01_rem_ctrl/face_l_eye_bot_01_rot_ctrl/face_l_eye_bot_01_ctrl/face_l_eye_bot_01_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_bot_02_rem_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_bot_02_rem_ctrl/face_l_eye_bot_02_rot_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_bot_02_rem_ctrl/face_l_eye_bot_02_rot_ctrl/face_l_eye_bot_02_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_bot_02_rem_ctrl/face_l_eye_bot_02_rot_ctrl/face_l_eye_bot_02_ctrl/face_l_eye_bot_02_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_bot_03_rem_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_bot_03_rem_ctrl/face_l_eye_bot_03_rot_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_bot_03_rem_ctrl/face_l_eye_bot_03_rot_ctrl/face_l_eye_bot_03_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_bot_03_rem_ctrl/face_l_eye_bot_03_rot_ctrl/face_l_eye_bot_03_ctrl/face_l_eye_bot_03_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_top_01_rem_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_top_01_rem_ctrl/face_l_eye_top_01_rot_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_top_01_rem_ctrl/face_l_eye_top_01_rot_ctrl/face_l_eye_top_01_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_top_01_rem_ctrl/face_l_eye_top_01_rot_ctrl/face_l_eye_top_01_ctrl/face_l_eye_top_01_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_top_02_rem_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_top_02_rem_ctrl/face_l_eye_top_02_rot_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_top_02_rem_ctrl/face_l_eye_top_02_rot_ctrl/face_l_eye_top_02_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_top_02_rem_ctrl/face_l_eye_top_02_rot_ctrl/face_l_eye_top_02_ctrl/face_l_eye_top_02_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_top_03_rem_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_top_03_rem_ctrl/face_l_eye_top_03_rot_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_top_03_rem_ctrl/face_l_eye_top_03_rot_ctrl/face_l_eye_top_03_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_eye_top_03_rem_ctrl/face_l_eye_top_03_rot_ctrl/face_l_eye_top_03_ctrl/face_l_eye_top_03_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_lip_top_corner_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_lip_top_corner_ctrl/face_lip_top_l_1_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_lip_top_pos_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_lip_top_pos_ctrl/face_l_lip_top_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_lip_top_pos_ctrl/face_l_lip_top_ctrl/face_lip_top_l_2_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_nostril_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_l_grp/face_l_nostril_ctrl/face_l_nostril_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_lip_top_mid_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_lip_top_mid_ctrl/face_lip_top_mid_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_brow_01_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_brow_01_ctrl/face_r_brow_01_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_brow_02_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_brow_02_ctrl/face_r_brow_02_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_brow_03_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_brow_03_ctrl/face_r_brow_03_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_cheek_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_cheek_ctrl/face_r_cheek_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_bot_01_rem_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_bot_01_rem_ctrl/face_r_eye_bot_01_rot_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_bot_01_rem_ctrl/face_r_eye_bot_01_rot_ctrl/face_r_eye_bot_01_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_bot_01_rem_ctrl/face_r_eye_bot_01_rot_ctrl/face_r_eye_bot_01_ctrl/face_r_eye_bot_01_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_bot_02_rem_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_bot_02_rem_ctrl/face_r_eye_bot_02_rot_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_bot_02_rem_ctrl/face_r_eye_bot_02_rot_ctrl/face_r_eye_bot_02_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_bot_02_rem_ctrl/face_r_eye_bot_02_rot_ctrl/face_r_eye_bot_02_ctrl/face_r_eye_bot_02_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_bot_03_rem_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_bot_03_rem_ctrl/face_r_eye_bot_03_rot_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_bot_03_rem_ctrl/face_r_eye_bot_03_rot_ctrl/face_r_eye_bot_03_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_bot_03_rem_ctrl/face_r_eye_bot_03_rot_ctrl/face_r_eye_bot_03_ctrl/face_r_eye_bot_03_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_top_01_rem_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_top_01_rem_ctrl/face_r_eye_top_01_rot_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_top_01_rem_ctrl/face_r_eye_top_01_rot_ctrl/face_r_eye_top_01_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_top_01_rem_ctrl/face_r_eye_top_01_rot_ctrl/face_r_eye_top_01_ctrl/face_r_eye_top_01_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_top_02_rem_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_top_02_rem_ctrl/face_r_eye_top_02_rot_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_top_02_rem_ctrl/face_r_eye_top_02_rot_ctrl/face_r_eye_top_02_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_top_02_rem_ctrl/face_r_eye_top_02_rot_ctrl/face_r_eye_top_02_ctrl/face_r_eye_top_02_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_top_03_rem_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_top_03_rem_ctrl/face_r_eye_top_03_rot_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_top_03_rem_ctrl/face_r_eye_top_03_rot_ctrl/face_r_eye_top_03_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_eye_top_03_rem_ctrl/face_r_eye_top_03_rot_ctrl/face_r_eye_top_03_ctrl/face_r_eye_top_03_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_lip_top_corner_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_lip_top_corner_ctrl/face_lip_top_r_1_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_lip_top_pos_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_lip_top_pos_ctrl/face_r_lip_top_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_lip_top_pos_ctrl/face_r_lip_top_ctrl/face_lip_top_r_2_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_nostril_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/face_r_grp/face_r_nostril_ctrl/face_r_nostril_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/nose_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_head_grp/nose_ctrl/face_nose_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_jaw_grp
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_jaw_grp/face_chin_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_jaw_grp/face_chin_ctrl/face_chin_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_jaw_grp/face_l_lip_bot_corner_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_jaw_grp/face_l_lip_bot_corner_ctrl/face_lip_bot_l_1_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_jaw_grp/face_l_lip_bot_pos_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_jaw_grp/face_l_lip_bot_pos_ctrl/face_l_lip_bot_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_jaw_grp/face_l_lip_bot_pos_ctrl/face_l_lip_bot_ctrl/face_lip_bot_l_2_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_jaw_grp/face_lip_bot_mid_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_jaw_grp/face_lip_bot_mid_ctrl/face_lip_bot_mid_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_jaw_grp/face_r_lip_bot_corner_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_jaw_grp/face_r_lip_bot_corner_ctrl/face_lip_bot_r_1_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_jaw_grp/face_r_lip_bot_pos_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_jaw_grp/face_r_lip_bot_pos_ctrl/face_r_lip_bot_ctrl
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_ctrl_grp/face_jaw_grp/face_r_lip_bot_pos_ctrl/face_r_lip_bot_ctrl/face_lip_bot_r_2_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_rig_anim_const
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_rig_anim_const/face_rig_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_rig_anim_const/face_rig_anim/UI_anim_grp
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_rig_anim_const/face_rig_anim/UI_anim_grp/face_l_brow_01_UI_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_rig_anim_const/face_rig_anim/UI_anim_grp/face_l_brow_03_UI_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_rig_anim_const/face_rig_anim/UI_anim_grp/face_l_eye_bot_02_UI_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_rig_anim_const/face_rig_anim/UI_anim_grp/face_l_eye_top_02_UI_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_rig_anim_const/face_rig_anim/UI_anim_grp/face_l_lip_side_UI_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_rig_anim_const/face_rig_anim/UI_anim_grp/face_lip_bot_mid_UI_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_rig_anim_const/face_rig_anim/UI_anim_grp/face_lip_top_mid_UI_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_rig_anim_const/face_rig_anim/UI_anim_grp/face_nose_UI_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_rig_anim_const/face_rig_anim/UI_anim_grp/face_r_brow_01_UI_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_rig_anim_const/face_rig_anim/UI_anim_grp/face_r_brow_03_UI_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_rig_anim_const/face_rig_anim/UI_anim_grp/face_r_eye_bot_02_UI_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_rig_anim_const/face_rig_anim/UI_anim_grp/face_r_eye_top_02_UI_anim
+        weight: 1
+      - path: all_anim/face_grp/face_anim_grp/face_rig_anim_const/face_rig_anim/UI_anim_grp/face_r_lip_side_UI_anim
+        weight: 1
+      - path: all_anim/head_grp
+        weight: 1
+      - path: all_anim/head_grp/head_anim_grp
+        weight: 1
+      - path: all_anim/head_grp/head_anim_grp/head_anim_o_const
+        weight: 1
+      - path: all_anim/head_grp/head_anim_grp/head_anim_o_const/head_anim_const
+        weight: 1
+      - path: all_anim/head_grp/head_anim_grp/head_anim_o_const/head_anim_const/head_anim
+        weight: 1
+      - path: all_anim/head_grp/head_anim_grp/jaw_anim_const
+        weight: 1
+      - path: all_anim/head_grp/head_anim_grp/jaw_anim_const/jaw_anim
+        weight: 1
+      - path: all_anim/head_grp/head_anim_grp/jaw_anim_const/jaw_anim/tongue_anim
+        weight: 1
+      - path: all_anim/help
+        weight: 1
+      - path: all_anim/l_arm_grp
+        weight: 1
+      - path: all_anim/l_arm_grp/l_arm_anim_grp
+        weight: 1
+      - path: all_anim/l_arm_grp/l_arm_anim_grp/l_arm_FK_anim_const
+        weight: 1
+      - path: all_anim/l_arm_grp/l_arm_anim_grp/l_arm_FK_anim_const/l_upArm_FK_anim_trans
+        weight: 1
+      - path: all_anim/l_arm_grp/l_arm_anim_grp/l_arm_FK_anim_const/l_upArm_FK_anim_trans/l_upArm_gimbal_top_anim
+        weight: 1
+      - path: all_anim/l_arm_grp/l_arm_anim_grp/l_arm_FK_anim_const/l_upArm_FK_anim_trans/l_upArm_gimbal_top_anim/l_upArm_FK_anim
+        weight: 1
+      - path: all_anim/l_arm_grp/l_arm_anim_grp/l_arm_FK_anim_const/l_upArm_FK_anim_trans/l_upArm_gimbal_top_anim/l_upArm_FK_anim/l_upArm_gimbal_bot_anim
+        weight: 1
+      - path: all_anim/l_arm_grp/l_arm_anim_grp/l_arm_FK_anim_const/l_upArm_FK_anim_trans/l_upArm_gimbal_top_anim/l_upArm_FK_anim/l_upArm_gimbal_bot_anim/l_loArm_FK_anim_trans
+        weight: 1
+      - path: all_anim/l_arm_grp/l_arm_anim_grp/l_arm_FK_anim_const/l_upArm_FK_anim_trans/l_upArm_gimbal_top_anim/l_upArm_FK_anim/l_upArm_gimbal_bot_anim/l_loArm_FK_anim_trans/l_loArm_gimbal_top_anim
+        weight: 1
+      - path: all_anim/l_arm_grp/l_arm_anim_grp/l_arm_FK_anim_const/l_upArm_FK_anim_trans/l_upArm_gimbal_top_anim/l_upArm_FK_anim/l_upArm_gimbal_bot_anim/l_loArm_FK_anim_trans/l_loArm_gimbal_top_anim/l_loArm_FK_anim
+        weight: 1
+      - path: all_anim/l_arm_grp/l_arm_anim_grp/l_arm_FK_anim_const/l_upArm_FK_anim_trans/l_upArm_gimbal_top_anim/l_upArm_FK_anim/l_upArm_gimbal_bot_anim/l_loArm_FK_anim_trans/l_loArm_gimbal_top_anim/l_loArm_FK_anim/l_loArm_gimbal_bot_anim
+        weight: 1
+      - path: all_anim/l_arm_grp/l_arm_anim_grp/l_arm_FK_anim_const/l_upArm_FK_anim_trans/l_upArm_gimbal_top_anim/l_upArm_FK_anim/l_upArm_gimbal_bot_anim/l_loArm_FK_anim_trans/l_loArm_gimbal_top_anim/l_loArm_FK_anim/l_loArm_gimbal_bot_anim/l_hand_FK_anim_trans
+        weight: 1
+      - path: all_anim/l_arm_grp/l_arm_anim_grp/l_arm_FK_anim_const/l_upArm_FK_anim_trans/l_upArm_gimbal_top_anim/l_upArm_FK_anim/l_upArm_gimbal_bot_anim/l_loArm_FK_anim_trans/l_loArm_gimbal_top_anim/l_loArm_FK_anim/l_loArm_gimbal_bot_anim/l_hand_FK_anim_trans/l_hand_gimbal_top_anim
+        weight: 1
+      - path: all_anim/l_arm_grp/l_arm_anim_grp/l_arm_FK_anim_const/l_upArm_FK_anim_trans/l_upArm_gimbal_top_anim/l_upArm_FK_anim/l_upArm_gimbal_bot_anim/l_loArm_FK_anim_trans/l_loArm_gimbal_top_anim/l_loArm_FK_anim/l_loArm_gimbal_bot_anim/l_hand_FK_anim_trans/l_hand_gimbal_top_anim/l_hand_FK_anim
+        weight: 1
+      - path: all_anim/l_arm_grp/l_arm_anim_grp/l_shldr_anim_const
+        weight: 1
+      - path: all_anim/l_arm_grp/l_arm_anim_grp/l_shldr_anim_const/l_shldr_breathe_ctrl
+        weight: 1
+      - path: all_anim/l_arm_grp/l_arm_anim_grp/l_shldr_anim_const/l_shldr_breathe_ctrl/l_shldr_anim
+        weight: 1
+      - path: all_anim/l_leg_grp
+        weight: 1
+      - path: all_anim/l_leg_grp/l_leg_anim_grp
+        weight: 1
+      - path: all_anim/l_leg_grp/l_leg_anim_grp/l_foot_anim
+        weight: 1
+      - path: all_anim/l_leg_grp/l_leg_anim_grp/l_leg_IK_anim_grp
+        weight: 1
+      - path: all_anim/l_leg_grp/l_leg_anim_grp/l_leg_IK_anim_grp/l_foot_IK_anim
+        weight: 1
+      - path: all_anim/l_leg_grp/l_leg_anim_grp/l_leg_IK_anim_grp/l_knee_IK_anim_const
+        weight: 1
+      - path: all_anim/r_arm_grp
+        weight: 1
+      - path: all_anim/r_arm_grp/r_arm_anim_grp
+        weight: 1
+      - path: all_anim/r_arm_grp/r_arm_anim_grp/r_arm_FK_anim_const
+        weight: 1
+      - path: all_anim/r_arm_grp/r_arm_anim_grp/r_arm_FK_anim_const/r_upArm_FK_trans
+        weight: 1
+      - path: all_anim/r_arm_grp/r_arm_anim_grp/r_arm_FK_anim_const/r_upArm_FK_trans/r_upArm_gimbal_top_anim
+        weight: 1
+      - path: all_anim/r_arm_grp/r_arm_anim_grp/r_arm_FK_anim_const/r_upArm_FK_trans/r_upArm_gimbal_top_anim/r_upArm_FK_anim
+        weight: 1
+      - path: all_anim/r_arm_grp/r_arm_anim_grp/r_arm_FK_anim_const/r_upArm_FK_trans/r_upArm_gimbal_top_anim/r_upArm_FK_anim/r_upArm_gimbal_bot_anim
+        weight: 1
+      - path: all_anim/r_arm_grp/r_arm_anim_grp/r_arm_FK_anim_const/r_upArm_FK_trans/r_upArm_gimbal_top_anim/r_upArm_FK_anim/r_upArm_gimbal_bot_anim/r_loArm_FK_anim_trans
+        weight: 1
+      - path: all_anim/r_arm_grp/r_arm_anim_grp/r_arm_FK_anim_const/r_upArm_FK_trans/r_upArm_gimbal_top_anim/r_upArm_FK_anim/r_upArm_gimbal_bot_anim/r_loArm_FK_anim_trans/r_loArm_gimbal_top_anim
+        weight: 1
+      - path: all_anim/r_arm_grp/r_arm_anim_grp/r_arm_FK_anim_const/r_upArm_FK_trans/r_upArm_gimbal_top_anim/r_upArm_FK_anim/r_upArm_gimbal_bot_anim/r_loArm_FK_anim_trans/r_loArm_gimbal_top_anim/r_loArm_FK_anim
+        weight: 1
+      - path: all_anim/r_arm_grp/r_arm_anim_grp/r_arm_FK_anim_const/r_upArm_FK_trans/r_upArm_gimbal_top_anim/r_upArm_FK_anim/r_upArm_gimbal_bot_anim/r_loArm_FK_anim_trans/r_loArm_gimbal_top_anim/r_loArm_FK_anim/r_loArm_gimbal_bot_anim
+        weight: 1
+      - path: all_anim/r_arm_grp/r_arm_anim_grp/r_arm_FK_anim_const/r_upArm_FK_trans/r_upArm_gimbal_top_anim/r_upArm_FK_anim/r_upArm_gimbal_bot_anim/r_loArm_FK_anim_trans/r_loArm_gimbal_top_anim/r_loArm_FK_anim/r_loArm_gimbal_bot_anim/r_hand_FK_anim_trans
+        weight: 1
+      - path: all_anim/r_arm_grp/r_arm_anim_grp/r_arm_FK_anim_const/r_upArm_FK_trans/r_upArm_gimbal_top_anim/r_upArm_FK_anim/r_upArm_gimbal_bot_anim/r_loArm_FK_anim_trans/r_loArm_gimbal_top_anim/r_loArm_FK_anim/r_loArm_gimbal_bot_anim/r_hand_FK_anim_trans/r_hand_gimbal_top_anim
+        weight: 1
+      - path: all_anim/r_arm_grp/r_arm_anim_grp/r_arm_FK_anim_const/r_upArm_FK_trans/r_upArm_gimbal_top_anim/r_upArm_FK_anim/r_upArm_gimbal_bot_anim/r_loArm_FK_anim_trans/r_loArm_gimbal_top_anim/r_loArm_FK_anim/r_loArm_gimbal_bot_anim/r_hand_FK_anim_trans/r_hand_gimbal_top_anim/r_hand_FK_anim
+        weight: 1
+      - path: all_anim/r_arm_grp/r_arm_anim_grp/r_shldr_anim_const
+        weight: 1
+      - path: all_anim/r_arm_grp/r_arm_anim_grp/r_shldr_anim_const/r_shldr_breathe_ctrl
+        weight: 1
+      - path: all_anim/r_arm_grp/r_arm_anim_grp/r_shldr_anim_const/r_shldr_breathe_ctrl/r_shldr_anim
+        weight: 1
+      - path: all_anim/r_leg_grp
+        weight: 1
+      - path: all_anim/r_leg_grp/r_leg_anim_grp
+        weight: 1
+      - path: all_anim/r_leg_grp/r_leg_anim_grp/r_foot_anim
+        weight: 1
+      - path: all_anim/r_leg_grp/r_leg_anim_grp/r_leg_IK_anim_grp
+        weight: 1
+      - path: all_anim/r_leg_grp/r_leg_anim_grp/r_leg_IK_anim_grp/r_foot_IK_anim
+        weight: 1
+      - path: all_anim/r_leg_grp/r_leg_anim_grp/r_leg_IK_anim_grp/r_knee_IK_anim_const
+        weight: 1
+      - path: all_anim/torso_grp
+        weight: 1
+      - path: all_anim/torso_grp/torso_anim_grp
+        weight: 1
+      - path: all_anim/torso_grp/torso_anim_grp/body_anim
+        weight: 1
+      - path: all_anim/torso_grp/torso_anim_grp/body_anim/chest_anim_const
+        weight: 1
+      - path: all_anim/torso_grp/torso_anim_grp/body_anim/chest_anim_const/chest_anim
+        weight: 1
+      - path: all_anim/torso_grp/torso_anim_grp/body_anim/hip_anim_const
+        weight: 1
+      - path: all_anim/torso_grp/torso_anim_grp/body_anim/hip_anim_const/hip_anim
+        weight: 1
+      - path: all_anim/torso_grp/torso_anim_grp/body_anim/torso_FK_01_anim
+        weight: 1
+      - path: all_anim/torso_grp/torso_anim_grp/body_anim/torso_FK_01_anim/torso_FK_02_anim
+        weight: 1
+      - path: U_grp
+        weight: 1
+      - path: U_grp/Ugeo_grp
+        weight: 1
+      - path: U_grp/Ugeo_grp/eye_Ugeo_grp
+        weight: 1
+      - path: U_grp/Ugeo_grp/eye_Ugeo_grp/l_eye_Ugeo_grp
+        weight: 1
+      - path: U_grp/Ugeo_grp/eye_Ugeo_grp/l_eye_Ugeo_grp/l_eye_Ugeo
+        weight: 1
+      - path: U_grp/Ugeo_grp/eye_Ugeo_grp/r_eye_Ugeo_grp
+        weight: 1
+      - path: U_grp/Ugeo_grp/eye_Ugeo_grp/r_eye_Ugeo_grp/r_eye_Ugeo
+        weight: 1
+      - path: U_grp/Ugeo_grp/jaw_Ugeo_grp
+        weight: 1
+      - path: U_grp/Ugeo_grp/jaw_Ugeo_grp/bot_teeth_Ugeo
+        weight: 1
+      - path: U_grp/Ugeo_grp/jaw_Ugeo_grp/tongue_Ugeo
+        weight: 1
+      - path: U_grp/Ugeo_grp/skinning_Ugeo_grp
+        weight: 1
+      - path: U_grp/Ugeo_grp/skinning_Ugeo_grp/body_Ugeo
+        weight: 1
+      - path: U_grp/Ugeo_grp/skinning_Ugeo_grp/head_Ugeo
+        weight: 1
+      - path: U_grp/Ugeo_grp/skull_Ugeo_grp
+        weight: 1
+      - path: U_grp/Ugeo_grp/skull_Ugeo_grp/top_teeth_Ugeo
+        weight: 1
+      - path: U_grp/Ujoint_grp
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/l_upLeg_result_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/l_upLeg_result_Ujoint/l_loLeg_result_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/l_upLeg_result_Ujoint/l_loLeg_result_Ujoint/l_foot_result_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/l_upLeg_result_Ujoint/l_loLeg_result_Ujoint/l_foot_result_Ujoint/l_heel_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/l_upLeg_result_Ujoint/l_loLeg_result_Ujoint/l_foot_result_Ujoint/l_toe_result_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/l_upLeg_result_Ujoint/l_loLeg_result_Ujoint/l_foot_result_Ujoint/l_toe_result_Ujoint/l_toe_end_result_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/r_upLeg_result_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/r_upLeg_result_Ujoint/r_loLeg_result_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/r_upLeg_result_Ujoint/r_loLeg_result_Ujoint/r_foot_result_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/r_upLeg_result_Ujoint/r_loLeg_result_Ujoint/r_foot_result_Ujoint/r_heel_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/r_upLeg_result_Ujoint/r_loLeg_result_Ujoint/r_foot_result_Ujoint/r_toe_result_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/r_upLeg_result_Ujoint/r_loLeg_result_Ujoint/r_foot_result_Ujoint/r_toe_result_Ujoint/r_toe_end_result_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_index_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_index_01_Ujoint/l_fing_index_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_index_01_Ujoint/l_fing_index_02_Ujoint/l_fing_index_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_index_01_Ujoint/l_fing_index_02_Ujoint/l_fing_index_03_Ujoint/l_fing_index_04_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_index_01_Ujoint/l_fing_index_02_Ujoint/l_fing_index_03_Ujoint/l_fing_index_04_Ujoint/l_fing_index_end_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_middle_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_middle_01_Ujoint/l_fing_middle_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_middle_01_Ujoint/l_fing_middle_02_Ujoint/l_fing_middle_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_middle_01_Ujoint/l_fing_middle_02_Ujoint/l_fing_middle_03_Ujoint/l_fing_middle_04_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_middle_01_Ujoint/l_fing_middle_02_Ujoint/l_fing_middle_03_Ujoint/l_fing_middle_04_Ujoint/l_fing_middle_end_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_pinky_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_pinky_01_Ujoint/l_fing_pinky_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_pinky_01_Ujoint/l_fing_pinky_02_Ujoint/l_fing_pinky_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_pinky_01_Ujoint/l_fing_pinky_02_Ujoint/l_fing_pinky_03_Ujoint/l_fing_pinky_04_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_pinky_01_Ujoint/l_fing_pinky_02_Ujoint/l_fing_pinky_03_Ujoint/l_fing_pinky_04_Ujoint/l_fing_pinky_end_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_ring_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_ring_01_Ujoint/l_fing_ring_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_ring_01_Ujoint/l_fing_ring_02_Ujoint/l_fing_ring_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_ring_01_Ujoint/l_fing_ring_02_Ujoint/l_fing_ring_03_Ujoint/l_fing_ring_04_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_ring_01_Ujoint/l_fing_ring_02_Ujoint/l_fing_ring_03_Ujoint/l_fing_ring_04_Ujoint/l_fing_ring_end_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_thumb_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_thumb_01_Ujoint/l_fing_thumb_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_thumb_01_Ujoint/l_fing_thumb_02_Ujoint/l_fing_thumb_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/l_shldr_Ujoint/l_upArm_twist_01_Ujoint/transform4/l_upArm_twist_02_Ujoint/transform3/l_upArm_twist_03_Ujoint/transform2/l_upArm_twist_04_Ujoint/transform1/l_loArm_twist_01_Ujoint/l_loArm_twist_02_Ujoint/l_loArm_twist_03_Ujoint/l_loArm_twist_04_Ujoint/l_hand_Ujoint/l_fing_thumb_01_Ujoint/l_fing_thumb_02_Ujoint/l_fing_thumb_03_Ujoint/l_fing_thumb_end_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_chin_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_l_brow_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_l_brow_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_l_brow_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_l_cheek_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_l_eye_bot_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_l_eye_bot_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_l_eye_bot_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_l_eye_top_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_l_eye_top_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_l_eye_top_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_l_nostril_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_lip_bot_l_1_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_lip_bot_l_2_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_lip_bot_mid_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_lip_bot_r_1_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_lip_bot_r_2_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_lip_top_l_1_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_lip_top_l_2_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_lip_top_mid_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_lip_top_r_1_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_lip_top_r_2_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_nose_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_r_brow_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_r_brow_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_r_brow_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_r_cheek_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_r_eye_bot_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_r_eye_bot_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_r_eye_bot_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_r_eye_top_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_r_eye_top_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_r_eye_top_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/face_r_nostril_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/jaw_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/jaw_Ujoint/tongue_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/jaw_Ujoint/tongue_01_Ujoint/tongue_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/jaw_Ujoint/tongue_01_Ujoint/tongue_02_Ujoint/tongue_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/jaw_Ujoint/tongue_01_Ujoint/tongue_02_Ujoint/tongue_03_Ujoint/tongue_04_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/jaw_Ujoint/tongue_01_Ujoint/tongue_02_Ujoint/tongue_03_Ujoint/tongue_04_Ujoint/tongue_05_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/jaw_Ujoint/tongue_01_Ujoint/tongue_02_Ujoint/tongue_03_Ujoint/tongue_04_Ujoint/tongue_05_Ujoint/tongue_06_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/jaw_Ujoint/tongue_01_Ujoint/tongue_02_Ujoint/tongue_03_Ujoint/tongue_04_Ujoint/tongue_05_Ujoint/tongue_06_Ujoint/tongue_end_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/l_eye_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/neck_01_Ujoint/neck_02_Ujoint/head_Ujoint/r_eye_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_index_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_index_01_Ujoint/r_fing_index_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_index_01_Ujoint/r_fing_index_02_Ujoint/r_fing_index_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_index_01_Ujoint/r_fing_index_02_Ujoint/r_fing_index_03_Ujoint/r_fing_index_04_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_index_01_Ujoint/r_fing_index_02_Ujoint/r_fing_index_03_Ujoint/r_fing_index_04_Ujoint/r_fing_index_end_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_middle_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_middle_01_Ujoint/r_fing_middle_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_middle_01_Ujoint/r_fing_middle_02_Ujoint/r_fing_middle_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_middle_01_Ujoint/r_fing_middle_02_Ujoint/r_fing_middle_03_Ujoint/r_fing_middle_04_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_middle_01_Ujoint/r_fing_middle_02_Ujoint/r_fing_middle_03_Ujoint/r_fing_middle_04_Ujoint/r_fing_middle_end_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_pinky_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_pinky_01_Ujoint/r_fing_pinky_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_pinky_01_Ujoint/r_fing_pinky_02_Ujoint/r_fing_pinky_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_pinky_01_Ujoint/r_fing_pinky_02_Ujoint/r_fing_pinky_03_Ujoint/r_fing_pinky_04_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_pinky_01_Ujoint/r_fing_pinky_02_Ujoint/r_fing_pinky_03_Ujoint/r_fing_pinky_04_Ujoint/r_fing_pinky_end_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_ring_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_ring_01_Ujoint/r_fing_ring_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_ring_01_Ujoint/r_fing_ring_02_Ujoint/r_fing_ring_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_ring_01_Ujoint/r_fing_ring_02_Ujoint/r_fing_ring_03_Ujoint/r_fing_ring_04_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_ring_01_Ujoint/r_fing_ring_02_Ujoint/r_fing_ring_03_Ujoint/r_fing_ring_04_Ujoint/r_fing_ring_end_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_thumb_01_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_thumb_01_Ujoint/r_fing_thumb_02_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_thumb_01_Ujoint/r_fing_thumb_02_Ujoint/r_fing_thumb_03_Ujoint
+        weight: 1
+      - path: U_grp/Ujoint_grp/hip_Ujoint/torso_02_result_Ujoint/torso_03_result_Ujoint/torso_04_result_Ujoint/torso_05_result_Ujoint/torso_06_result_Ujoint/chest_Ujoint/r_shldr_Ujoint/r_upArm_twist_01_Ujoint/transform8/r_upArm_twist_02_Ujoint/transform7/r_upArm_twist_03_Ujoint/transform6/r_upArm_twist_04_Ujoint/transform5/r_loArm_twist_01_Ujoint/r_loArm_twist_02_Ujoint/r_loArm_twist_03_Ujoint/r_loArm_twist_04_Ujoint/r_hand_Ujoint/r_fing_thumb_01_Ujoint/r_fing_thumb_02_Ujoint/r_fing_thumb_03_Ujoint/r_fing_thumb_end_Ujoint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

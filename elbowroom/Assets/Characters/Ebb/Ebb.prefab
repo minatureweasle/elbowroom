@@ -2018,6 +2018,8 @@ GameObject:
   - 114: {fileID: 11405124}
   - 135: {fileID: 13547470}
   - 114: {fileID: 11464858}
+  - 82: {fileID: 8239686}
+  - 114: {fileID: 11439686}
   m_Layer: 0
   m_Name: Ebb
   m_TagString: Player
@@ -4257,6 +4259,64 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!82 &8239686
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106356}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9506388
 Animator:
   serializedVersion: 3
@@ -4289,10 +4349,11 @@ MonoBehaviour:
   canMoveWhileJumping: 1
   stopSuddenly: 0
   jumpVelocity: 16
+  jumpTimeOut: 1
   boostDuration: .699999988
   boostMaxSpeed: 36
   boostAcceleration: 100
-  jumpTimeOut: 1
+  recoilTimeOut: .699999988
   strafeMinSpeed: 0
   strafeMaxSpeed: 16
   strafeAcceleration: 30
@@ -4300,6 +4361,19 @@ MonoBehaviour:
   forwardMaxSpeed: 30
   forwardAcceleration: 20
   boostStreamPrefab: {fileID: 119318, guid: e6261b18e2e7a014299a94c4f55803eb, type: 2}
+--- !u!114 &11439686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a7ed5bd4d5a7845927507d9204db33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpClip: {fileID: 8300000, guid: ab87ecf7e9cf76041a3a3c26d6d8ac49, type: 3}
+  boostClip: {fileID: 8300000, guid: 2ee00732f106ad64da0d2277cf99fbaf, type: 3}
 --- !u!114 &11443558
 MonoBehaviour:
   m_ObjectHideFlags: 1

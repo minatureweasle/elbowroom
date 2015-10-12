@@ -1260,13 +1260,14 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 162454947}
-  - 114: {fileID: 162454950}
-  - 114: {fileID: 162454949}
   - 95: {fileID: 162454948}
   - 54: {fileID: 162454951}
   - 136: {fileID: 162454952}
   - 114: {fileID: 162454955}
-  - 65: {fileID: 162454954}
+  - 114: {fileID: 162454954}
+  - 114: {fileID: 162454953}
+  - 135: {fileID: 162454950}
+  - 114: {fileID: 162454949}
   m_Layer: 0
   m_Name: Ebb
   m_TagString: Player
@@ -1308,45 +1309,28 @@ Animator:
 --- !u!114 &162454949
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406388, guid: 2106c871173fae646aef24887ce73510,
+  m_PrefabParentObject: {fileID: 11464858, guid: 2106c871173fae646aef24887ce73510,
     type: 2}
   m_PrefabInternal: {fileID: 1011544055}
   m_GameObject: {fileID: 162454946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f13c2bfafbf0ec8419c5f6e9b537ad5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 95b2fd671d56fa744bffc5078096ae6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useForce: 0
-  animateRoll: 0
-  increaseGravityWhenFalling: 1
-  canMoveWhileJumping: 1
-  stopSuddenly: 0
-  jumpVelocity: 16
-  boostDuration: .699999988
-  boostMaxSpeed: 36
-  boostAcceleration: 100
-  jumpTimeOut: 1.39999998
-  wallJumpTimeWindow: .699999988
-  respawnHeight: -20
-  strafeMinSpeed: 0
-  strafeMaxSpeed: 16
-  strafeAcceleration: 30
-  forwardMinSpeed: 6
-  forwardMaxSpeed: 30
-  forwardAcceleration: 20
---- !u!114 &162454950
-MonoBehaviour:
+--- !u!135 &162454950
+SphereCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11435038, guid: 2106c871173fae646aef24887ce73510,
+  m_PrefabParentObject: {fileID: 13547470, guid: 2106c871173fae646aef24887ce73510,
     type: 2}
   m_PrefabInternal: {fileID: 1011544055}
   m_GameObject: {fileID: 162454946}
+  m_Material: {fileID: 13400000, guid: 1344e7f3f206ca14dba011bc7e74fd59, type: 2}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f4ba913168f1d24e831a3f0fe80fe2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Radius: .699999988
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!54 &162454951
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1377,29 +1361,58 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!65 &162454954
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6525954, guid: 2106c871173fae646aef24887ce73510,
-    type: 2}
-  m_PrefabInternal: {fileID: 1011544055}
-  m_GameObject: {fileID: 162454946}
-  m_Material: {fileID: 13400000, guid: 1344e7f3f206ca14dba011bc7e74fd59, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: .5, y: .899999976, z: .75}
-  m_Center: {x: 0, y: .61966908, z: .300000012}
---- !u!114 &162454955
+--- !u!114 &162454953
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11470070, guid: 2106c871173fae646aef24887ce73510,
+  m_PrefabParentObject: {fileID: 11405124, guid: 2106c871173fae646aef24887ce73510,
     type: 2}
   m_PrefabInternal: {fileID: 1011544055}
   m_GameObject: {fileID: 162454946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9453247440530e41b3ac9fc5111a9c5, type: 3}
+  m_Script: {fileID: 11500000, guid: ce26115759527f44c975c6b78a849d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useForce: 0
+  animateRoll: 0
+  increaseGravityWhenFalling: 1
+  canMoveWhileJumping: 1
+  stopSuddenly: 0
+  jumpVelocity: 16
+  boostDuration: .699999988
+  boostMaxSpeed: 36
+  boostAcceleration: 100
+  jumpTimeOut: 1
+  recoilTimeOut: .699999988
+  strafeMinSpeed: 0
+  strafeMaxSpeed: 16
+  strafeAcceleration: 30
+  forwardMinSpeed: 6
+  forwardMaxSpeed: 30
+  forwardAcceleration: 20
+  boostStreamPrefab: {fileID: 119318, guid: e6261b18e2e7a014299a94c4f55803eb, type: 2}
+--- !u!114 &162454954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11485830, guid: 2106c871173fae646aef24887ce73510,
+    type: 2}
+  m_PrefabInternal: {fileID: 1011544055}
+  m_GameObject: {fileID: 162454946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4ba913168f1d24e831a3f0fe80fe2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &162454955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11443558, guid: 2106c871173fae646aef24887ce73510,
+    type: 2}
+  m_PrefabInternal: {fileID: 1011544055}
+  m_GameObject: {fileID: 162454946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f13c2bfafbf0ec8419c5f6e9b537ad5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myIdentity: 0
@@ -5058,12 +5071,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 965032643}
   - 95: {fileID: 965032650}
-  - 114: {fileID: 965032649}
-  - 114: {fileID: 965032648}
-  - 114: {fileID: 965032647}
   - 54: {fileID: 965032646}
   - 136: {fileID: 965032645}
   - 65: {fileID: 965032644}
+  - 114: {fileID: 965032651}
+  - 114: {fileID: 965032649}
+  - 114: {fileID: 965032648}
+  - 114: {fileID: 965032647}
   m_Layer: 0
   m_Name: James
   m_TagString: Untagged
@@ -5133,10 +5147,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 965032642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9453247440530e41b3ac9fc5111a9c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f4ba913168f1d24e831a3f0fe80fe2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myIdentity: 0
 --- !u!114 &965032648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5145,11 +5158,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 965032642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f13c2bfafbf0ec8419c5f6e9b537ad5d, type: 3}
+  m_Script: {fileID: 11500000, guid: ce26115759527f44c975c6b78a849d1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   useForce: 0
-  animateRoll: 1
+  animateRoll: 0
   increaseGravityWhenFalling: 1
   canMoveWhileJumping: 1
   stopSuddenly: 0
@@ -5157,15 +5170,15 @@ MonoBehaviour:
   boostDuration: .699999988
   boostMaxSpeed: 36
   boostAcceleration: 100
-  jumpTimeOut: 1.39999998
-  wallJumpTimeWindow: .699999988
-  respawnHeight: -20
+  jumpTimeOut: 1
+  recoilTimeOut: .699999988
   strafeMinSpeed: 0
   strafeMaxSpeed: 16
   strafeAcceleration: 30
   forwardMinSpeed: 6
   forwardMaxSpeed: 30
   forwardAcceleration: 20
+  boostStreamPrefab: {fileID: 119318, guid: e6261b18e2e7a014299a94c4f55803eb, type: 2}
 --- !u!114 &965032649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5174,7 +5187,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 965032642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f4ba913168f1d24e831a3f0fe80fe2e, type: 3}
+  m_Script: {fileID: 11500000, guid: 95b2fd671d56fa744bffc5078096ae6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!95 &965032650
@@ -5193,6 +5206,18 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &965032651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 965032642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f13c2bfafbf0ec8419c5f6e9b537ad5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myIdentity: 0
 --- !u!1 &967715229
 GameObject:
   m_ObjectHideFlags: 0

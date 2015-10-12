@@ -89,14 +89,16 @@ public class AutomaticLevel : MonoBehaviour {
         if (ele == "Room")
         {
 			spawnPoint += distRoom/2;
-			Instantiate(rooms[0], new Vector3(spawnPointX,spawnPointY,spawnPoint), Quaternion.identity);
+			GameObject room = (GameObject)Instantiate(rooms[0], new Vector3(spawnPointX,spawnPointY,spawnPoint), Quaternion.identity);
+            room.transform.GetChild(0).renderer.material.color = new Color(Random.Range(0f,1f), 0.6f, Random.Range(0f,1f)); 
             spawnIncrement = distRoom/2;
 			spawnIncrement += distanceBetweenObjects; 
 		}
         else if (ele == "Platform")
         {
 			spawnPoint += distPlatform/2;
-			Instantiate(platform, new Vector3(spawnPointX,spawnPointY,spawnPoint), Quaternion.identity);
+			GameObject platform_object = (GameObject) Instantiate(platform, new Vector3(spawnPointX,spawnPointY,spawnPoint), Quaternion.identity);
+            platform_object.transform.GetChild(0).renderer.material.color = new Color(Random.Range(0f,1f), 0.6f, Random.Range(0f,1f)); 
             spawnIncrement = distPlatform/2;
 			spawnIncrement += distanceBetweenObjects; 
         }

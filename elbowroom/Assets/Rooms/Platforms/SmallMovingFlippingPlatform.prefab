@@ -448,13 +448,13 @@ MonoBehaviour:
   triggerDistance: 5
   moveHorizontal: 1
   moveVertical: 0
-  flipLeft: 1
+  flipLeft: 0
   flipRight: 0
   shrink: 0
   shrinkAmount: 0
   timeBetweenFlips: 2
   timeUntilNextFlip: 1
-  horizontalMoveDistance: 4
+  horizontalMoveDistance: 2
   verticalMoveDistance: 4
   moveSpeed: 10
   platformMat: {fileID: 108810}

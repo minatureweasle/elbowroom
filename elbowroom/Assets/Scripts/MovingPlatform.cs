@@ -74,8 +74,8 @@ public class MovingPlatform : TriggeredTrap {
     bool pMoveHorizontal(bool moveLeft){
 
 		if (moveLeft) {
-			Vector3 destination = transform.localPosition;
-			destination.x = horizontalMoveDistance;
+			Vector3 destination = startingPosition;
+			destination.x = startingPosition.x + horizontalMoveDistance;
 			transform.localPosition = Vector3.Slerp (transform.localPosition, destination, moveSpeed * Time.deltaTime);
 			if (destination == transform.localPosition){
 				return false;
@@ -83,8 +83,8 @@ public class MovingPlatform : TriggeredTrap {
 			return true;
 
 		} else {
-			Vector3 destination = transform.localPosition;
-			destination.x = -horizontalMoveDistance;
+			Vector3 destination = startingPosition;
+			destination.x = startingPosition.x -horizontalMoveDistance;
 			transform.localPosition = Vector3.Slerp (transform.localPosition, destination, moveSpeed * Time.deltaTime);
 			if (destination == transform.localPosition){
 				return true;
@@ -94,7 +94,7 @@ public class MovingPlatform : TriggeredTrap {
 	}
 
 	void pMoveVertical(){
-
+		//amazing
 	}
 
     //shrink the scale of the platform

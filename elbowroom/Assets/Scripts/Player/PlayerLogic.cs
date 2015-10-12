@@ -7,26 +7,23 @@ public class PlayerLogic : MonoBehaviour {
 	Rigidbody myRigidbody;
 	PlayerController myInputDetection;
     PlayerJump myJumpHandler;
+    PlayerAudio playerAudio;
 
 	Vector3 targetVelocity;
 
 	public bool useForce = false;
-
     public bool animateRoll = false;
-
 	public bool increaseGravityWhenFalling = true;
-
 	public bool canMoveWhileJumping = true;
-
 	public bool stopSuddenly = false;
 
 	public float jumpVelocity = 16f;
+	public float jumpTimeOut = 1f;
 
 	public float boostDuration = 0.7f;
 	public float boostMaxSpeed = 36;
 	public float boostAcceleration = 100;
 
-	public float jumpTimeOut = 1f;
 	public float recoilTimeOut = 0.7f;
 
 	//public float wallJumpTimeWindow = 0.7f;
@@ -60,6 +57,7 @@ public class PlayerLogic : MonoBehaviour {
 		myRigidbody = GetComponent<Rigidbody> ();
 		myInputDetection = GetComponent<PlayerController> ();
         myJumpHandler = GetComponent<PlayerJump>();
+        playerAudio = GetComponent<PlayerAudio>();
 
 		currentMaxSpeed = forwardMaxSpeed;
 		currentAcceleration = forwardAcceleration;
@@ -338,6 +336,8 @@ public class PlayerLogic : MonoBehaviour {
 
         //you must be on the ground to jump
         if (myJumpHandler.IsOnGround()) { 
+        	playerAudio.PlayJumpClip();
+
 		    Vector3 newVelocity = myRigidbody.velocity;
 		    newVelocity.y = jumpVelocity;
 		    myRigidbody.velocity = newVelocity;
@@ -407,6 +407,8 @@ public class PlayerLogic : MonoBehaviour {
     //change states to BOOSTING
     //and schedule a time when the boost will end
 	void Boost(){
+
+		playerAudio.PlayBoostClip();
 
 		Instantiate(boostStreamPrefab, transform.position + Vector3.up, transform.rotation);
 

@@ -342,7 +342,7 @@ ModelImporter:
     - serializedVersion: 16
       name: James_Run
       takeName: Take 001
-      firstFrame: 2
+      firstFrame: 3
       lastFrame: 16
       wrapMode: 0
       orientationOffsetY: 0

@@ -7,6 +7,7 @@ public class RocketLauncher : MonoBehaviour {
 	//public GameObject player;
 	public GameObject bulletPrefab;
 	public Transform firepoint;
+	AudioSource myAudio;
 
 	public float lerpFactor = 1f;
 
@@ -16,15 +17,19 @@ public class RocketLauncher : MonoBehaviour {
 
 	public float maxDistance = 30;
 
+	void Start(){
+		myAudio = GetComponent<AudioSource>();
+	}
+
     //Target the player, and shoot at the player if ready
 	void Update () {
+
 		TargetPlayer ();
-		if (Time.time > waitEndTime)
-			Shoot();
+		
 	}
 
 	//the launcher turns to point at the player and when the player is in sight it schedules rockets to be fired
-	void TargetPlayer(){
+	public void TargetPlayer(){
 		//Vector3 directionToPlayer = player.transform.position - transform.position;
 		Vector3 directionToPlayer = PlayerGroup.instance.GetClosestPlayerTo(transform.position).position - transform.position;
 		//point at his head rather than his feet
@@ -59,10 +64,13 @@ public class RocketLauncher : MonoBehaviour {
 			GetComponent<LineRenderer>().SetPosition(1, transform.position);
 			StopWaitingToShoot();
 		}
+		if (Time.time > waitEndTime)
+			Shoot();
 	}
 
     //Create a rocket pointing in the same direction as the turret and stop shooting
 	void Shoot(){
+		myAudio.Play();
 		Instantiate(bulletPrefab, firepoint.position, transform.rotation);
 		StopWaitingToShoot();
 	}
