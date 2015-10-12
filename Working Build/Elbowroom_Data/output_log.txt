@@ -1,10 +1,10 @@
 Initialize engine version: 4.6.2f1 (bd99309c2ad7)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 560 Ti   (ID=0x1200)
+    Version:  Direct3D 11.0 [level 10.0]
+    Renderer: NVIDIA GeForce GTX 275 (ID=0x5e6)
     Vendor:   NVIDIA
-    VRAM:     971 MB
+    VRAM:     863 MB
 Begin MonoManager ReloadAssembly
 Platform assembly: C:\Users\brmjoe002\Documents\GitHub\elbowroom\Working Build\Elbowroom_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Users\brmjoe002\Documents\GitHub\elbowroom\Working Build\Elbowroom_Data\Managed\UnityEngine.dll into Unity Child Domain
@@ -16,22 +16,30 @@ Platform assembly: C:\Users\brmjoe002\Documents\GitHub\elbowroom\Working Build\E
 Loading C:\Users\brmjoe002\Documents\GitHub\elbowroom\Working Build\Elbowroom_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: C:\Users\brmjoe002\Documents\GitHub\elbowroom\Working Build\Elbowroom_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\brmjoe002\Documents\GitHub\elbowroom\Working Build\Elbowroom_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.058 seconds
+- Completed reload, in  0.070 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 XInput1_3.dll not found.
 <RI> Input initialized.
 Platform assembly: C:\Users\brmjoe002\Documents\GitHub\elbowroom\Working Build\Elbowroom_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\brmjoe002\Documents\GitHub\elbowroom\Working Build\Elbowroom_Data\Managed\System.dll (this message is harmless)
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
+UnloadTime: 5.282707 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-UnloadTime: 5.224638 ms
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1750.
+Total: 2.008076 ms (FindLiveObjects: 0.092690 ms CreateObjectMapping: 0.022450 ms MarkObjects: 0.299559 ms  DeleteObjects: 0.725486 ms)
+
+UnloadTime: 4.240983 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1355.
+Total: 1.857655 ms (FindLiveObjects: 0.072805 ms CreateObjectMapping: 0.023413 ms MarkObjects: 0.352800 ms  DeleteObjects: 0.603609 ms)
+
+UnloadTime: 3.299005 ms
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1067.
-Total: 1.885873 ms (FindLiveObjects: 0.063183 ms CreateObjectMapping: 0.019243 ms MarkObjects: 0.311104 ms  DeleteObjects: 0.606814 ms)
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2025.
+Total: 1.853806 ms (FindLiveObjects: 0.099104 ms CreateObjectMapping: 0.041373 ms MarkObjects: 0.366912 ms  DeleteObjects: 0.481733 ms)
 
 Building level
  
@@ -53,81 +61,140 @@ Building level
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
 17
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
 
 16
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
 15
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
 
 14
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-The referenced script on this Behaviour is missing!
+13
  
-(Filename:  Line: 1769)
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-The referenced script on this Behaviour is missing!
+NullReferenceException: Object reference not set to an instance of an object
+  at StickyBullet.OnCollisionEnter (UnityEngine.Collision col) [0x00000] in <filename unknown>:0 
  
-(Filename:  Line: 1769)
+(Filename:  Line: -1)
 
-The referenced script on this Behaviour is missing!
+NullReferenceException: Object reference not set to an instance of an object
+  at StickyBullet.OnCollisionEnter (UnityEngine.Collision col) [0x00000] in <filename unknown>:0 
  
-(Filename:  Line: 1769)
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at StickyBullet.OnCollisionEnter (UnityEngine.Collision col) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at StickyBullet.OnCollisionEnter (UnityEngine.Collision col) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at StickyBullet.OnCollisionEnter (UnityEngine.Collision col) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnloadTime: 5.173980 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 194 unused Assets to reduce memory usage. Loaded Objects now: 1353.
+Total: 2.549465 ms (FindLiveObjects: 0.085634 ms CreateObjectMapping: 0.037525 ms MarkObjects: 0.438114 ms  DeleteObjects: 1.148205 ms)
+
+UnloadTime: 2.585386 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1353.
+Total: 1.331020 ms (FindLiveObjects: 0.075371 ms CreateObjectMapping: 0.030789 ms MarkObjects: 0.350876 ms  DeleteObjects: 0.007697 ms)
+
+UnloadTime: 3.706650 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1751.
+Total: 2.200192 ms (FindLiveObjects: 0.098463 ms CreateObjectMapping: 0.034959 ms MarkObjects: 0.356970 ms  DeleteObjects: 0.844796 ms)
+
+UnloadTime: 4.208589 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1356.
+Total: 2.012566 ms (FindLiveObjects: 0.073446 ms CreateObjectMapping: 0.043298 ms MarkObjects: 0.382948 ms  DeleteObjects: 0.632475 ms)
+
+UnloadTime: 3.326909 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2007.
+Total: 1.824620 ms (FindLiveObjects: 0.098463 ms CreateObjectMapping: 0.038487 ms MarkObjects: 0.365308 ms  DeleteObjects: 0.511881 ms)
+
+UnloadTime: 3.524156 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1356.
+Total: 1.310814 ms (FindLiveObjects: 0.047467 ms CreateObjectMapping: 0.024696 ms MarkObjects: 0.262355 ms  DeleteObjects: 0.426247 ms)
+
+UnloadTime: 3.367962 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1751.
+Total: 2.025075 ms (FindLiveObjects: 0.095256 ms CreateObjectMapping: 0.063504 ms MarkObjects: 0.389684 ms  DeleteObjects: 0.575064 ms)
+
+UnloadTime: 4.389480 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1356.
+Total: 2.050733 ms (FindLiveObjects: 0.076974 ms CreateObjectMapping: 0.047467 ms MarkObjects: 0.403475 ms  DeleteObjects: 0.663585 ms)
+
+UnloadTime: 3.246085 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2025.
+Total: 2.010642 ms (FindLiveObjects: 0.106160 ms CreateObjectMapping: 0.064145 ms MarkObjects: 0.413738 ms  DeleteObjects: 0.531125 ms)
+
+Building level
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Building level
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Building level
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+19
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+18
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+17
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+16
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+15
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
 13
  
@@ -137,81 +204,21 @@ The referenced script on this Behaviour is missing!
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
 11
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
 
 10
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
 9
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
 8
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
 
 7
  
@@ -221,89 +228,205 @@ The referenced script on this Behaviour is missing!
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
 5
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
 
 4
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
 3
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
 
 2
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-The referenced script on this Behaviour is missing!
+1
  
-(Filename:  Line: 1769)
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1769)
+UnloadTime: 6.843368 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-The referenced script on this Behaviour is missing!
+Unloading 205 unused Assets to reduce memory usage. Loaded Objects now: 1353.
+Total: 2.805085 ms (FindLiveObjects: 0.086596 ms CreateObjectMapping: 0.076333 ms MarkObjects: 0.451263 ms  DeleteObjects: 1.354433 ms)
+
+UnloadTime: 3.447502 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2007.
+Total: 1.993643 ms (FindLiveObjects: 0.104236 ms CreateObjectMapping: 0.061259 ms MarkObjects: 0.400268 ms  DeleteObjects: 0.569612 ms)
+
+UnloadTime: 6.293961 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1356.
+Total: 2.010963 ms (FindLiveObjects: 0.074729 ms CreateObjectMapping: 0.065107 ms MarkObjects: 0.418229 ms  DeleteObjects: 0.648511 ms)
+
+UnloadTime: 3.335889 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2007.
+Total: 1.915065 ms (FindLiveObjects: 0.101029 ms CreateObjectMapping: 0.066069 ms MarkObjects: 0.391287 ms  DeleteObjects: 0.539784 ms)
+
+UnloadTime: 5.345249 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1356.
+Total: 4.493716 ms (FindLiveObjects: 0.078899 ms CreateObjectMapping: 0.056448 ms MarkObjects: 0.412455 ms  DeleteObjects: 3.090212 ms)
+
+UnloadTime: 2.594687 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1353.
+Total: 1.379770 ms (FindLiveObjects: 0.075691 ms CreateObjectMapping: 0.063183 ms MarkObjects: 0.387759 ms  DeleteObjects: 0.008338 ms)
+
+UnloadTime: 3.513572 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 1084.
+Total: 4.339767 ms (FindLiveObjects: 0.062541 ms CreateObjectMapping: 0.064145 ms MarkObjects: 0.366591 ms  DeleteObjects: 2.979240 ms)
+
+Building level
  
-(Filename:  Line: 1769)
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Building level
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Building level
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+19
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+18
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+17
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+16
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+15
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+13
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+11
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
 1
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-UnloadTime: 4.082530 ms
+UnloadTime: 4.229437 ms
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 165 unused Assets to reduce memory usage. Loaded Objects now: 1270.
-Total: 1.524414 ms (FindLiveObjects: 0.080181 ms CreateObjectMapping: 0.028865 ms MarkObjects: 0.379740 ms  DeleteObjects: 0.233809 ms)
+Unloading 183 unused Assets to reduce memory usage. Loaded Objects now: 1353.
+Total: 2.423739 ms (FindLiveObjects: 0.084672 ms CreateObjectMapping: 0.070880 ms MarkObjects: 0.525993 ms  DeleteObjects: 0.860191 ms)
+
+UnloadTime: 3.418316 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 1084.
+Total: 2.440096 ms (FindLiveObjects: 0.061900 ms CreateObjectMapping: 0.056448 ms MarkObjects: 0.476601 ms  DeleteObjects: 0.883925 ms)
+
+Building level
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Building level
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Building level
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+19
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 1.266233 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 166 unused Assets to reduce memory usage. Loaded Objects now: 1353.
+Total: 3.861562 ms (FindLiveObjects: 0.054523 ms CreateObjectMapping: 0.040732 ms MarkObjects: 0.323935 ms  DeleteObjects: 2.894568 ms)
+
+UnloadTime: 2.433361 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1353.
+Total: 1.418899 ms (FindLiveObjects: 0.074729 ms CreateObjectMapping: 0.036883 ms MarkObjects: 0.460565 ms  DeleteObjects: 0.008018 ms)
+
+UnloadTime: 3.259235 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1356.
+Total: 1.469895 ms (FindLiveObjects: 0.080502 ms CreateObjectMapping: 0.037204 ms MarkObjects: 0.508032 ms  DeleteObjects: 0.008338 ms)
+
+UnloadTime: 2.526693 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1353.
+Total: 1.468933 ms (FindLiveObjects: 0.075050 ms CreateObjectMapping: 0.036562 ms MarkObjects: 0.485581 ms  DeleteObjects: 0.008018 ms)
 
