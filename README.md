@@ -1,2 +1,2 @@
-# elbowroom
-3rd year games project
+# ElbowROOM (Unity 3D)
+2 Player platform based racing game!
